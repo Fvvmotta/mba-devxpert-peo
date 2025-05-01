@@ -1,0 +1,6 @@
+@MBA_DevXpert_PEO.Api_HostAddress = http://localhost:5285
+
+GET {{MBA_DevXpert_PEO.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,30 @@
+C:\Users\adm\Documents\MBA\Modulo 3\MBA_DevXpert_PEO\src\MBA_DevXpert_PEO.GestaoDeConteudo.Domain\bin\Debug\net8.0\MBA_DevXpert_PEO.GestaoDeConteudo.Domain.deps.json
+C:\Users\adm\Documents\MBA\Modulo 3\MBA_DevXpert_PEO\src\MBA_DevXpert_PEO.GestaoDeConteudo.Domain\bin\Debug\net8.0\MBA_DevXpert_PEO.GestaoDeConteudo.Domain.dll
+C:\Users\adm\Documents\MBA\Modulo 3\MBA_DevXpert_PEO\src\MBA_DevXpert_PEO.GestaoDeConteudo.Domain\bin\Debug\net8.0\MBA_DevXpert_PEO.GestaoDeConteudo.Domain.pdb
+C:\Users\adm\Documents\MBA\Modulo 3\MBA_DevXpert_PEO\src\MBA_DevXpert_PEO.GestaoDeConteudo.Domain\bin\Debug\net8.0\MBA_DevXpert_PEO.Core.dll
+C:\Users\adm\Documents\MBA\Modulo 3\MBA_DevXpert_PEO\src\MBA_DevXpert_PEO.GestaoDeConteudo.Domain\bin\Debug\net8.0\MBA_DevXpert_PEO.Core.pdb
+C:\Users\adm\Documents\MBA\Modulo 3\MBA_DevXpert_PEO\src\MBA_DevXpert_PEO.GestaoDeConteudo.Domain\obj\Debug\net8.0\MBA_DevXpert_PEO.GestaoDeConteudo.Domain.csproj.AssemblyReference.cache
+C:\Users\adm\Documents\MBA\Modulo 3\MBA_DevXpert_PEO\src\MBA_DevXpert_PEO.GestaoDeConteudo.Domain\obj\Debug\net8.0\MBA_DevXpert_PEO.GestaoDeConteudo.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\adm\Documents\MBA\Modulo 3\MBA_DevXpert_PEO\src\MBA_DevXpert_PEO.GestaoDeConteudo.Domain\obj\Debug\net8.0\MBA_DevXpert_PEO.GestaoDeConteudo.Domain.AssemblyInfoInputs.cache
+C:\Users\adm\Documents\MBA\Modulo 3\MBA_DevXpert_PEO\src\MBA_DevXpert_PEO.GestaoDeConteudo.Domain\obj\Debug\net8.0\MBA_DevXpert_PEO.GestaoDeConteudo.Domain.AssemblyInfo.cs
+C:\Users\adm\Documents\MBA\Modulo 3\MBA_DevXpert_PEO\src\MBA_DevXpert_PEO.GestaoDeConteudo.Domain\obj\Debug\net8.0\MBA_DevXpert_PEO.GestaoDeConteudo.Domain.csproj.CoreCompileInputs.cache
+C:\Users\adm\Documents\MBA\Modulo 3\MBA_DevXpert_PEO\src\MBA_DevXpert_PEO.GestaoDeConteudo.Domain\obj\Debug\net8.0\MBA_DevX.44CDF638.Up2Date
+C:\Users\adm\Documents\MBA\Modulo 3\MBA_DevXpert_PEO\src\MBA_DevXpert_PEO.GestaoDeConteudo.Domain\obj\Debug\net8.0\MBA_DevXpert_PEO.GestaoDeConteudo.Domain.dll
+C:\Users\adm\Documents\MBA\Modulo 3\MBA_DevXpert_PEO\src\MBA_DevXpert_PEO.GestaoDeConteudo.Domain\obj\Debug\net8.0\refint\MBA_DevXpert_PEO.GestaoDeConteudo.Domain.dll
+C:\Users\adm\Documents\MBA\Modulo 3\MBA_DevXpert_PEO\src\MBA_DevXpert_PEO.GestaoDeConteudo.Domain\obj\Debug\net8.0\MBA_DevXpert_PEO.GestaoDeConteudo.Domain.pdb
+C:\Users\adm\Documents\MBA\Modulo 3\MBA_DevXpert_PEO\src\MBA_DevXpert_PEO.GestaoDeConteudo.Domain\obj\Debug\net8.0\ref\MBA_DevXpert_PEO.GestaoDeConteudo.Domain.dll
+C:\Users\adm\Documents\MBA\Modulo3\MBA_DevXpert_PEO\src\MBA_DevXpert_PEO.GestaoDeConteudo.Domain\bin\Debug\net8.0\MBA_DevXpert_PEO.GestaoDeConteudo.Domain.deps.json
+C:\Users\adm\Documents\MBA\Modulo3\MBA_DevXpert_PEO\src\MBA_DevXpert_PEO.GestaoDeConteudo.Domain\bin\Debug\net8.0\MBA_DevXpert_PEO.GestaoDeConteudo.Domain.dll
+C:\Users\adm\Documents\MBA\Modulo3\MBA_DevXpert_PEO\src\MBA_DevXpert_PEO.GestaoDeConteudo.Domain\bin\Debug\net8.0\MBA_DevXpert_PEO.GestaoDeConteudo.Domain.pdb
+C:\Users\adm\Documents\MBA\Modulo3\MBA_DevXpert_PEO\src\MBA_DevXpert_PEO.GestaoDeConteudo.Domain\bin\Debug\net8.0\MBA_DevXpert_PEO.Core.dll
+C:\Users\adm\Documents\MBA\Modulo3\MBA_DevXpert_PEO\src\MBA_DevXpert_PEO.GestaoDeConteudo.Domain\bin\Debug\net8.0\MBA_DevXpert_PEO.Core.pdb
+C:\Users\adm\Documents\MBA\Modulo3\MBA_DevXpert_PEO\src\MBA_DevXpert_PEO.GestaoDeConteudo.Domain\obj\Debug\net8.0\MBA_DevXpert_PEO.GestaoDeConteudo.Domain.csproj.AssemblyReference.cache
+C:\Users\adm\Documents\MBA\Modulo3\MBA_DevXpert_PEO\src\MBA_DevXpert_PEO.GestaoDeConteudo.Domain\obj\Debug\net8.0\MBA_DevXpert_PEO.GestaoDeConteudo.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\adm\Documents\MBA\Modulo3\MBA_DevXpert_PEO\src\MBA_DevXpert_PEO.GestaoDeConteudo.Domain\obj\Debug\net8.0\MBA_DevXpert_PEO.GestaoDeConteudo.Domain.AssemblyInfoInputs.cache
+C:\Users\adm\Documents\MBA\Modulo3\MBA_DevXpert_PEO\src\MBA_DevXpert_PEO.GestaoDeConteudo.Domain\obj\Debug\net8.0\MBA_DevXpert_PEO.GestaoDeConteudo.Domain.AssemblyInfo.cs
+C:\Users\adm\Documents\MBA\Modulo3\MBA_DevXpert_PEO\src\MBA_DevXpert_PEO.GestaoDeConteudo.Domain\obj\Debug\net8.0\MBA_DevXpert_PEO.GestaoDeConteudo.Domain.csproj.CoreCompileInputs.cache
+C:\Users\adm\Documents\MBA\Modulo3\MBA_DevXpert_PEO\src\MBA_DevXpert_PEO.GestaoDeConteudo.Domain\obj\Debug\net8.0\MBA_DevX.44CDF638.Up2Date
+C:\Users\adm\Documents\MBA\Modulo3\MBA_DevXpert_PEO\src\MBA_DevXpert_PEO.GestaoDeConteudo.Domain\obj\Debug\net8.0\MBA_DevXpert_PEO.GestaoDeConteudo.Domain.dll
+C:\Users\adm\Documents\MBA\Modulo3\MBA_DevXpert_PEO\src\MBA_DevXpert_PEO.GestaoDeConteudo.Domain\obj\Debug\net8.0\refint\MBA_DevXpert_PEO.GestaoDeConteudo.Domain.dll
+C:\Users\adm\Documents\MBA\Modulo3\MBA_DevXpert_PEO\src\MBA_DevXpert_PEO.GestaoDeConteudo.Domain\obj\Debug\net8.0\MBA_DevXpert_PEO.GestaoDeConteudo.Domain.pdb
+C:\Users\adm\Documents\MBA\Modulo3\MBA_DevXpert_PEO\src\MBA_DevXpert_PEO.GestaoDeConteudo.Domain\obj\Debug\net8.0\ref\MBA_DevXpert_PEO.GestaoDeConteudo.Domain.dll

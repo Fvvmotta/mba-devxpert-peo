@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Service\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MBA_DevXpert_PEO.Core\MBA_DevXpert_PEO.Core.csproj" />
+    <ProjectReference Include="..\MBA_DevXpert_PEO.PagamentoEFaturamento.Domain\MBA_DevXpert_PEO.PagamentoEFaturamento.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

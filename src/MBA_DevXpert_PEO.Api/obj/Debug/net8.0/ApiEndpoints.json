@@ -1,0 +1,448 @@
+[
+  {
+    "ContainingType": "MBA_DevXpert_PEO.Api.Controllers.AdminAlunoController",
+    "Method": "ObterTodos",
+    "RelativePath": "api/adminaluno",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MBA_DevXpert_PEO.Api.Controllers.AdminAlunoController",
+    "Method": "Criar",
+    "RelativePath": "api/adminaluno",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "MBA_DevXpert_PEO.GestaoDeAlunos.Application.DTOs.CriarAlunoDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MBA_DevXpert_PEO.Api.Controllers.AdminAlunoController",
+    "Method": "ObterPorId",
+    "RelativePath": "api/adminaluno/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MBA_DevXpert_PEO.Api.Controllers.AdminAlunoController",
+    "Method": "Atualizar",
+    "RelativePath": "api/adminaluno/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "MBA_DevXpert_PEO.GestaoDeAlunos.Application.DTOs.AtualizarAlunoDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MBA_DevXpert_PEO.Api.Controllers.AdminAlunoController",
+    "Method": "Remover",
+    "RelativePath": "api/adminaluno/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MBA_DevXpert_PEO.Api.Controllers.AdminCursoController",
+    "Method": "ObterCursos",
+    "RelativePath": "api/AdminCurso",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MBA_DevXpert_PEO.Api.Controllers.AdminCursoController",
+    "Method": "CriarCurso",
+    "RelativePath": "api/AdminCurso",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "MBA_DevXpert_PEO.GestaoDeConteudo.Application.DTOs.CursoInputDTO",
+        "IsRequired": true
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MBA_DevXpert_PEO.Api.Controllers.AdminCursoController",
+    "Method": "AdicionarAula",
+    "RelativePath": "api/AdminCurso/{cursoId}/aulas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cursoId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "MBA_DevXpert_PEO.GestaoDeConteudo.Application.DTOs.AdicionarAulaInputDTO",
+        "IsRequired": true
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MBA_DevXpert_PEO.Api.Controllers.AdminCursoController",
+    "Method": "ObterCursoPorId",
+    "RelativePath": "api/AdminCurso/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MBA_DevXpert_PEO.Api.Controllers.AdminCursoController",
+    "Method": "AtualizarCurso",
+    "RelativePath": "api/AdminCurso/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "MBA_DevXpert_PEO.GestaoDeConteudo.Application.DTOs.UpdateCursoInputDTO",
+        "IsRequired": true
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MBA_DevXpert_PEO.Api.Controllers.AdminCursoController",
+    "Method": "DeletarCurso",
+    "RelativePath": "api/AdminCurso/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MBA_DevXpert_PEO.GestaoDeAlunos.API.Controllers.AlunoController",
+    "Method": "AtualizarAluno",
+    "RelativePath": "api/alunos/{alunoId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "alunoId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "MBA_DevXpert_PEO.GestaoDeAlunos.Application.DTOs.AtualizarAlunoDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MBA_DevXpert_PEO.GestaoDeAlunos.API.Controllers.AlunoController",
+    "Method": "CriarMatricula",
+    "RelativePath": "api/alunos/{alunoId}/matriculas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "alunoId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "MBA_DevXpert_PEO.GestaoDeAlunos.Application.DTOs.CriarMatriculaDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MBA_DevXpert_PEO.GestaoDeAlunos.API.Controllers.AlunoController",
+    "Method": "FinalizarCurso",
+    "RelativePath": "api/alunos/{alunoId}/matriculas/{matriculaId}/finalizar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "alunoId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "matriculaId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MBA_DevXpert_PEO.GestaoDeAlunos.API.Controllers.AlunoController",
+    "Method": "ObterMatriculasDetalhadas",
+    "RelativePath": "api/alunos/matriculas-detalhadas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MBA_DevXpert_PEO.Api.Controllers.Admin.CursoController",
+    "Method": "ObterCursos",
+    "RelativePath": "api/Curso",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MBA_DevXpert_PEO.Api.Controllers.Admin.CursoController",
+    "Method": "ObterCursoPorId",
+    "RelativePath": "api/Curso/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MBA_DevXpert_PEO.Api.Controllers.DiagnosticoController",
+    "Method": "ObterBaseDeTeste",
+    "RelativePath": "api/diagnostico/teste-base",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MBA_DevXpert_PEO.Api.Controllers.PagamentosController",
+    "Method": "RealizarPagamento",
+    "RelativePath": "api/pagamentos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "MBA_DevXpert_PEO.PagamentoEFaturamento.Application.DTOs.RealizarPagamentoDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MBA_DevXpert_PEO.Api.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "MBA_DevXpert_PEO.Api.DTOs.UserLoginDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MBA_DevXpert_PEO.Api.Controllers.AuthController",
+    "Method": "Register",
+    "RelativePath": "auth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "MBA_DevXpert_PEO.Api.DTOs.UserRegisterDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
