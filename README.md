@@ -43,20 +43,20 @@ O objetivo deste projeto é desenvolver uma aplicação web moderna, modular e e
 ```
 src/
 │
-├── MBA_DevXpert_PEO.Api/                          # API principal (Swagger, Auth, DI)
-├── MBA_DevXpert_PEO.Core/                         # Entidades base, VO, UoW, DTOs, Interfaces comuns
+├── MBA_DevXpert_PEO.Api/                          
+├── MBA_DevXpert_PEO.Core/                         
 │
-├── MBA_DevXpert_PEO.GestaoDeAlunos.*              # Domínio e aplicação de Alunos (matrículas, certificados)
-├── MBA_DevXpert_PEO.GestaoDeConteudo.*            # Domínio e aplicação de Conteúdo (cursos, aulas)
-├── MBA_DevXpert_PEO.PagamentoEFaturamento.*       # Domínio e aplicação de Pagamentos
-├── MBA_DevXpert_PEO.Identidade/                   # Autenticação e configuração do Identity com JWT
-├── EventSourcing/                                  # Suporte a histórico de eventos (opcional)
+├── MBA_DevXpert_PEO.GestaoDeAlunos.*              
+├── MBA_DevXpert_PEO.GestaoDeConteudo.*           
+├── MBA_DevXpert_PEO.PagamentoEFaturamento.*       
+├── MBA_DevXpert_PEO.Identidade/                  
+├── EventSourcing/                                  
 │
-├── Tests/                                         # Testes unitários e de integração
+├── Tests/                                         
 │
-├── README.md                                      # Documentação do projeto
-├── FEEDBACK.md                                    # Feedback do avaliador
-├── .gitignore                                     # Arquivos ignorados pelo Git
+├── README.md                                      
+├── FEEDBACK.md                                    
+├── .gitignore                                     
 ```
 
 ---
