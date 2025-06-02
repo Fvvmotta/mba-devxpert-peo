@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3nSHLcZgTdY=",
+  "dgSpecHash": "yBli0ZWYJl8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\adm\\Documents\\MBA\\Modulo3\\MBA_DevXpert_PEO\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Infra\\MBA_DevXpert_PEO.GestaoDeAlunos.Infra.csproj",
+  "projectFilePath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Infra\\MBA_DevXpert_PEO.GestaoDeAlunos.Infra.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\adm\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\adm\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

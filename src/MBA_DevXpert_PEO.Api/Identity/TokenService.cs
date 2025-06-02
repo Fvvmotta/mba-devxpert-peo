@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
-namespace MBA_DevXpert_PEO.Identity
+namespace MBA_DevXpert_PEO.Api.Identity
 {
     public class TokenService
     {

@@ -1,15 +1,14 @@
 {
-  "EventSourcing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\adm\\Documents\\MBA\\Modulo3\\MBA_DevXpert_PEO\\src\\EventSourcing",
-  "MBA_DevXpert_PEO.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\adm\\Documents\\MBA\\Modulo3\\MBA_DevXpert_PEO\\src\\MBA_DevXpert_PEO.Api",
-  "MBA_DevXpert_PEO.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\adm\\Documents\\MBA\\Modulo3\\MBA_DevXpert_PEO\\src\\MBA_DevXpert_PEO.Core",
-  "MBA_DevXpert_PEO.GestaoDeAlunos.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\adm\\Documents\\MBA\\Modulo3\\MBA_DevXpert_PEO\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Application",
-  "MBA_DevXpert_PEO.GestaoDeAlunos.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\adm\\Documents\\MBA\\Modulo3\\MBA_DevXpert_PEO\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Domain",
-  "MBA_DevXpert_PEO.GestaoDeAlunos.Infra, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\adm\\Documents\\MBA\\Modulo3\\MBA_DevXpert_PEO\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Infra",
-  "MBA_DevXpert_PEO.GestaoDeConteudo.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\adm\\Documents\\MBA\\Modulo3\\MBA_DevXpert_PEO\\src\\MBA_DevXpert_PEO.GestaoDeConteudo.Application",
-  "MBA_DevXpert_PEO.GestaoDeConteudo.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\adm\\Documents\\MBA\\Modulo3\\MBA_DevXpert_PEO\\src\\MBA_DevXpert_PEO.GestaoDeConteudo.Domain",
-  "MBA_DevXpert_PEO.GestaoDeConteudo.Infra, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\adm\\Documents\\MBA\\Modulo3\\MBA_DevXpert_PEO\\src\\MBA_DevXpert_PEO.GestaoDeConteudo.Infra",
-  "MBA_DevXpert_PEO.Identity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\adm\\Documents\\MBA\\Modulo3\\MBA_DevXpert_PEO\\src\\MBA_DevXpert_PEO.Identidade",
-  "MBA_DevXpert_PEO.PagamentoEFaturamento.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\adm\\Documents\\MBA\\Modulo3\\MBA_DevXpert_PEO\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Application",
-  "MBA_DevXpert_PEO.PagamentoEFaturamento.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\adm\\Documents\\MBA\\Modulo3\\MBA_DevXpert_PEO\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Domain",
-  "MBA_DevXpert_PEO.PagamentoEFaturamento.Infra, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\adm\\Documents\\MBA\\Modulo3\\MBA_DevXpert_PEO\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Infra"
+  "EventSourcing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Labs\\mba-devxpert-peo\\src\\EventSourcing",
+  "MBA_DevXpert_PEO.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Api",
+  "MBA_DevXpert_PEO.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core",
+  "MBA_DevXpert_PEO.GestaoDeAlunos.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Application",
+  "MBA_DevXpert_PEO.GestaoDeAlunos.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Domain",
+  "MBA_DevXpert_PEO.GestaoDeAlunos.Infra, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Infra",
+  "MBA_DevXpert_PEO.GestaoDeConteudo.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeConteudo.Application",
+  "MBA_DevXpert_PEO.GestaoDeConteudo.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeConteudo.Domain",
+  "MBA_DevXpert_PEO.GestaoDeConteudo.Infra, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeConteudo.Infra",
+  "MBA_DevXpert_PEO.PagamentoEFaturamento.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Application",
+  "MBA_DevXpert_PEO.PagamentoEFaturamento.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Domain",
+  "MBA_DevXpert_PEO.PagamentoEFaturamento.Infra, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Infra"
 }

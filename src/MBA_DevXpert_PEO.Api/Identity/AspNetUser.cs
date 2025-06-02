@@ -3,7 +3,7 @@ using System.Security.Claims;
 using MBA_DevXpert_PEO.Identity;
 using Microsoft.AspNetCore.Http;
 
-namespace MBA_DevXpert_PEO.Identity
+namespace MBA_DevXpert_PEO.Api.Identity
 {
     public class AspNetUser : IUser
     {

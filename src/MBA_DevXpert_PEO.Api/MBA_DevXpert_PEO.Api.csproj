@@ -8,15 +8,19 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.3.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.3.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.4">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.4" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.9.0" />
     <ProjectReference Include="..\EventSourcing\EventSourcing.csproj" />
     <ProjectReference Include="..\MBA_DevXpert_PEO.GestaoDeAlunos.Application\MBA_DevXpert_PEO.GestaoDeAlunos.Application.csproj" />
     <ProjectReference Include="..\MBA_DevXpert_PEO.GestaoDeAlunos.Domain\MBA_DevXpert_PEO.GestaoDeAlunos.Domain.csproj" />
@@ -26,7 +30,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MBA_DevXpert_PEO.GestaoDeConteudo.Application\MBA_DevXpert_PEO.GestaoDeConteudo.Application.csproj" />
-    <ProjectReference Include="..\MBA_DevXpert_PEO.Identidade\MBA_DevXpert_PEO.Identity.csproj" />
     <ProjectReference Include="..\MBA_DevXpert_PEO.PagamentoEFaturamento.Application\MBA_DevXpert_PEO.PagamentoEFaturamento.Application.csproj" />
     <ProjectReference Include="..\MBA_DevXpert_PEO.PagamentoEFaturamento.Domain\MBA_DevXpert_PEO.PagamentoEFaturamento.Domain.csproj" />
     <ProjectReference Include="..\MBA_DevXpert_PEO.PagamentoEFaturamento.Infra\MBA_DevXpert_PEO.PagamentoEFaturamento.Infra.csproj" />

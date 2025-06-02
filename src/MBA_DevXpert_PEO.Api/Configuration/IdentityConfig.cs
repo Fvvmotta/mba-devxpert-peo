@@ -5,8 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using MBA_DevXpert_PEO.Identity;
-using MBA_DevXpert_PEO.Identidade.Data;
+using MBA_DevXpert_PEO.Api.Identity;
 
 namespace MBA_DevXpert_PEO.Api.Configuration
 {
@@ -28,6 +27,7 @@ namespace MBA_DevXpert_PEO.Api.Configuration
             services.AddIdentity<ApplicationUser, IdentityRole<Guid>>()
                 .AddEntityFrameworkStores<IdentityContext>()
                 .AddDefaultTokenProviders();
+            services.AddHttpContextAccessor();
 
             services.AddAuthentication(x =>
             {
@@ -48,7 +48,8 @@ namespace MBA_DevXpert_PEO.Api.Configuration
                     ValidAudience = appSettings.Audience
                 };
             });
-
+            services.AddAuthentication();
+            services.AddAuthorization(); 
             return services;
         }
     }

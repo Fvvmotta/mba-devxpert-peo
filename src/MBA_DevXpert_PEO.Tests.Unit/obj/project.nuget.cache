@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "C7RWuCzP99w=",
+  "dgSpecHash": "FCp15v2IwT4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\adm\\Documents\\MBA\\Modulo3\\MBA_DevXpert_PEO\\src\\MBA_DevXpert_PEO.Tests.Unit\\MBA_DevXpert_PEO.Tests.Unit.csproj",
+  "projectFilePath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Tests.Unit\\MBA_DevXpert_PEO.Tests.Unit.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\adm\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\adm\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",

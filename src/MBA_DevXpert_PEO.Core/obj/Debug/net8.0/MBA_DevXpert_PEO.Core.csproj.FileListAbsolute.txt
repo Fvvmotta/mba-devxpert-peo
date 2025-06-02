@@ -22,3 +22,16 @@ C:\Users\adm\Documents\MBA\Modulo3\MBA_DevXpert_PEO\src\MBA_DevXpert_PEO.Core\ob
 C:\Users\adm\Documents\MBA\Modulo3\MBA_DevXpert_PEO\src\MBA_DevXpert_PEO.Core\obj\Debug\net8.0\refint\MBA_DevXpert_PEO.Core.dll
 C:\Users\adm\Documents\MBA\Modulo3\MBA_DevXpert_PEO\src\MBA_DevXpert_PEO.Core\obj\Debug\net8.0\MBA_DevXpert_PEO.Core.pdb
 C:\Users\adm\Documents\MBA\Modulo3\MBA_DevXpert_PEO\src\MBA_DevXpert_PEO.Core\obj\Debug\net8.0\ref\MBA_DevXpert_PEO.Core.dll
+C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Core\bin\Debug\net8.0\MBA_DevXpert_PEO.Core.deps.json
+C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Core\bin\Debug\net8.0\MBA_DevXpert_PEO.Core.dll
+C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Core\bin\Debug\net8.0\MBA_DevXpert_PEO.Core.pdb
+C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Core\obj\Debug\net8.0\MBA_DevXpert_PEO.Core.csproj.AssemblyReference.cache
+C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Core\obj\Debug\net8.0\MBA_DevXpert_PEO.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Core\obj\Debug\net8.0\MBA_DevXpert_PEO.Core.AssemblyInfoInputs.cache
+C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Core\obj\Debug\net8.0\MBA_DevXpert_PEO.Core.AssemblyInfo.cs
+C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Core\obj\Debug\net8.0\MBA_DevXpert_PEO.Core.csproj.CoreCompileInputs.cache
+C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Core\obj\Debug\net8.0\MBA_DevXpert_PEO.Core.sourcelink.json
+C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Core\obj\Debug\net8.0\MBA_DevXpert_PEO.Core.dll
+C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Core\obj\Debug\net8.0\refint\MBA_DevXpert_PEO.Core.dll
+C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Core\obj\Debug\net8.0\MBA_DevXpert_PEO.Core.pdb
+C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Core\obj\Debug\net8.0\ref\MBA_DevXpert_PEO.Core.dll

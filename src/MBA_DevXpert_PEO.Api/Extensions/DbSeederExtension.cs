@@ -9,9 +9,9 @@ using MBA_DevXpert_PEO.PagamentoEFaturamento.Domain.ValueObjects;
 using MBA_DevXpert_PEO.PagamentoEFaturamento.Infra.Context;
 using MBA_DevXpert_PEO.GestaoDeAlunos.Domain.Entities;
 using MBA_DevXpert_PEO.GestaoDeAlunos.Domain.Repositories;
-using MBA_DevXpert_PEO.Identity;
 using Microsoft.AspNetCore.Identity;
-using MBA_DevXpert_PEO.Identidade.Data;
+using MBA_DevXpert_PEO.Api.Identity;
+
 
 namespace MBA_DevXpert_PEO.Api.Extensions
 {

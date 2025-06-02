@@ -39,7 +39,7 @@ namespace MBA_DevXpert_PEO.Api.Configuration
                     }
                 });
             });
-
+            services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
             return services;
         }
 

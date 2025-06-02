@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Http;
 
 
 
-namespace MBA_DevXpert_PEO.Identidade
+namespace MBA_DevXpert_PEO.Api.Identity
 {
     public class CustomAuthorization
     {

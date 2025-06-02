@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "M7UkgeBCmRM=",
+  "dgSpecHash": "5Ze1Oat0V+k=",
   "success": true,
-  "projectFilePath": "C:\\Users\\adm\\Documents\\MBA\\Modulo3\\MBA_DevXpert_PEO\\src\\MBA_DevXpert_PEO.GestaoDeConteudo.Application\\MBA_DevXpert_PEO.GestaoDeConteudo.Application.csproj",
+  "projectFilePath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeConteudo.Application\\MBA_DevXpert_PEO.GestaoDeConteudo.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\adm\\.nuget\\packages\\eventstore.client\\22.0.0\\eventstore.client.22.0.0.nupkg.sha512",
     "C:\\Users\\adm\\.nuget\\packages\\fluentvalidation\\11.11.0\\fluentvalidation.11.11.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\adm\\Documents\\MBA\\Modulo3\\MBA_DevXpert_PEO\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj": {}
+    "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\adm\\Documents\\MBA\\Modulo3\\MBA_DevXpert_PEO\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj": {
+    "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\adm\\Documents\\MBA\\Modulo3\\MBA_DevXpert_PEO\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj",
+        "projectUniqueName": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj",
         "projectName": "MBA_DevXpert_PEO.Core",
-        "projectPath": "C:\\Users\\adm\\Documents\\MBA\\Modulo3\\MBA_DevXpert_PEO\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj",
+        "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj",
         "packagesPath": "C:\\Users\\adm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\adm\\Documents\\MBA\\Modulo3\\MBA_DevXpert_PEO\\src\\MBA_DevXpert_PEO.Core\\obj\\",
+        "outputPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -75,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

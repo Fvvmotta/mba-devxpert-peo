@@ -4878,16 +4878,19 @@
           "MBA_DevXpert_PEO.GestaoDeAlunos.Infra": "1.0.0",
           "MBA_DevXpert_PEO.GestaoDeConteudo.Application": "1.0.0",
           "MBA_DevXpert_PEO.GestaoDeConteudo.Infra": "1.0.0",
-          "MBA_DevXpert_PEO.Identity": "1.0.0",
           "MBA_DevXpert_PEO.PagamentoEFaturamento.Application": "1.0.0",
           "MBA_DevXpert_PEO.PagamentoEFaturamento.Domain": "1.0.0",
           "MBA_DevXpert_PEO.PagamentoEFaturamento.Infra": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.4",
+          "Microsoft.AspNetCore.Http": "2.3.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.4",
+          "Microsoft.AspNetCore.Mvc": "2.3.0",
           "Microsoft.AspNetCore.Mvc.Versioning": "5.1.0",
           "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer": "5.1.0",
+          "Microsoft.EntityFrameworkCore": "9.0.4",
           "Microsoft.EntityFrameworkCore.InMemory": "9.0.4",
-          "Swashbuckle.AspNetCore": "6.6.2"
+          "Swashbuckle.AspNetCore": "6.6.2",
+          "System.IdentityModel.Tokens.Jwt": "8.9.0"
         },
         "compile": {
           "bin/placeholder/MBA_DevXpert_PEO.Api.dll": {}
@@ -5001,23 +5004,6 @@
         },
         "runtime": {
           "bin/placeholder/MBA_DevXpert_PEO.GestaoDeConteudo.Infra.dll": {}
-        }
-      },
-      "MBA_DevXpert_PEO.Identity/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "Microsoft.AspNetCore.Http": "2.3.0",
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.4",
-          "Microsoft.AspNetCore.Mvc": "2.3.0",
-          "Microsoft.EntityFrameworkCore": "9.0.4",
-          "System.IdentityModel.Tokens.Jwt": "8.9.0"
-        },
-        "compile": {
-          "bin/placeholder/MBA_DevXpert_PEO.Identity.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/MBA_DevXpert_PEO.Identity.dll": {}
         }
       },
       "MBA_DevXpert_PEO.PagamentoEFaturamento.Application/1.0.0": {
@@ -13180,11 +13166,6 @@
       "path": "../MBA_DevXpert_PEO.GestaoDeConteudo.Infra/MBA_DevXpert_PEO.GestaoDeConteudo.Infra.csproj",
       "msbuildProject": "../MBA_DevXpert_PEO.GestaoDeConteudo.Infra/MBA_DevXpert_PEO.GestaoDeConteudo.Infra.csproj"
     },
-    "MBA_DevXpert_PEO.Identity/1.0.0": {
-      "type": "project",
-      "path": "../MBA_DevXpert_PEO.Identidade/MBA_DevXpert_PEO.Identity.csproj",
-      "msbuildProject": "../MBA_DevXpert_PEO.Identidade/MBA_DevXpert_PEO.Identity.csproj"
-    },
     "MBA_DevXpert_PEO.PagamentoEFaturamento.Application/1.0.0": {
       "type": "project",
       "path": "../MBA_DevXpert_PEO.PagamentoEFaturamento.Application/MBA_DevXpert_PEO.PagamentoEFaturamento.Application.csproj",
@@ -13218,11 +13199,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\adm\\Documents\\MBA\\Modulo3\\MBA_DevXpert_PEO\\src\\MBA_DevXpert_PEO.Tests.Integration\\MBA_DevXpert_PEO.Tests.Integration.csproj",
+      "projectUniqueName": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Tests.Integration\\MBA_DevXpert_PEO.Tests.Integration.csproj",
       "projectName": "MBA_DevXpert_PEO.Tests.Integration",
-      "projectPath": "C:\\Users\\adm\\Documents\\MBA\\Modulo3\\MBA_DevXpert_PEO\\src\\MBA_DevXpert_PEO.Tests.Integration\\MBA_DevXpert_PEO.Tests.Integration.csproj",
+      "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Tests.Integration\\MBA_DevXpert_PEO.Tests.Integration.csproj",
       "packagesPath": "C:\\Users\\adm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\adm\\Documents\\MBA\\Modulo3\\MBA_DevXpert_PEO\\src\\MBA_DevXpert_PEO.Tests.Integration\\obj\\",
+      "outputPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Tests.Integration\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -13243,8 +13224,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\adm\\Documents\\MBA\\Modulo3\\MBA_DevXpert_PEO\\src\\MBA_DevXpert_PEO.Api\\MBA_DevXpert_PEO.Api.csproj": {
-              "projectPath": "C:\\Users\\adm\\Documents\\MBA\\Modulo3\\MBA_DevXpert_PEO\\src\\MBA_DevXpert_PEO.Api\\MBA_DevXpert_PEO.Api.csproj"
+            "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Api\\MBA_DevXpert_PEO.Api.csproj": {
+              "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Api\\MBA_DevXpert_PEO.Api.csproj"
             }
           }
         }
@@ -13304,7 +13285,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -3398,16 +3398,19 @@
           "MBA_DevXpert_PEO.GestaoDeAlunos.Infra": "1.0.0",
           "MBA_DevXpert_PEO.GestaoDeConteudo.Application": "1.0.0",
           "MBA_DevXpert_PEO.GestaoDeConteudo.Infra": "1.0.0",
-          "MBA_DevXpert_PEO.Identity": "1.0.0",
           "MBA_DevXpert_PEO.PagamentoEFaturamento.Application": "1.0.0",
           "MBA_DevXpert_PEO.PagamentoEFaturamento.Domain": "1.0.0",
           "MBA_DevXpert_PEO.PagamentoEFaturamento.Infra": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.4",
+          "Microsoft.AspNetCore.Http": "2.3.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.4",
+          "Microsoft.AspNetCore.Mvc": "2.3.0",
           "Microsoft.AspNetCore.Mvc.Versioning": "5.1.0",
           "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer": "5.1.0",
+          "Microsoft.EntityFrameworkCore": "9.0.4",
           "Microsoft.EntityFrameworkCore.InMemory": "9.0.4",
-          "Swashbuckle.AspNetCore": "6.6.2"
+          "Swashbuckle.AspNetCore": "6.6.2",
+          "System.IdentityModel.Tokens.Jwt": "8.9.0"
         },
         "runtime": {
           "MBA_DevXpert_PEO.Api.dll": {
@@ -3528,24 +3531,6 @@
         },
         "compile": {
           "MBA_DevXpert_PEO.GestaoDeConteudo.Infra.dll": {}
-        }
-      },
-      "MBA_DevXpert_PEO.Identity/1.0.0": {
-        "dependencies": {
-          "Microsoft.AspNetCore.Http": "2.3.0",
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.4",
-          "Microsoft.AspNetCore.Mvc": "2.3.0",
-          "Microsoft.EntityFrameworkCore": "9.0.4",
-          "System.IdentityModel.Tokens.Jwt": "8.9.0"
-        },
-        "runtime": {
-          "MBA_DevXpert_PEO.Identity.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        },
-        "compile": {
-          "MBA_DevXpert_PEO.Identity.dll": {}
         }
       },
       "MBA_DevXpert_PEO.PagamentoEFaturamento.Application/1.0.0": {
@@ -7122,11 +7107,6 @@
       "sha512": ""
     },
     "MBA_DevXpert_PEO.GestaoDeConteudo.Infra/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "MBA_DevXpert_PEO.Identity/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "azpWukUCA/8=",
+  "dgSpecHash": "43SsTZDDsuI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\adm\\Documents\\MBA\\Modulo3\\MBA_DevXpert_PEO\\src\\EventSourcing\\EventSourcing.csproj",
+  "projectFilePath": "C:\\Labs\\mba-devxpert-peo\\src\\EventSourcing\\EventSourcing.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\adm\\.nuget\\packages\\eventstore.client\\22.0.0\\eventstore.client.22.0.0.nupkg.sha512",
     "C:\\Users\\adm\\.nuget\\packages\\fluentvalidation\\11.11.0\\fluentvalidation.11.11.0.nupkg.sha512",

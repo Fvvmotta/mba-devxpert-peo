@@ -203,11 +203,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\adm\\Documents\\MBA\\Modulo3\\MBA_DevXpert_PEO\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Application\\MBA_DevXpert_PEO.GestaoDeAlunos.Application.csproj",
+      "projectUniqueName": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Application\\MBA_DevXpert_PEO.GestaoDeAlunos.Application.csproj",
       "projectName": "MBA_DevXpert_PEO.GestaoDeAlunos.Application",
-      "projectPath": "C:\\Users\\adm\\Documents\\MBA\\Modulo3\\MBA_DevXpert_PEO\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Application\\MBA_DevXpert_PEO.GestaoDeAlunos.Application.csproj",
+      "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Application\\MBA_DevXpert_PEO.GestaoDeAlunos.Application.csproj",
       "packagesPath": "C:\\Users\\adm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\adm\\Documents\\MBA\\Modulo3\\MBA_DevXpert_PEO\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Application\\obj\\",
+      "outputPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -228,11 +228,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\adm\\Documents\\MBA\\Modulo3\\MBA_DevXpert_PEO\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj": {
-              "projectPath": "C:\\Users\\adm\\Documents\\MBA\\Modulo3\\MBA_DevXpert_PEO\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj"
+            "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj": {
+              "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj"
             },
-            "C:\\Users\\adm\\Documents\\MBA\\Modulo3\\MBA_DevXpert_PEO\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Domain\\MBA_DevXpert_PEO.GestaoDeAlunos.Domain.csproj": {
-              "projectPath": "C:\\Users\\adm\\Documents\\MBA\\Modulo3\\MBA_DevXpert_PEO\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Domain\\MBA_DevXpert_PEO.GestaoDeAlunos.Domain.csproj"
+            "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Domain\\MBA_DevXpert_PEO.GestaoDeAlunos.Domain.csproj": {
+              "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Domain\\MBA_DevXpert_PEO.GestaoDeAlunos.Domain.csproj"
             }
           }
         }
@@ -268,7 +268,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

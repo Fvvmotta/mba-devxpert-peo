@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace MBA_DevXpert_PEO.Identity
+namespace MBA_DevXpert_PEO.Api.Identity
 {
     public class AppSettings
     {
