@@ -4,7 +4,7 @@ using System.Net.Http.Json;
 using System.Text;
 using System.Threading.Tasks;
 using FluentAssertions;
-using MBA_DevXpert_PEO.Tests.Integration.GestaoDeConteudo.Configuration;
+using MBA_DevXpert_PEO.Tests.Integration.Conteudos.Configuration;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Newtonsoft.Json;
 using Xunit;

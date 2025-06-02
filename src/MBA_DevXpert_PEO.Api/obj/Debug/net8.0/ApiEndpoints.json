@@ -25,7 +25,7 @@
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "MBA_DevXpert_PEO.GestaoDeAlunos.Application.DTOs.CriarAlunoDto",
+        "Type": "MBA_DevXpert_PEO.Alunos.Application.DTOs.CriarAlunoDto",
         "IsRequired": true
       },
       {
@@ -72,7 +72,7 @@
       },
       {
         "Name": "dto",
-        "Type": "MBA_DevXpert_PEO.GestaoDeAlunos.Application.DTOs.AtualizarAlunoDto",
+        "Type": "MBA_DevXpert_PEO.Alunos.Application.DTOs.AtualizarAlunoDto",
         "IsRequired": true
       },
       {
@@ -130,7 +130,7 @@
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "MBA_DevXpert_PEO.GestaoDeConteudo.Application.DTOs.CursoInputDTO",
+        "Type": "MBA_DevXpert_PEO.Conteudos.Application.DTOs.CursoInputDTO",
         "IsRequired": true
       },
       {
@@ -156,7 +156,7 @@
       },
       {
         "Name": "dto",
-        "Type": "MBA_DevXpert_PEO.GestaoDeConteudo.Application.DTOs.AdicionarAulaInputDTO",
+        "Type": "MBA_DevXpert_PEO.Conteudos.Application.DTOs.AdicionarAulaInputDTO",
         "IsRequired": true
       },
       {
@@ -203,7 +203,7 @@
       },
       {
         "Name": "dto",
-        "Type": "MBA_DevXpert_PEO.GestaoDeConteudo.Application.DTOs.UpdateCursoInputDTO",
+        "Type": "MBA_DevXpert_PEO.Conteudos.Application.DTOs.UpdateCursoInputDTO",
         "IsRequired": true
       },
       {
@@ -236,7 +236,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MBA_DevXpert_PEO.GestaoDeAlunos.API.Controllers.AlunoController",
+    "ContainingType": "MBA_DevXpert_PEO.Alunos.API.Controllers.AlunoController",
     "Method": "AtualizarAluno",
     "RelativePath": "api/alunos/{alunoId}",
     "HttpMethod": "PUT",
@@ -250,7 +250,7 @@
       },
       {
         "Name": "dto",
-        "Type": "MBA_DevXpert_PEO.GestaoDeAlunos.Application.DTOs.AtualizarAlunoDto",
+        "Type": "MBA_DevXpert_PEO.Alunos.Application.DTOs.AtualizarAlunoDto",
         "IsRequired": true
       },
       {
@@ -262,7 +262,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MBA_DevXpert_PEO.GestaoDeAlunos.API.Controllers.AlunoController",
+    "ContainingType": "MBA_DevXpert_PEO.Alunos.API.Controllers.AlunoController",
     "Method": "CriarMatricula",
     "RelativePath": "api/alunos/{alunoId}/matriculas",
     "HttpMethod": "POST",
@@ -276,7 +276,7 @@
       },
       {
         "Name": "dto",
-        "Type": "MBA_DevXpert_PEO.GestaoDeAlunos.Application.DTOs.CriarMatriculaDto",
+        "Type": "MBA_DevXpert_PEO.Alunos.Application.DTOs.CriarMatriculaDto",
         "IsRequired": true
       },
       {
@@ -288,7 +288,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MBA_DevXpert_PEO.GestaoDeAlunos.API.Controllers.AlunoController",
+    "ContainingType": "MBA_DevXpert_PEO.Alunos.API.Controllers.AlunoController",
     "Method": "FinalizarCurso",
     "RelativePath": "api/alunos/{alunoId}/matriculas/{matriculaId}/finalizar",
     "HttpMethod": "POST",
@@ -314,7 +314,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MBA_DevXpert_PEO.GestaoDeAlunos.API.Controllers.AlunoController",
+    "ContainingType": "MBA_DevXpert_PEO.Alunos.API.Controllers.AlunoController",
     "Method": "ObterMatriculasDetalhadas",
     "RelativePath": "api/alunos/matriculas-detalhadas",
     "HttpMethod": "GET",
@@ -392,7 +392,7 @@
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "MBA_DevXpert_PEO.PagamentoEFaturamento.Application.DTOs.RealizarPagamentoDto",
+        "Type": "MBA_DevXpert_PEO.Pagamentos.Application.DTOs.RealizarPagamentoDto",
         "IsRequired": true
       },
       {

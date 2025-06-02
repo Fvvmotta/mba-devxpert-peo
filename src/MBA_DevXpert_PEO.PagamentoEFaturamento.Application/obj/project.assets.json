@@ -74,19 +74,6 @@
         "runtime": {
           "bin/placeholder/MBA_DevXpert_PEO.Core.dll": {}
         }
-      },
-      "MBA_DevXpert_PEO.PagamentoEFaturamento.Domain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "MBA_DevXpert_PEO.Core": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/MBA_DevXpert_PEO.PagamentoEFaturamento.Domain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/MBA_DevXpert_PEO.PagamentoEFaturamento.Domain.dll": {}
-        }
       }
     }
   },
@@ -183,17 +170,12 @@
       "type": "project",
       "path": "../MBA_DevXpert_PEO.Core/MBA_DevXpert_PEO.Core.csproj",
       "msbuildProject": "../MBA_DevXpert_PEO.Core/MBA_DevXpert_PEO.Core.csproj"
-    },
-    "MBA_DevXpert_PEO.PagamentoEFaturamento.Domain/1.0.0": {
-      "type": "project",
-      "path": "../MBA_DevXpert_PEO.PagamentoEFaturamento.Domain/MBA_DevXpert_PEO.PagamentoEFaturamento.Domain.csproj",
-      "msbuildProject": "../MBA_DevXpert_PEO.PagamentoEFaturamento.Domain/MBA_DevXpert_PEO.PagamentoEFaturamento.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "MBA_DevXpert_PEO.Core >= 1.0.0",
-      "MBA_DevXpert_PEO.PagamentoEFaturamento.Domain >= 1.0.0"
+      "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Domain\\MBA_DevXpert_PEO.Pagamentos.Domain.csproj",
+      "MBA_DevXpert_PEO.Core >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -203,9 +185,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Application\\MBA_DevXpert_PEO.PagamentoEFaturamento.Application.csproj",
-      "projectName": "MBA_DevXpert_PEO.PagamentoEFaturamento.Application",
-      "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Application\\MBA_DevXpert_PEO.PagamentoEFaturamento.Application.csproj",
+      "projectUniqueName": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Application\\MBA_DevXpert_PEO.Pagamentos.Application.csproj",
+      "projectName": "MBA_DevXpert_PEO.Pagamentos.Application",
+      "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Application\\MBA_DevXpert_PEO.Pagamentos.Application.csproj",
       "packagesPath": "C:\\Users\\adm\\.nuget\\packages\\",
       "outputPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Application\\obj\\",
       "projectStyle": "PackageReference",
@@ -231,8 +213,8 @@
             "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj": {
               "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj"
             },
-            "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Domain\\MBA_DevXpert_PEO.PagamentoEFaturamento.Domain.csproj": {
-              "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Domain\\MBA_DevXpert_PEO.PagamentoEFaturamento.Domain.csproj"
+            "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Domain\\MBA_DevXpert_PEO.Pagamentos.Domain.csproj": {
+              "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Domain\\MBA_DevXpert_PEO.Pagamentos.Domain.csproj"
             }
           }
         }
@@ -271,5 +253,16 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Não é possível encontrar as informações do projeto para 'C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Domain\\MBA_DevXpert_PEO.Pagamentos.Domain.csproj'. Se você está usando o Visual Studio, isso pode ocorrer porque o projeto não está carregado ou não faz parte da solução atual. Portanto, execute uma restauração usando a linha de comando. Do contrário, o arquivo de projeto pode ser inválido ou pode haver destinos obrigatórios para a restauração ausentes.",
+      "libraryId": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Domain\\MBA_DevXpert_PEO.Pagamentos.Domain.csproj",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

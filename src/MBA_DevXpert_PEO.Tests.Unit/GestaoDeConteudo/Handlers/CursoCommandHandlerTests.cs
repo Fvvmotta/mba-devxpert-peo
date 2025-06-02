@@ -10,13 +10,13 @@ using FluentValidation;
 using MBA_DevXpert_PEO.Core.Communication.Mediator;
 using MBA_DevXpert_PEO.Core.Data;
 using MBA_DevXpert_PEO.Core.Messages.CommonMessages.Notifications;
-using MBA_DevXpert_PEO.GestaoDeConteudo.Application.Commands;
-using MBA_DevXpert_PEO.GestaoDeConteudo.Application.Handlers;
-using MBA_DevXpert_PEO.GestaoDeConteudo.Domain.Entities;
-using MBA_DevXpert_PEO.GestaoDeConteudo.Domain.Repositories;
-using MBA_DevXpert_PEO.GestaoDeConteudo.Domain.ValueObjects;
+using MBA_DevXpert_PEO.Conteudos.Application.Commands;
+using MBA_DevXpert_PEO.Conteudos.Application.Handlers;
+using MBA_DevXpert_PEO.Conteudos.Domain.Entities;
+using MBA_DevXpert_PEO.Conteudos.Domain.Repositories;
+using MBA_DevXpert_PEO.Conteudos.Domain.ValueObjects;
 
-namespace MBA_DevXpert_PEO.Tests.Unit.GestaoDeConteudo.Handlers
+namespace MBA_DevXpert_PEO.Tests.Unit.Conteudos.Handlers
 {
     public class CursoCommandHandlerTests
     {

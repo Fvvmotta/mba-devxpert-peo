@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using MBA_DevXpert_PEO.GestaoDeConteudo.Application.Commands;
+using MBA_DevXpert_PEO.Conteudos.Application.Commands;
 
 namespace MBA_DevXpert_PEO.Api.Configuration
 {

@@ -22,17 +22,17 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.9.0" />
     <ProjectReference Include="..\EventSourcing\EventSourcing.csproj" />
-    <ProjectReference Include="..\MBA_DevXpert_PEO.GestaoDeAlunos.Application\MBA_DevXpert_PEO.GestaoDeAlunos.Application.csproj" />
-    <ProjectReference Include="..\MBA_DevXpert_PEO.GestaoDeAlunos.Domain\MBA_DevXpert_PEO.GestaoDeAlunos.Domain.csproj" />
-	  <ProjectReference Include="..\MBA_DevXpert_PEO.GestaoDeConteudo.Infra\MBA_DevXpert_PEO.GestaoDeConteudo.Infra.csproj" />
-	  <ProjectReference Include="..\MBA_DevXpert_PEO.GestaoDeAlunos.Infra\MBA_DevXpert_PEO.GestaoDeAlunos.Infra.csproj" />
+    <ProjectReference Include="..\MBA_DevXpert_PEO.Alunos.Application\MBA_DevXpert_PEO.Alunos.Application.csproj" />
+    <ProjectReference Include="..\MBA_DevXpert_PEO.Alunos.Domain\MBA_DevXpert_PEO.Alunos.Domain.csproj" />
+	  <ProjectReference Include="..\MBA_DevXpert_PEO.Conteudos.Infra\MBA_DevXpert_PEO.Conteudos.Infra.csproj" />
+	  <ProjectReference Include="..\MBA_DevXpert_PEO.Alunos.Infra\MBA_DevXpert_PEO.Alunos.Infra.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MBA_DevXpert_PEO.GestaoDeConteudo.Application\MBA_DevXpert_PEO.GestaoDeConteudo.Application.csproj" />
-    <ProjectReference Include="..\MBA_DevXpert_PEO.PagamentoEFaturamento.Application\MBA_DevXpert_PEO.PagamentoEFaturamento.Application.csproj" />
-    <ProjectReference Include="..\MBA_DevXpert_PEO.PagamentoEFaturamento.Domain\MBA_DevXpert_PEO.PagamentoEFaturamento.Domain.csproj" />
-    <ProjectReference Include="..\MBA_DevXpert_PEO.PagamentoEFaturamento.Infra\MBA_DevXpert_PEO.PagamentoEFaturamento.Infra.csproj" />
+    <ProjectReference Include="..\MBA_DevXpert_PEO.Conteudos.Application\MBA_DevXpert_PEO.Conteudos.Application.csproj" />
+    <ProjectReference Include="..\MBA_DevXpert_PEO.Pagamentos.Application\MBA_DevXpert_PEO.Pagamentos.Application.csproj" />
+    <ProjectReference Include="..\MBA_DevXpert_PEO.Pagamentos.Domain\MBA_DevXpert_PEO.Pagamentos.Domain.csproj" />
+    <ProjectReference Include="..\MBA_DevXpert_PEO.Pagamentos.Infra\MBA_DevXpert_PEO.Pagamentos.Infra.csproj" />
   </ItemGroup>
 
 </Project>

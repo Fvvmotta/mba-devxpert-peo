@@ -20,10 +20,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MBA_DevXpert_PEO.Core\MBA_DevXpert_PEO.Core.csproj" />
-    <ProjectReference Include="..\MBA_DevXpert_PEO.GestaoDeAlunos.Application\MBA_DevXpert_PEO.GestaoDeAlunos.Application.csproj" />
-    <ProjectReference Include="..\MBA_DevXpert_PEO.GestaoDeAlunos.Domain\MBA_DevXpert_PEO.GestaoDeAlunos.Domain.csproj" />
-    <ProjectReference Include="..\MBA_DevXpert_PEO.GestaoDeConteudo.Application\MBA_DevXpert_PEO.GestaoDeConteudo.Application.csproj" />
-    <ProjectReference Include="..\MBA_DevXpert_PEO.GestaoDeConteudo.Domain\MBA_DevXpert_PEO.GestaoDeConteudo.Domain.csproj" />
+    <ProjectReference Include="..\MBA_DevXpert_PEO.Alunos.Application\MBA_DevXpert_PEO.Alunos.Application.csproj" />
+    <ProjectReference Include="..\MBA_DevXpert_PEO.Alunos.Domain\MBA_DevXpert_PEO.Alunos.Domain.csproj" />
+    <ProjectReference Include="..\MBA_DevXpert_PEO.Conteudos.Application\MBA_DevXpert_PEO.Conteudos.Application.csproj" />
+    <ProjectReference Include="..\MBA_DevXpert_PEO.Conteudos.Domain\MBA_DevXpert_PEO.Conteudos.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>

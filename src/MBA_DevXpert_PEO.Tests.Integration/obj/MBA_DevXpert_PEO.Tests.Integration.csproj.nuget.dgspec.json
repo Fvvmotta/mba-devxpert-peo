@@ -87,6 +87,249 @@
         }
       }
     },
+    "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Alunos.Application\\MBA_DevXpert_PEO.Alunos.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Alunos.Application\\MBA_DevXpert_PEO.Alunos.Application.csproj",
+        "projectName": "MBA_DevXpert_PEO.Alunos.Application",
+        "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Alunos.Application\\MBA_DevXpert_PEO.Alunos.Application.csproj",
+        "packagesPath": "C:\\Users\\adm\\.nuget\\packages\\",
+        "outputPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Alunos.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\adm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Alunos.Domain\\MBA_DevXpert_PEO.Alunos.Domain.csproj": {
+                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Alunos.Domain\\MBA_DevXpert_PEO.Alunos.Domain.csproj"
+              },
+              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj": {
+                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.204/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Alunos.Domain\\MBA_DevXpert_PEO.Alunos.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Alunos.Domain\\MBA_DevXpert_PEO.Alunos.Domain.csproj",
+        "projectName": "MBA_DevXpert_PEO.Alunos.Domain",
+        "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Alunos.Domain\\MBA_DevXpert_PEO.Alunos.Domain.csproj",
+        "packagesPath": "C:\\Users\\adm\\.nuget\\packages\\",
+        "outputPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Alunos.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\adm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj": {
+                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.204/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Alunos.Infra\\MBA_DevXpert_PEO.Alunos.Infra.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Alunos.Infra\\MBA_DevXpert_PEO.Alunos.Infra.csproj",
+        "projectName": "MBA_DevXpert_PEO.Alunos.Infra",
+        "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Alunos.Infra\\MBA_DevXpert_PEO.Alunos.Infra.csproj",
+        "packagesPath": "C:\\Users\\adm\\.nuget\\packages\\",
+        "outputPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Alunos.Infra\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\adm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Alunos.Domain\\MBA_DevXpert_PEO.Alunos.Domain.csproj": {
+                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Alunos.Domain\\MBA_DevXpert_PEO.Alunos.Domain.csproj"
+              },
+              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj": {
+                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.204/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Api\\MBA_DevXpert_PEO.Api.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -118,29 +361,29 @@
               "C:\\Labs\\mba-devxpert-peo\\src\\EventSourcing\\EventSourcing.csproj": {
                 "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\EventSourcing\\EventSourcing.csproj"
               },
-              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Application\\MBA_DevXpert_PEO.GestaoDeAlunos.Application.csproj": {
-                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Application\\MBA_DevXpert_PEO.GestaoDeAlunos.Application.csproj"
+              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Alunos.Application\\MBA_DevXpert_PEO.Alunos.Application.csproj": {
+                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Alunos.Application\\MBA_DevXpert_PEO.Alunos.Application.csproj"
               },
-              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Domain\\MBA_DevXpert_PEO.GestaoDeAlunos.Domain.csproj": {
-                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Domain\\MBA_DevXpert_PEO.GestaoDeAlunos.Domain.csproj"
+              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Alunos.Domain\\MBA_DevXpert_PEO.Alunos.Domain.csproj": {
+                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Alunos.Domain\\MBA_DevXpert_PEO.Alunos.Domain.csproj"
               },
-              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Infra\\MBA_DevXpert_PEO.GestaoDeAlunos.Infra.csproj": {
-                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Infra\\MBA_DevXpert_PEO.GestaoDeAlunos.Infra.csproj"
+              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Alunos.Infra\\MBA_DevXpert_PEO.Alunos.Infra.csproj": {
+                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Alunos.Infra\\MBA_DevXpert_PEO.Alunos.Infra.csproj"
               },
-              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeConteudo.Application\\MBA_DevXpert_PEO.GestaoDeConteudo.Application.csproj": {
-                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeConteudo.Application\\MBA_DevXpert_PEO.GestaoDeConteudo.Application.csproj"
+              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Conteudos.Application\\MBA_DevXpert_PEO.Conteudos.Application.csproj": {
+                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Conteudos.Application\\MBA_DevXpert_PEO.Conteudos.Application.csproj"
               },
-              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeConteudo.Infra\\MBA_DevXpert_PEO.GestaoDeConteudo.Infra.csproj": {
-                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeConteudo.Infra\\MBA_DevXpert_PEO.GestaoDeConteudo.Infra.csproj"
+              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Conteudos.Infra\\MBA_DevXpert_PEO.Conteudos.Infra.csproj": {
+                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Conteudos.Infra\\MBA_DevXpert_PEO.Conteudos.Infra.csproj"
               },
-              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Application\\MBA_DevXpert_PEO.PagamentoEFaturamento.Application.csproj": {
-                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Application\\MBA_DevXpert_PEO.PagamentoEFaturamento.Application.csproj"
+              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Application\\MBA_DevXpert_PEO.Pagamentos.Application.csproj": {
+                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Application\\MBA_DevXpert_PEO.Pagamentos.Application.csproj"
               },
-              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Domain\\MBA_DevXpert_PEO.PagamentoEFaturamento.Domain.csproj": {
-                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Domain\\MBA_DevXpert_PEO.PagamentoEFaturamento.Domain.csproj"
+              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Domain\\MBA_DevXpert_PEO.Pagamentos.Domain.csproj": {
+                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Domain\\MBA_DevXpert_PEO.Pagamentos.Domain.csproj"
               },
-              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Infra\\MBA_DevXpert_PEO.PagamentoEFaturamento.Infra.csproj": {
-                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Infra\\MBA_DevXpert_PEO.PagamentoEFaturamento.Infra.csproj"
+              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Infra\\MBA_DevXpert_PEO.Pagamentos.Infra.csproj": {
+                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Infra\\MBA_DevXpert_PEO.Pagamentos.Infra.csproj"
               }
             }
           }
@@ -231,6 +474,252 @@
         }
       }
     },
+    "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Conteudos.Application\\MBA_DevXpert_PEO.Conteudos.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Conteudos.Application\\MBA_DevXpert_PEO.Conteudos.Application.csproj",
+        "projectName": "MBA_DevXpert_PEO.Conteudos.Application",
+        "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Conteudos.Application\\MBA_DevXpert_PEO.Conteudos.Application.csproj",
+        "packagesPath": "C:\\Users\\adm\\.nuget\\packages\\",
+        "outputPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Conteudos.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\adm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Conteudos.Domain\\MBA_DevXpert_PEO.Conteudos.Domain.csproj": {
+                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Conteudos.Domain\\MBA_DevXpert_PEO.Conteudos.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.204/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Conteudos.Domain\\MBA_DevXpert_PEO.Conteudos.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Conteudos.Domain\\MBA_DevXpert_PEO.Conteudos.Domain.csproj",
+        "projectName": "MBA_DevXpert_PEO.Conteudos.Domain",
+        "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Conteudos.Domain\\MBA_DevXpert_PEO.Conteudos.Domain.csproj",
+        "packagesPath": "C:\\Users\\adm\\.nuget\\packages\\",
+        "outputPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Conteudos.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\adm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj": {
+                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "EventStore.Client": {
+              "target": "Package",
+              "version": "[22.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.204/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Conteudos.Infra\\MBA_DevXpert_PEO.Conteudos.Infra.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Conteudos.Infra\\MBA_DevXpert_PEO.Conteudos.Infra.csproj",
+        "projectName": "MBA_DevXpert_PEO.Conteudos.Infra",
+        "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Conteudos.Infra\\MBA_DevXpert_PEO.Conteudos.Infra.csproj",
+        "packagesPath": "C:\\Users\\adm\\.nuget\\packages\\",
+        "outputPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Conteudos.Infra\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\adm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Conteudos.Domain\\MBA_DevXpert_PEO.Conteudos.Domain.csproj": {
+                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Conteudos.Domain\\MBA_DevXpert_PEO.Conteudos.Domain.csproj"
+              },
+              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj": {
+                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.sqlserver": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.204/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -306,14 +795,14 @@
         }
       }
     },
-    "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Application\\MBA_DevXpert_PEO.GestaoDeAlunos.Application.csproj": {
+    "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Application\\MBA_DevXpert_PEO.Pagamentos.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Application\\MBA_DevXpert_PEO.GestaoDeAlunos.Application.csproj",
-        "projectName": "MBA_DevXpert_PEO.GestaoDeAlunos.Application",
-        "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Application\\MBA_DevXpert_PEO.GestaoDeAlunos.Application.csproj",
+        "projectUniqueName": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Application\\MBA_DevXpert_PEO.Pagamentos.Application.csproj",
+        "projectName": "MBA_DevXpert_PEO.Pagamentos.Application",
+        "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Application\\MBA_DevXpert_PEO.Pagamentos.Application.csproj",
         "packagesPath": "C:\\Users\\adm\\.nuget\\packages\\",
-        "outputPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Application\\obj\\",
+        "outputPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -337,8 +826,8 @@
               "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj": {
                 "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj"
               },
-              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Domain\\MBA_DevXpert_PEO.GestaoDeAlunos.Domain.csproj": {
-                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Domain\\MBA_DevXpert_PEO.GestaoDeAlunos.Domain.csproj"
+              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Domain\\MBA_DevXpert_PEO.Pagamentos.Domain.csproj": {
+                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Domain\\MBA_DevXpert_PEO.Pagamentos.Domain.csproj"
               }
             }
           }
@@ -378,14 +867,14 @@
         }
       }
     },
-    "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Domain\\MBA_DevXpert_PEO.GestaoDeAlunos.Domain.csproj": {
+    "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Domain\\MBA_DevXpert_PEO.Pagamentos.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Domain\\MBA_DevXpert_PEO.GestaoDeAlunos.Domain.csproj",
-        "projectName": "MBA_DevXpert_PEO.GestaoDeAlunos.Domain",
-        "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Domain\\MBA_DevXpert_PEO.GestaoDeAlunos.Domain.csproj",
+        "projectUniqueName": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Domain\\MBA_DevXpert_PEO.Pagamentos.Domain.csproj",
+        "projectName": "MBA_DevXpert_PEO.Pagamentos.Domain",
+        "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Domain\\MBA_DevXpert_PEO.Pagamentos.Domain.csproj",
         "packagesPath": "C:\\Users\\adm\\.nuget\\packages\\",
-        "outputPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Domain\\obj\\",
+        "outputPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -447,260 +936,14 @@
         }
       }
     },
-    "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Infra\\MBA_DevXpert_PEO.GestaoDeAlunos.Infra.csproj": {
+    "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Infra\\MBA_DevXpert_PEO.Pagamentos.Infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Infra\\MBA_DevXpert_PEO.GestaoDeAlunos.Infra.csproj",
-        "projectName": "MBA_DevXpert_PEO.GestaoDeAlunos.Infra",
-        "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Infra\\MBA_DevXpert_PEO.GestaoDeAlunos.Infra.csproj",
+        "projectUniqueName": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Infra\\MBA_DevXpert_PEO.Pagamentos.Infra.csproj",
+        "projectName": "MBA_DevXpert_PEO.Pagamentos.Infra",
+        "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Infra\\MBA_DevXpert_PEO.Pagamentos.Infra.csproj",
         "packagesPath": "C:\\Users\\adm\\.nuget\\packages\\",
-        "outputPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Infra\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\adm\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
-            "projectReferences": {
-              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj": {
-                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj"
-              },
-              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Domain\\MBA_DevXpert_PEO.GestaoDeAlunos.Domain.csproj": {
-                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Domain\\MBA_DevXpert_PEO.GestaoDeAlunos.Domain.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
-      },
-      "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
-          "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[9.0.4, )"
-            },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[9.0.4, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[9.0.4, )"
-            },
-            "Microsoft.EntityFrameworkCore.Sqlite": {
-              "target": "Package",
-              "version": "[9.0.4, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[9.0.4, )"
-            },
-            "Microsoft.Extensions.Configuration.Json": {
-              "target": "Package",
-              "version": "[9.0.4, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.204/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeConteudo.Application\\MBA_DevXpert_PEO.GestaoDeConteudo.Application.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeConteudo.Application\\MBA_DevXpert_PEO.GestaoDeConteudo.Application.csproj",
-        "projectName": "MBA_DevXpert_PEO.GestaoDeConteudo.Application",
-        "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeConteudo.Application\\MBA_DevXpert_PEO.GestaoDeConteudo.Application.csproj",
-        "packagesPath": "C:\\Users\\adm\\.nuget\\packages\\",
-        "outputPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeConteudo.Application\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\adm\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
-            "projectReferences": {
-              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeConteudo.Domain\\MBA_DevXpert_PEO.GestaoDeConteudo.Domain.csproj": {
-                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeConteudo.Domain\\MBA_DevXpert_PEO.GestaoDeConteudo.Domain.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
-      },
-      "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.204/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeConteudo.Domain\\MBA_DevXpert_PEO.GestaoDeConteudo.Domain.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeConteudo.Domain\\MBA_DevXpert_PEO.GestaoDeConteudo.Domain.csproj",
-        "projectName": "MBA_DevXpert_PEO.GestaoDeConteudo.Domain",
-        "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeConteudo.Domain\\MBA_DevXpert_PEO.GestaoDeConteudo.Domain.csproj",
-        "packagesPath": "C:\\Users\\adm\\.nuget\\packages\\",
-        "outputPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeConteudo.Domain\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\adm\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
-            "projectReferences": {
-              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj": {
-                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
-      },
-      "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
-          "dependencies": {
-            "EventStore.Client": {
-              "target": "Package",
-              "version": "[22.0.0, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.204/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeConteudo.Infra\\MBA_DevXpert_PEO.GestaoDeConteudo.Infra.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeConteudo.Infra\\MBA_DevXpert_PEO.GestaoDeConteudo.Infra.csproj",
-        "projectName": "MBA_DevXpert_PEO.GestaoDeConteudo.Infra",
-        "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeConteudo.Infra\\MBA_DevXpert_PEO.GestaoDeConteudo.Infra.csproj",
-        "packagesPath": "C:\\Users\\adm\\.nuget\\packages\\",
-        "outputPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeConteudo.Infra\\obj\\",
+        "outputPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Infra\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -724,251 +967,8 @@
               "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj": {
                 "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj"
               },
-              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeConteudo.Domain\\MBA_DevXpert_PEO.GestaoDeConteudo.Domain.csproj": {
-                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeConteudo.Domain\\MBA_DevXpert_PEO.GestaoDeConteudo.Domain.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
-      },
-      "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
-          "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[9.0.4, )"
-            },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[9.0.4, )"
-            },
-            "Microsoft.EntityFrameworkCore.Sqlite": {
-              "target": "Package",
-              "version": "[9.0.4, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[9.0.4, )"
-            },
-            "Microsoft.EntityFrameworkCore.sqlserver": {
-              "target": "Package",
-              "version": "[9.0.4, )"
-            },
-            "Microsoft.Extensions.Configuration.Json": {
-              "target": "Package",
-              "version": "[9.0.4, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.204/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Application\\MBA_DevXpert_PEO.PagamentoEFaturamento.Application.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Application\\MBA_DevXpert_PEO.PagamentoEFaturamento.Application.csproj",
-        "projectName": "MBA_DevXpert_PEO.PagamentoEFaturamento.Application",
-        "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Application\\MBA_DevXpert_PEO.PagamentoEFaturamento.Application.csproj",
-        "packagesPath": "C:\\Users\\adm\\.nuget\\packages\\",
-        "outputPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Application\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\adm\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
-            "projectReferences": {
-              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj": {
-                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj"
-              },
-              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Domain\\MBA_DevXpert_PEO.PagamentoEFaturamento.Domain.csproj": {
-                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Domain\\MBA_DevXpert_PEO.PagamentoEFaturamento.Domain.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
-      },
-      "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.204/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Domain\\MBA_DevXpert_PEO.PagamentoEFaturamento.Domain.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Domain\\MBA_DevXpert_PEO.PagamentoEFaturamento.Domain.csproj",
-        "projectName": "MBA_DevXpert_PEO.PagamentoEFaturamento.Domain",
-        "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Domain\\MBA_DevXpert_PEO.PagamentoEFaturamento.Domain.csproj",
-        "packagesPath": "C:\\Users\\adm\\.nuget\\packages\\",
-        "outputPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Domain\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\adm\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
-            "projectReferences": {
-              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj": {
-                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
-      },
-      "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.204/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Infra\\MBA_DevXpert_PEO.PagamentoEFaturamento.Infra.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Infra\\MBA_DevXpert_PEO.PagamentoEFaturamento.Infra.csproj",
-        "projectName": "MBA_DevXpert_PEO.PagamentoEFaturamento.Infra",
-        "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Infra\\MBA_DevXpert_PEO.PagamentoEFaturamento.Infra.csproj",
-        "packagesPath": "C:\\Users\\adm\\.nuget\\packages\\",
-        "outputPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Infra\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\adm\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
-            "projectReferences": {
-              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj": {
-                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj"
-              },
-              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Domain\\MBA_DevXpert_PEO.PagamentoEFaturamento.Domain.csproj": {
-                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Domain\\MBA_DevXpert_PEO.PagamentoEFaturamento.Domain.csproj"
+              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Domain\\MBA_DevXpert_PEO.Pagamentos.Domain.csproj": {
+                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Domain\\MBA_DevXpert_PEO.Pagamentos.Domain.csproj"
               }
             }
           }

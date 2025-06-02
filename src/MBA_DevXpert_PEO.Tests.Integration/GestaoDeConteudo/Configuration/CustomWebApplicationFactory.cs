@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using MBA_DevXpert_PEO.GestaoDeConteudo.Infra.Context;
+using MBA_DevXpert_PEO.Conteudos.Infra.Context;
 using System.IO;
 using System.Linq;
 
-namespace MBA_DevXpert_PEO.Tests.Integration.GestaoDeConteudo.Configuration
+namespace MBA_DevXpert_PEO.Tests.Integration.Conteudos.Configuration
 {
     public class CustomWebApplicationFactory<TProgram> : WebApplicationFactory<TProgram> where TProgram : class
     {

@@ -1,10 +1,10 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using MBA_DevXpert_PEO.GestaoDeAlunos.Application.Commands;
-using MBA_DevXpert_PEO.GestaoDeAlunos.Application.DTOs;
-using MBA_DevXpert_PEO.GestaoDeConteudo.Application.Services;
+using MBA_DevXpert_PEO.Alunos.Application.Commands;
+using MBA_DevXpert_PEO.Alunos.Application.DTOs;
+using MBA_DevXpert_PEO.Conteudos.Application.Services;
 
-namespace MBA_DevXpert_PEO.GestaoDeAlunos.API.Controllers
+namespace MBA_DevXpert_PEO.Alunos.API.Controllers
 {
     [ApiController]
     [Route("api/alunos")]

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using MBA_DevXpert_PEO.GestaoDeAlunos.Domain.Entities;
-using MBA_DevXpert_PEO.GestaoDeAlunos.Domain.Repositories;
+using MBA_DevXpert_PEO.Alunos.Domain.Entities;
+using MBA_DevXpert_PEO.Alunos.Domain.Repositories;
 using MBA_DevXpert_PEO.Api.DTOs;
 using MBA_DevXpert_PEO.Core.Communication.Mediator;
 using MBA_DevXpert_PEO.Core.Messages.CommonMessages.Notifications;

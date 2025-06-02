@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using MBA_DevXpert_PEO.GestaoDeAlunos.Domain.Entities;
-using MBA_DevXpert_PEO.GestaoDeAlunos.Domain.Repositories;
+using MBA_DevXpert_PEO.Alunos.Domain.Entities;
+using MBA_DevXpert_PEO.Alunos.Domain.Repositories;
 using MBA_DevXpert_PEO.Core.Communication.Mediator;
 using MBA_DevXpert_PEO.Core.Messages.CommonMessages.Notifications;
-using MBA_DevXpert_PEO.GestaoDeConteudo.Application.Services;
+using MBA_DevXpert_PEO.Conteudos.Application.Services;
 using MediatR;
-using MBA_DevXpert_PEO.GestaoDeAlunos.Application.DTOs;
+using MBA_DevXpert_PEO.Alunos.Application.DTOs;
 
 namespace MBA_DevXpert_PEO.Api.Controllers
 {

@@ -1,14 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using MBA_DevXpert_PEO.GestaoDeConteudo.Infra.Context;
-using MBA_DevXpert_PEO.GestaoDeConteudo.Domain.Entities;
-using MBA_DevXpert_PEO.GestaoDeConteudo.Domain.ValueObjects;
-using MBA_DevXpert_PEO.GestaoDeAlunos.Infra.Context;
-using MBA_DevXpert_PEO.PagamentoEFaturamento.Domain.Entities;
-using MBA_DevXpert_PEO.PagamentoEFaturamento.Domain.ValueObjects;
-using MBA_DevXpert_PEO.PagamentoEFaturamento.Infra.Context;
-using MBA_DevXpert_PEO.GestaoDeAlunos.Domain.Entities;
-using MBA_DevXpert_PEO.GestaoDeAlunos.Domain.Repositories;
+using MBA_DevXpert_PEO.Conteudos.Infra.Context;
+using MBA_DevXpert_PEO.Conteudos.Domain.Entities;
+using MBA_DevXpert_PEO.Conteudos.Domain.ValueObjects;
+using MBA_DevXpert_PEO.Alunos.Infra.Context;
+using MBA_DevXpert_PEO.Pagamentos.Domain.Entities;
+using MBA_DevXpert_PEO.Pagamentos.Domain.ValueObjects;
+using MBA_DevXpert_PEO.Pagamentos.Infra.Context;
+using MBA_DevXpert_PEO.Alunos.Domain.Entities;
+using MBA_DevXpert_PEO.Alunos.Domain.Repositories;
 using Microsoft.AspNetCore.Identity;
 using MBA_DevXpert_PEO.Api.Identity;
 
@@ -23,7 +23,7 @@ namespace MBA_DevXpert_PEO.Api.Extensions
             var services = scope.ServiceProvider;
 
             var conteudoContext = services.GetRequiredService<GestaoConteudoContext>();
-            var alunosContext = services.GetRequiredService<GestaoDeAlunosContext>();
+            var alunosContext = services.GetRequiredService<AlunosContext>();
             var pagamentosContext = services.GetRequiredService<PagamentosContext>();
             var identityContext = services.GetRequiredService<IdentityContext>();
 
@@ -60,7 +60,7 @@ namespace MBA_DevXpert_PEO.Api.Extensions
             using var scope = app.Services.CreateScope();
 
             var conteudoContext = scope.ServiceProvider.GetRequiredService<GestaoConteudoContext>();
-            var alunosContext = scope.ServiceProvider.GetRequiredService<GestaoDeAlunosContext>();
+            var alunosContext = scope.ServiceProvider.GetRequiredService<AlunosContext>();
             var pagamentosContext = scope.ServiceProvider.GetRequiredService<PagamentosContext>();
 
             var curso = await conteudoContext.Cursos.Include(c => c.Aulas).FirstOrDefaultAsync();

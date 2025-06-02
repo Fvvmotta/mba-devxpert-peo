@@ -1,9 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using MBA_DevXpert_PEO.GestaoDeConteudo.Infra.Context;
-using MBA_DevXpert_PEO.GestaoDeAlunos.Infra.Context;
-using MBA_DevXpert_PEO.PagamentoEFaturamento.Infra.Context;
+using MBA_DevXpert_PEO.Conteudos.Infra.Context;
+using MBA_DevXpert_PEO.Alunos.Infra.Context;
+using MBA_DevXpert_PEO.Pagamentos.Infra.Context;
 
 namespace MBA_DevXpert_PEO.Api.Configuration
 {
@@ -16,7 +16,7 @@ namespace MBA_DevXpert_PEO.Api.Configuration
             services.AddDbContext<GestaoConteudoContext>(options =>
                 options.UseSqlite(connectionString));
 
-            services.AddDbContext<GestaoDeAlunosContext>(options =>
+            services.AddDbContext<AlunosContext>(options =>
                 options.UseSqlite(connectionString));
 
             services.AddDbContext<PagamentosContext>(options =>

@@ -3947,6 +3947,96 @@
           "bin/placeholder/EventSourcing.dll": {}
         }
       },
+      "MBA_DevXpert_PEO.Alunos.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "MBA_DevXpert_PEO.Alunos.Domain": "1.0.0",
+          "MBA_DevXpert_PEO.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MBA_DevXpert_PEO.Alunos.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MBA_DevXpert_PEO.Alunos.Application.dll": {}
+        }
+      },
+      "MBA_DevXpert_PEO.Alunos.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "MBA_DevXpert_PEO.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MBA_DevXpert_PEO.Alunos.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MBA_DevXpert_PEO.Alunos.Domain.dll": {}
+        }
+      },
+      "MBA_DevXpert_PEO.Alunos.Infra/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "MBA_DevXpert_PEO.Alunos.Domain": "1.0.0",
+          "MBA_DevXpert_PEO.Core": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "9.0.4",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.4",
+          "Microsoft.EntityFrameworkCore.Sqlite": "9.0.4",
+          "Microsoft.Extensions.Configuration.Json": "9.0.4"
+        },
+        "compile": {
+          "bin/placeholder/MBA_DevXpert_PEO.Alunos.Infra.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MBA_DevXpert_PEO.Alunos.Infra.dll": {}
+        }
+      },
+      "MBA_DevXpert_PEO.Conteudos.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "MBA_DevXpert_PEO.Conteudos.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MBA_DevXpert_PEO.Conteudos.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MBA_DevXpert_PEO.Conteudos.Application.dll": {}
+        }
+      },
+      "MBA_DevXpert_PEO.Conteudos.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "EventStore.Client": "22.0.0",
+          "MBA_DevXpert_PEO.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MBA_DevXpert_PEO.Conteudos.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MBA_DevXpert_PEO.Conteudos.Domain.dll": {}
+        }
+      },
+      "MBA_DevXpert_PEO.Conteudos.Infra/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "MBA_DevXpert_PEO.Conteudos.Domain": "1.0.0",
+          "MBA_DevXpert_PEO.Core": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "9.0.4",
+          "Microsoft.EntityFrameworkCore.Sqlite": "9.0.4",
+          "Microsoft.EntityFrameworkCore.sqlserver": "9.0.4",
+          "Microsoft.Extensions.Configuration.Json": "9.0.4"
+        },
+        "compile": {
+          "bin/placeholder/MBA_DevXpert_PEO.Conteudos.Infra.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MBA_DevXpert_PEO.Conteudos.Infra.dll": {}
+        }
+      },
       "MBA_DevXpert_PEO.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -3961,139 +4051,49 @@
           "bin/placeholder/MBA_DevXpert_PEO.Core.dll": {}
         }
       },
-      "MBA_DevXpert_PEO.GestaoDeAlunos.Application/1.0.0": {
+      "MBA_DevXpert_PEO.Pagamentos.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "MBA_DevXpert_PEO.Core": "1.0.0",
-          "MBA_DevXpert_PEO.GestaoDeAlunos.Domain": "1.0.0"
+          "MBA_DevXpert_PEO.Pagamentos.Domain": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/MBA_DevXpert_PEO.GestaoDeAlunos.Application.dll": {}
+          "bin/placeholder/MBA_DevXpert_PEO.Pagamentos.Application.dll": {}
         },
         "runtime": {
-          "bin/placeholder/MBA_DevXpert_PEO.GestaoDeAlunos.Application.dll": {}
+          "bin/placeholder/MBA_DevXpert_PEO.Pagamentos.Application.dll": {}
         }
       },
-      "MBA_DevXpert_PEO.GestaoDeAlunos.Domain/1.0.0": {
+      "MBA_DevXpert_PEO.Pagamentos.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "MBA_DevXpert_PEO.Core": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/MBA_DevXpert_PEO.GestaoDeAlunos.Domain.dll": {}
+          "bin/placeholder/MBA_DevXpert_PEO.Pagamentos.Domain.dll": {}
         },
         "runtime": {
-          "bin/placeholder/MBA_DevXpert_PEO.GestaoDeAlunos.Domain.dll": {}
+          "bin/placeholder/MBA_DevXpert_PEO.Pagamentos.Domain.dll": {}
         }
       },
-      "MBA_DevXpert_PEO.GestaoDeAlunos.Infra/1.0.0": {
+      "MBA_DevXpert_PEO.Pagamentos.Infra/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "MBA_DevXpert_PEO.Core": "1.0.0",
-          "MBA_DevXpert_PEO.GestaoDeAlunos.Domain": "1.0.0",
+          "MBA_DevXpert_PEO.Pagamentos.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "9.0.4",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.4",
           "Microsoft.EntityFrameworkCore.Sqlite": "9.0.4",
           "Microsoft.Extensions.Configuration.Json": "9.0.4"
         },
         "compile": {
-          "bin/placeholder/MBA_DevXpert_PEO.GestaoDeAlunos.Infra.dll": {}
+          "bin/placeholder/MBA_DevXpert_PEO.Pagamentos.Infra.dll": {}
         },
         "runtime": {
-          "bin/placeholder/MBA_DevXpert_PEO.GestaoDeAlunos.Infra.dll": {}
-        }
-      },
-      "MBA_DevXpert_PEO.GestaoDeConteudo.Application/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "MBA_DevXpert_PEO.GestaoDeConteudo.Domain": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/MBA_DevXpert_PEO.GestaoDeConteudo.Application.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/MBA_DevXpert_PEO.GestaoDeConteudo.Application.dll": {}
-        }
-      },
-      "MBA_DevXpert_PEO.GestaoDeConteudo.Domain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "EventStore.Client": "22.0.0",
-          "MBA_DevXpert_PEO.Core": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/MBA_DevXpert_PEO.GestaoDeConteudo.Domain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/MBA_DevXpert_PEO.GestaoDeConteudo.Domain.dll": {}
-        }
-      },
-      "MBA_DevXpert_PEO.GestaoDeConteudo.Infra/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "MBA_DevXpert_PEO.Core": "1.0.0",
-          "MBA_DevXpert_PEO.GestaoDeConteudo.Domain": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "9.0.4",
-          "Microsoft.EntityFrameworkCore.Sqlite": "9.0.4",
-          "Microsoft.EntityFrameworkCore.sqlserver": "9.0.4",
-          "Microsoft.Extensions.Configuration.Json": "9.0.4"
-        },
-        "compile": {
-          "bin/placeholder/MBA_DevXpert_PEO.GestaoDeConteudo.Infra.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/MBA_DevXpert_PEO.GestaoDeConteudo.Infra.dll": {}
-        }
-      },
-      "MBA_DevXpert_PEO.PagamentoEFaturamento.Application/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "MBA_DevXpert_PEO.Core": "1.0.0",
-          "MBA_DevXpert_PEO.PagamentoEFaturamento.Domain": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/MBA_DevXpert_PEO.PagamentoEFaturamento.Application.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/MBA_DevXpert_PEO.PagamentoEFaturamento.Application.dll": {}
-        }
-      },
-      "MBA_DevXpert_PEO.PagamentoEFaturamento.Domain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "MBA_DevXpert_PEO.Core": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/MBA_DevXpert_PEO.PagamentoEFaturamento.Domain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/MBA_DevXpert_PEO.PagamentoEFaturamento.Domain.dll": {}
-        }
-      },
-      "MBA_DevXpert_PEO.PagamentoEFaturamento.Infra/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "MBA_DevXpert_PEO.Core": "1.0.0",
-          "MBA_DevXpert_PEO.PagamentoEFaturamento.Domain": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "9.0.4",
-          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.4",
-          "Microsoft.EntityFrameworkCore.Sqlite": "9.0.4",
-          "Microsoft.Extensions.Configuration.Json": "9.0.4"
-        },
-        "compile": {
-          "bin/placeholder/MBA_DevXpert_PEO.PagamentoEFaturamento.Infra.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/MBA_DevXpert_PEO.PagamentoEFaturamento.Infra.dll": {}
+          "bin/placeholder/MBA_DevXpert_PEO.Pagamentos.Infra.dll": {}
         }
       }
     }
@@ -10948,68 +10948,68 @@
       "path": "../EventSourcing/EventSourcing.csproj",
       "msbuildProject": "../EventSourcing/EventSourcing.csproj"
     },
+    "MBA_DevXpert_PEO.Alunos.Application/1.0.0": {
+      "type": "project",
+      "path": "../MBA_DevXpert_PEO.Alunos.Application/MBA_DevXpert_PEO.Alunos.Application.csproj",
+      "msbuildProject": "../MBA_DevXpert_PEO.Alunos.Application/MBA_DevXpert_PEO.Alunos.Application.csproj"
+    },
+    "MBA_DevXpert_PEO.Alunos.Domain/1.0.0": {
+      "type": "project",
+      "path": "../MBA_DevXpert_PEO.Alunos.Domain/MBA_DevXpert_PEO.Alunos.Domain.csproj",
+      "msbuildProject": "../MBA_DevXpert_PEO.Alunos.Domain/MBA_DevXpert_PEO.Alunos.Domain.csproj"
+    },
+    "MBA_DevXpert_PEO.Alunos.Infra/1.0.0": {
+      "type": "project",
+      "path": "../MBA_DevXpert_PEO.Alunos.Infra/MBA_DevXpert_PEO.Alunos.Infra.csproj",
+      "msbuildProject": "../MBA_DevXpert_PEO.Alunos.Infra/MBA_DevXpert_PEO.Alunos.Infra.csproj"
+    },
+    "MBA_DevXpert_PEO.Conteudos.Application/1.0.0": {
+      "type": "project",
+      "path": "../MBA_DevXpert_PEO.Conteudos.Application/MBA_DevXpert_PEO.Conteudos.Application.csproj",
+      "msbuildProject": "../MBA_DevXpert_PEO.Conteudos.Application/MBA_DevXpert_PEO.Conteudos.Application.csproj"
+    },
+    "MBA_DevXpert_PEO.Conteudos.Domain/1.0.0": {
+      "type": "project",
+      "path": "../MBA_DevXpert_PEO.Conteudos.Domain/MBA_DevXpert_PEO.Conteudos.Domain.csproj",
+      "msbuildProject": "../MBA_DevXpert_PEO.Conteudos.Domain/MBA_DevXpert_PEO.Conteudos.Domain.csproj"
+    },
+    "MBA_DevXpert_PEO.Conteudos.Infra/1.0.0": {
+      "type": "project",
+      "path": "../MBA_DevXpert_PEO.Conteudos.Infra/MBA_DevXpert_PEO.Conteudos.Infra.csproj",
+      "msbuildProject": "../MBA_DevXpert_PEO.Conteudos.Infra/MBA_DevXpert_PEO.Conteudos.Infra.csproj"
+    },
     "MBA_DevXpert_PEO.Core/1.0.0": {
       "type": "project",
       "path": "../MBA_DevXpert_PEO.Core/MBA_DevXpert_PEO.Core.csproj",
       "msbuildProject": "../MBA_DevXpert_PEO.Core/MBA_DevXpert_PEO.Core.csproj"
     },
-    "MBA_DevXpert_PEO.GestaoDeAlunos.Application/1.0.0": {
+    "MBA_DevXpert_PEO.Pagamentos.Application/1.0.0": {
       "type": "project",
-      "path": "../MBA_DevXpert_PEO.GestaoDeAlunos.Application/MBA_DevXpert_PEO.GestaoDeAlunos.Application.csproj",
-      "msbuildProject": "../MBA_DevXpert_PEO.GestaoDeAlunos.Application/MBA_DevXpert_PEO.GestaoDeAlunos.Application.csproj"
+      "path": "../MBA_DevXpert_PEO.Pagamentos.Application/MBA_DevXpert_PEO.Pagamentos.Application.csproj",
+      "msbuildProject": "../MBA_DevXpert_PEO.Pagamentos.Application/MBA_DevXpert_PEO.Pagamentos.Application.csproj"
     },
-    "MBA_DevXpert_PEO.GestaoDeAlunos.Domain/1.0.0": {
+    "MBA_DevXpert_PEO.Pagamentos.Domain/1.0.0": {
       "type": "project",
-      "path": "../MBA_DevXpert_PEO.GestaoDeAlunos.Domain/MBA_DevXpert_PEO.GestaoDeAlunos.Domain.csproj",
-      "msbuildProject": "../MBA_DevXpert_PEO.GestaoDeAlunos.Domain/MBA_DevXpert_PEO.GestaoDeAlunos.Domain.csproj"
+      "path": "../MBA_DevXpert_PEO.Pagamentos.Domain/MBA_DevXpert_PEO.Pagamentos.Domain.csproj",
+      "msbuildProject": "../MBA_DevXpert_PEO.Pagamentos.Domain/MBA_DevXpert_PEO.Pagamentos.Domain.csproj"
     },
-    "MBA_DevXpert_PEO.GestaoDeAlunos.Infra/1.0.0": {
+    "MBA_DevXpert_PEO.Pagamentos.Infra/1.0.0": {
       "type": "project",
-      "path": "../MBA_DevXpert_PEO.GestaoDeAlunos.Infra/MBA_DevXpert_PEO.GestaoDeAlunos.Infra.csproj",
-      "msbuildProject": "../MBA_DevXpert_PEO.GestaoDeAlunos.Infra/MBA_DevXpert_PEO.GestaoDeAlunos.Infra.csproj"
-    },
-    "MBA_DevXpert_PEO.GestaoDeConteudo.Application/1.0.0": {
-      "type": "project",
-      "path": "../MBA_DevXpert_PEO.GestaoDeConteudo.Application/MBA_DevXpert_PEO.GestaoDeConteudo.Application.csproj",
-      "msbuildProject": "../MBA_DevXpert_PEO.GestaoDeConteudo.Application/MBA_DevXpert_PEO.GestaoDeConteudo.Application.csproj"
-    },
-    "MBA_DevXpert_PEO.GestaoDeConteudo.Domain/1.0.0": {
-      "type": "project",
-      "path": "../MBA_DevXpert_PEO.GestaoDeConteudo.Domain/MBA_DevXpert_PEO.GestaoDeConteudo.Domain.csproj",
-      "msbuildProject": "../MBA_DevXpert_PEO.GestaoDeConteudo.Domain/MBA_DevXpert_PEO.GestaoDeConteudo.Domain.csproj"
-    },
-    "MBA_DevXpert_PEO.GestaoDeConteudo.Infra/1.0.0": {
-      "type": "project",
-      "path": "../MBA_DevXpert_PEO.GestaoDeConteudo.Infra/MBA_DevXpert_PEO.GestaoDeConteudo.Infra.csproj",
-      "msbuildProject": "../MBA_DevXpert_PEO.GestaoDeConteudo.Infra/MBA_DevXpert_PEO.GestaoDeConteudo.Infra.csproj"
-    },
-    "MBA_DevXpert_PEO.PagamentoEFaturamento.Application/1.0.0": {
-      "type": "project",
-      "path": "../MBA_DevXpert_PEO.PagamentoEFaturamento.Application/MBA_DevXpert_PEO.PagamentoEFaturamento.Application.csproj",
-      "msbuildProject": "../MBA_DevXpert_PEO.PagamentoEFaturamento.Application/MBA_DevXpert_PEO.PagamentoEFaturamento.Application.csproj"
-    },
-    "MBA_DevXpert_PEO.PagamentoEFaturamento.Domain/1.0.0": {
-      "type": "project",
-      "path": "../MBA_DevXpert_PEO.PagamentoEFaturamento.Domain/MBA_DevXpert_PEO.PagamentoEFaturamento.Domain.csproj",
-      "msbuildProject": "../MBA_DevXpert_PEO.PagamentoEFaturamento.Domain/MBA_DevXpert_PEO.PagamentoEFaturamento.Domain.csproj"
-    },
-    "MBA_DevXpert_PEO.PagamentoEFaturamento.Infra/1.0.0": {
-      "type": "project",
-      "path": "../MBA_DevXpert_PEO.PagamentoEFaturamento.Infra/MBA_DevXpert_PEO.PagamentoEFaturamento.Infra.csproj",
-      "msbuildProject": "../MBA_DevXpert_PEO.PagamentoEFaturamento.Infra/MBA_DevXpert_PEO.PagamentoEFaturamento.Infra.csproj"
+      "path": "../MBA_DevXpert_PEO.Pagamentos.Infra/MBA_DevXpert_PEO.Pagamentos.Infra.csproj",
+      "msbuildProject": "../MBA_DevXpert_PEO.Pagamentos.Infra/MBA_DevXpert_PEO.Pagamentos.Infra.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "EventSourcing >= 1.0.0",
-      "MBA_DevXpert_PEO.GestaoDeAlunos.Application >= 1.0.0",
-      "MBA_DevXpert_PEO.GestaoDeAlunos.Domain >= 1.0.0",
-      "MBA_DevXpert_PEO.GestaoDeAlunos.Infra >= 1.0.0",
-      "MBA_DevXpert_PEO.GestaoDeConteudo.Application >= 1.0.0",
-      "MBA_DevXpert_PEO.GestaoDeConteudo.Infra >= 1.0.0",
-      "MBA_DevXpert_PEO.PagamentoEFaturamento.Application >= 1.0.0",
-      "MBA_DevXpert_PEO.PagamentoEFaturamento.Domain >= 1.0.0",
-      "MBA_DevXpert_PEO.PagamentoEFaturamento.Infra >= 1.0.0",
+      "MBA_DevXpert_PEO.Alunos.Application >= 1.0.0",
+      "MBA_DevXpert_PEO.Alunos.Domain >= 1.0.0",
+      "MBA_DevXpert_PEO.Alunos.Infra >= 1.0.0",
+      "MBA_DevXpert_PEO.Conteudos.Application >= 1.0.0",
+      "MBA_DevXpert_PEO.Conteudos.Infra >= 1.0.0",
+      "MBA_DevXpert_PEO.Pagamentos.Application >= 1.0.0",
+      "MBA_DevXpert_PEO.Pagamentos.Domain >= 1.0.0",
+      "MBA_DevXpert_PEO.Pagamentos.Infra >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.4",
       "Microsoft.AspNetCore.Http >= 2.3.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 8.0.4",
@@ -11058,29 +11058,29 @@
             "C:\\Labs\\mba-devxpert-peo\\src\\EventSourcing\\EventSourcing.csproj": {
               "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\EventSourcing\\EventSourcing.csproj"
             },
-            "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Application\\MBA_DevXpert_PEO.GestaoDeAlunos.Application.csproj": {
-              "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Application\\MBA_DevXpert_PEO.GestaoDeAlunos.Application.csproj"
+            "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Alunos.Application\\MBA_DevXpert_PEO.Alunos.Application.csproj": {
+              "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Alunos.Application\\MBA_DevXpert_PEO.Alunos.Application.csproj"
             },
-            "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Domain\\MBA_DevXpert_PEO.GestaoDeAlunos.Domain.csproj": {
-              "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Domain\\MBA_DevXpert_PEO.GestaoDeAlunos.Domain.csproj"
+            "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Alunos.Domain\\MBA_DevXpert_PEO.Alunos.Domain.csproj": {
+              "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Alunos.Domain\\MBA_DevXpert_PEO.Alunos.Domain.csproj"
             },
-            "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Infra\\MBA_DevXpert_PEO.GestaoDeAlunos.Infra.csproj": {
-              "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeAlunos.Infra\\MBA_DevXpert_PEO.GestaoDeAlunos.Infra.csproj"
+            "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Alunos.Infra\\MBA_DevXpert_PEO.Alunos.Infra.csproj": {
+              "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Alunos.Infra\\MBA_DevXpert_PEO.Alunos.Infra.csproj"
             },
-            "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeConteudo.Application\\MBA_DevXpert_PEO.GestaoDeConteudo.Application.csproj": {
-              "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeConteudo.Application\\MBA_DevXpert_PEO.GestaoDeConteudo.Application.csproj"
+            "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Conteudos.Application\\MBA_DevXpert_PEO.Conteudos.Application.csproj": {
+              "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Conteudos.Application\\MBA_DevXpert_PEO.Conteudos.Application.csproj"
             },
-            "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeConteudo.Infra\\MBA_DevXpert_PEO.GestaoDeConteudo.Infra.csproj": {
-              "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.GestaoDeConteudo.Infra\\MBA_DevXpert_PEO.GestaoDeConteudo.Infra.csproj"
+            "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Conteudos.Infra\\MBA_DevXpert_PEO.Conteudos.Infra.csproj": {
+              "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Conteudos.Infra\\MBA_DevXpert_PEO.Conteudos.Infra.csproj"
             },
-            "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Application\\MBA_DevXpert_PEO.PagamentoEFaturamento.Application.csproj": {
-              "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Application\\MBA_DevXpert_PEO.PagamentoEFaturamento.Application.csproj"
+            "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Application\\MBA_DevXpert_PEO.Pagamentos.Application.csproj": {
+              "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Application\\MBA_DevXpert_PEO.Pagamentos.Application.csproj"
             },
-            "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Domain\\MBA_DevXpert_PEO.PagamentoEFaturamento.Domain.csproj": {
-              "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Domain\\MBA_DevXpert_PEO.PagamentoEFaturamento.Domain.csproj"
+            "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Domain\\MBA_DevXpert_PEO.Pagamentos.Domain.csproj": {
+              "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Domain\\MBA_DevXpert_PEO.Pagamentos.Domain.csproj"
             },
-            "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Infra\\MBA_DevXpert_PEO.PagamentoEFaturamento.Infra.csproj": {
-              "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.PagamentoEFaturamento.Infra\\MBA_DevXpert_PEO.PagamentoEFaturamento.Infra.csproj"
+            "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Infra\\MBA_DevXpert_PEO.Pagamentos.Infra.csproj": {
+              "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Infra\\MBA_DevXpert_PEO.Pagamentos.Infra.csproj"
             }
           }
         }

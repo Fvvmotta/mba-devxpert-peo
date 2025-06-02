@@ -1,13 +1,62 @@
-# Visual Studio cache
-.vs/
-*.user
-*.suo
-
-# Build
+## Build results
 bin/
 obj/
+[Bb]uild/
+[Bb]uild[Ll]og.*
 
-# SQLite
+## Visual Studio folders
+.vs/
+.vscode/
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Backup & crash files
+*.bak
+*.tmp
+*.swp
+*.log
+
+## Database files
 *.db
 *.db-shm
 *.db-wal
+
+## NuGet packages
+*.nupkg
+*.snupkg
+packages/
+# NuGet v3
+project.lock.json
+project.assets.json
+*.nuget.props
+*.nuget.targets
+
+## Rider
+.idea/
+*.sln.iml
+
+## Dotnet-specific
+artifacts/
+TestResults/
+*.coverage
+*.coveragexml
+
+# EF Core tools
+Migrations/
+
+## Publish output
+publish/
+
+## JetBrains + VS Code
+.idea/
+*.sln.iml
+.vscode/
+
+## OS junk
+.DS_Store
+Thumbs.db
+ehthumbs.db

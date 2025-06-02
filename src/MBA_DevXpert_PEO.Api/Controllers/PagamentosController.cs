@@ -2,8 +2,8 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MediatR;
-using MBA_DevXpert_PEO.PagamentoEFaturamento.Application.Commands;
-using MBA_DevXpert_PEO.PagamentoEFaturamento.Application.DTOs;
+using MBA_DevXpert_PEO.Pagamentos.Application.Commands;
+using MBA_DevXpert_PEO.Pagamentos.Application.DTOs;
 using MBA_DevXpert_PEO.Core.Communication.Mediator;
 using MBA_DevXpert_PEO.Core.Messages.CommonMessages.Notifications;
 

@@ -2,9 +2,9 @@
 using MediatR;
 using MBA_DevXpert_PEO.Core.Communication.Mediator;
 using MBA_DevXpert_PEO.Core.Messages.CommonMessages.Notifications;
-using MBA_DevXpert_PEO.GestaoDeConteudo.Application.DTOs;
-using MBA_DevXpert_PEO.GestaoDeConteudo.Application.Commands;
-using MBA_DevXpert_PEO.GestaoDeConteudo.Application.Services;
+using MBA_DevXpert_PEO.Conteudos.Application.DTOs;
+using MBA_DevXpert_PEO.Conteudos.Application.Commands;
+using MBA_DevXpert_PEO.Conteudos.Application.Services;
 
 namespace MBA_DevXpert_PEO.Api.Controllers
 {

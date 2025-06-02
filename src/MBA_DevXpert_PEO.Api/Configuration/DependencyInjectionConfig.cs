@@ -2,15 +2,15 @@
 using MBA_DevXpert_PEO.Core.Communication.Mediator;
 using MBA_DevXpert_PEO.Core.Data.EventSourcing;
 using MBA_DevXpert_PEO.Core.Messages.CommonMessages.Notifications;
-using MBA_DevXpert_PEO.GestaoDeAlunos.Domain.Repositories;
-using MBA_DevXpert_PEO.GestaoDeAlunos.Infra.Repositories;
-using MBA_DevXpert_PEO.GestaoDeConteudo.Application.Commands;
-using MBA_DevXpert_PEO.GestaoDeConteudo.Application.Handlers;
-using MBA_DevXpert_PEO.GestaoDeConteudo.Application.Services;
-using MBA_DevXpert_PEO.GestaoDeConteudo.Domain.Repositories;
-using MBA_DevXpert_PEO.GestaoDeConteudo.Infra.Repository;
-using MBA_DevXpert_PEO.PagamentoEFaturamento.Infra.Repositories;
-using MBA_DevXpert_PEO.PagamentoEFaturamento.Domain.Repositories;
+using MBA_DevXpert_PEO.Alunos.Domain.Repositories;
+using MBA_DevXpert_PEO.Alunos.Infra.Repositories;
+using MBA_DevXpert_PEO.Conteudos.Application.Commands;
+using MBA_DevXpert_PEO.Conteudos.Application.Handlers;
+using MBA_DevXpert_PEO.Conteudos.Application.Services;
+using MBA_DevXpert_PEO.Conteudos.Domain.Repositories;
+using MBA_DevXpert_PEO.Conteudos.Infra.Repository;
+using MBA_DevXpert_PEO.Pagamentos.Infra.Repositories;
+using MBA_DevXpert_PEO.Pagamentos.Domain.Repositories;
 using MediatR;
 using MBA_DevXpert_PEO.Api.Identity;
 

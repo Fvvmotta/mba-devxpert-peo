@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using MBA_DevXpert_PEO.GestaoDeConteudo.Infra.Context;
-using MBA_DevXpert_PEO.GestaoDeAlunos.Infra.Context;
-using MBA_DevXpert_PEO.PagamentoEFaturamento.Infra.Context;
+using MBA_DevXpert_PEO.Conteudos.Infra.Context;
+using MBA_DevXpert_PEO.Alunos.Infra.Context;
+using MBA_DevXpert_PEO.Pagamentos.Infra.Context;
 
 namespace MBA_DevXpert_PEO.Api.Controllers
 {
@@ -11,12 +11,12 @@ namespace MBA_DevXpert_PEO.Api.Controllers
     public class DiagnosticoController : Controller
     {
         private readonly GestaoConteudoContext _conteudoContext;
-        private readonly GestaoDeAlunosContext _alunosContext;
+        private readonly AlunosContext _alunosContext;
         private readonly PagamentosContext _pagamentosContext;
 
         public DiagnosticoController(
             GestaoConteudoContext conteudoContext,
-            GestaoDeAlunosContext alunosContext,
+            AlunosContext alunosContext,
             PagamentosContext pagamentosContext)
         {
             _conteudoContext = conteudoContext;

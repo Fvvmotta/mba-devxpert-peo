@@ -3,16 +3,16 @@ using Moq;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using MBA_DevXpert_PEO.GestaoDeAlunos.Application.Commands;
-using MBA_DevXpert_PEO.GestaoDeAlunos.Application.Handlers;
-using MBA_DevXpert_PEO.GestaoDeAlunos.Domain.Repositories;
+using MBA_DevXpert_PEO.Alunos.Application.Commands;
+using MBA_DevXpert_PEO.Alunos.Application.Handlers;
+using MBA_DevXpert_PEO.Alunos.Domain.Repositories;
 using MBA_DevXpert_PEO.Core.Communication.Mediator;
-using MBA_DevXpert_PEO.GestaoDeAlunos.Domain.Entities;
-using MBA_DevXpert_PEO.GestaoDeAlunos.Domain.Entities.Enum;
-using MBA_DevXpert_PEO.GestaoDeAlunos.Application.Events;
+using MBA_DevXpert_PEO.Alunos.Domain.Entities;
+using MBA_DevXpert_PEO.Alunos.Domain.Entities.Enum;
+using MBA_DevXpert_PEO.Alunos.Application.Events;
 using MBA_DevXpert_PEO.Core.Messages.CommonMessages.Notifications;
 
-namespace MBA_DevXpert_PEO.Tests.Unit.GestaoDeAlunos.Application
+namespace MBA_DevXpert_PEO.Tests.Unit.Alunos.Application
 {
     public class AlunoCommandHandlerTests
     {
