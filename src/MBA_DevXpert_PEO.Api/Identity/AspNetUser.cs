@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
-using MBA_DevXpert_PEO.Identity;
+using MBA_DevXpert_PEO.Api.Identity;
 using Microsoft.AspNetCore.Http;
 
 namespace MBA_DevXpert_PEO.Api.Identity

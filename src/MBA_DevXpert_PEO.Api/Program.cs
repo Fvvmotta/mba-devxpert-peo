@@ -10,10 +10,9 @@ builder.Host.UseDefaultServiceProvider(options =>
     options.ValidateOnBuild = false;
 });
 
-// Application-specific registrations
-builder.Services.RegisterApplicationServices();
+builder.AddDatabaseSelector();
 
-builder.Services.RegisterInfraData(builder.Configuration);
+builder.Services.RegisterApplicationServices();
 
 builder.Services.AddIdentityConfig(builder.Configuration);
 

@@ -67,7 +67,13 @@ namespace MBA_DevXpert_PEO.Alunos.Application.Handlers
 
             try
             {
-                aluno.ConcluirMatricula(command.MatriculaId);
+                aluno.ConcluirMatricula(
+                    command.MatriculaId,
+                    command.AlunoNome,
+                    command.CursoNome,
+                    command.CargaHoraria,
+                    DateTime.UtcNow
+                );
             }
             catch (Exception ex)
             {
@@ -82,12 +88,11 @@ namespace MBA_DevXpert_PEO.Alunos.Application.Handlers
             {
                 var matricula = aluno.Matriculas.FirstOrDefault(m => m.Id == command.MatriculaId);
                 var certificadoId = matricula?.Certificado?.Id ?? Guid.Empty;
-
-                await _mediator.PublicarEvento(new CursoFinalizadoEvent(aluno.Id, command.MatriculaId, certificadoId));
+                await _mediator.PublicarEvento(new CursoFinalizadoEvent(command.AlunoId, command.MatriculaId, certificadoId));
             }
-
             return sucesso;
         }
+
         public async Task<bool> Handle(AtualizarAlunoCommand command, CancellationToken cancellationToken)
         {
             var aluno = await _alunoRepository.ObterPorId(command.AlunoId);

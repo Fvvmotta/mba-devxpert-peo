@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MBA_DevXpert_PEO.Alunos.Infra\MBA_DevXpert_PEO.Alunos.Infra.csproj" />
     <ProjectReference Include="..\MBA_DevXpert_PEO.Core\MBA_DevXpert_PEO.Core.csproj" />
     <ProjectReference Include="..\MBA_DevXpert_PEO.Alunos.Domain\MBA_DevXpert_PEO.Alunos.Domain.csproj" />
   </ItemGroup>

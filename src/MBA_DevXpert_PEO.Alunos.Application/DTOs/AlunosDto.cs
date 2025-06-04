@@ -1,8 +1,30 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.EntityFrameworkCore;
 
 namespace MBA_DevXpert_PEO.Alunos.Application.DTOs
 {
+
+    public class AlunoDto
+    {
+        public Guid Id { get; set; }
+        public string Nome { get; set; }
+        public string Email { get; set; }
+    }
+    public class AlunoComMatriculasDto
+    {
+        public Guid AlunoId { get; set; }
+        public string Nome { get; set; } = string.Empty;
+        public List<MatriculaDto> Matriculas { get; set; } = new();
+    }
+
+    public class MatriculaComCursoDto
+    {
+        public Guid MatriculaId { get; set; }
+        public Guid CursoId { get; set; }
+        public DateTime DataMatricula { get; set; }
+    }
+    
     public class CriarMatriculaDto
     {
         [Required(ErrorMessage = "O ID do curso é obrigatório.")]
@@ -40,7 +62,16 @@ namespace MBA_DevXpert_PEO.Alunos.Application.DTOs
 
     public class CertificadoDto
     {
-        public Guid Id { get; set; }
+        public string NomeAluno { get; set; }
+        public string NomeCurso { get; set; }
+        public int CargaHorariaCurso { get; set; }
+        public DateTime DataConclusao { get; set; }
+        public DateTime DataEmissao { get; set; }
+    }
+
+    public class AlunoCertificadoDto
+    {
+        public string Nome { get; set; }
         public DateTime DataEmissao { get; set; }
     }
 

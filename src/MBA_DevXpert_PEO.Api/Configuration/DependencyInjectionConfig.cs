@@ -13,6 +13,7 @@ using MBA_DevXpert_PEO.Pagamentos.Infra.Repositories;
 using MBA_DevXpert_PEO.Pagamentos.Domain.Repositories;
 using MediatR;
 using MBA_DevXpert_PEO.Api.Identity;
+using Alunos.Queries;
 
 namespace MBA_DevXpert_PEO.Api.Configuration
 {
@@ -35,6 +36,9 @@ namespace MBA_DevXpert_PEO.Api.Configuration
             services.AddScoped<IRequestHandler<AdicionarAulaCommand, bool>, CursoCommandHandler>();
             services.AddScoped<IRequestHandler<UpdateCursoCommand, bool>, CursoCommandHandler>();
             services.AddScoped<IRequestHandler<DeleteCursoCommand, bool>, CursoCommandHandler>();
+
+            // Queries
+            services.AddScoped<IAlunoQueries, AlunoQueries>();
 
             // Services 
             services.AddScoped<ICursoAppService, CursoAppService>();

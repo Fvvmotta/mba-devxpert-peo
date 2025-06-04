@@ -9,15 +9,30 @@ namespace MBA_DevXpert_PEO.Conteudos.Infra.Context
     {
         public GestaoConteudoContext CreateDbContext(string[] args)
         {
+            var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "Production";
+
             var configuration = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json")
+                .AddJsonFile("appsettings.json", optional: false)
+                .AddJsonFile($"appsettings.{environment}.json", optional: true)
                 .Build();
 
             var optionsBuilder = new DbContextOptionsBuilder<GestaoConteudoContext>();
-            optionsBuilder.UseSqlite(configuration.GetConnectionString("DefaultConnection"));
+            var connection = configuration.GetConnectionString("DefaultConnection");
+
+            if (environment == "Development")
+            {
+                optionsBuilder.UseSqlServer(connection,
+                    x => x.MigrationsAssembly("MBA_DevXpert_PEO.Conteudos.Infra"));
+            }
+            else
+            {
+                optionsBuilder.UseSqlite(connection,
+                    x => x.MigrationsAssembly("MBA_DevXpert_PEO.Conteudos.Infra"));
+            }
 
             return new GestaoConteudoContext(optionsBuilder.Options);
         }
     }
+
 }

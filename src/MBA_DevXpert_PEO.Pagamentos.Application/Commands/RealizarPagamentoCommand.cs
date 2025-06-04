@@ -13,7 +13,7 @@ namespace MBA_DevXpert_PEO.Pagamentos.Application.Commands
         public string NumeroCartao { get; init; } = string.Empty;
         public string Vencimento { get; init; } = string.Empty; // MM/AA
         public string CVV { get; init; } = string.Empty;
-
+        
         public override bool EhValido()
         {
             ValidationResult = new RealizarPagamentoCommandValidator().Validate(this);

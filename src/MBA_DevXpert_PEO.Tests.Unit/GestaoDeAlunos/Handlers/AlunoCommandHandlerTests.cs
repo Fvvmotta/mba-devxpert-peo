@@ -54,13 +54,12 @@ namespace MBA_DevXpert_PEO.Tests.Unit.Alunos.Application
         [Fact]
         public async Task FinalizarCurso_DeveConcluirMatriculaEPublicarEvento()
         {
-            // Arrange
             var aluno = new Aluno("Maria", "maria@email.com");
             var matricula = new Matricula(Guid.NewGuid());
-            matricula.Historico.DefinirTotalAulas(3);
-            matricula.Historico.RegistrarAulaConcluida();
-            matricula.Historico.RegistrarAulaConcluida();
-            matricula.Historico.RegistrarAulaConcluida();
+            matricula.DefinirTotalAulas(3);
+            matricula.RegistrarAulaConcluida();
+            matricula.RegistrarAulaConcluida();
+            matricula.RegistrarAulaConcluida();
 
             aluno.Matricular(matricula);
 
@@ -69,12 +68,16 @@ namespace MBA_DevXpert_PEO.Tests.Unit.Alunos.Application
             _alunoRepositoryMock.Setup(r => r.UnitOfWork.Commit())
                 .ReturnsAsync(true);
 
-            var command = new FinalizarCursoCommand(aluno.Id, matricula.Id);
+            var command = new FinalizarCursoCommand(
+                aluno.Id,
+                matricula.Id,
+                aluno.Nome,
+                "Curso de Testes",
+                20
+            );
 
-            // Act
             var resultado = await _handler.Handle(command, CancellationToken.None);
 
-            // Assert
             Assert.True(resultado);
             Assert.Equal(StatusMatricula.Concluida, matricula.Status);
             Assert.NotNull(matricula.Certificado);
@@ -84,23 +87,26 @@ namespace MBA_DevXpert_PEO.Tests.Unit.Alunos.Application
         [Fact]
         public async Task FinalizarCurso_DeveFalhar_SeAulasNaoConcluidas()
         {
-            // Arrange
             var aluno = new Aluno("Lucas", "lucas@email.com");
             var matricula = new Matricula(Guid.NewGuid());
-            matricula.Historico.DefinirTotalAulas(3);
-            matricula.Historico.RegistrarAulaConcluida(); // incompleto
+            matricula.DefinirTotalAulas(3);
+            matricula.RegistrarAulaConcluida(); // incompleto
 
             aluno.Matricular(matricula);
 
             _alunoRepositoryMock.Setup(r => r.ObterPorId(aluno.Id))
                 .ReturnsAsync(aluno);
 
-            var command = new FinalizarCursoCommand(aluno.Id, matricula.Id);
+            var command = new FinalizarCursoCommand(
+                aluno.Id,
+                matricula.Id,
+                aluno.Nome,
+                "Curso de Testes",
+                20
+            );
 
-            // Act
             var resultado = await _handler.Handle(command, CancellationToken.None);
 
-            // Assert
             Assert.False(resultado);
             _mediatorHandlerMock.Verify(m => m.PublicarEvento(It.IsAny<CursoFinalizadoEvent>()), Times.Once);
             _mediatorHandlerMock.Verify(m => m.PublicarNotificacao(It.IsAny<DomainNotification>()), Times.Once);

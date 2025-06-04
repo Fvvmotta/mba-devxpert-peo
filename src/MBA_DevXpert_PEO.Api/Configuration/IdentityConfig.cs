@@ -21,9 +21,6 @@ namespace MBA_DevXpert_PEO.Api.Configuration
 
             var key = Encoding.ASCII.GetBytes(appSettings.Secret);
 
-            services.AddDbContext<IdentityContext>(options =>
-                options.UseSqlite(configuration.GetConnectionString("DefaultConnection")));
-
             services.AddIdentity<ApplicationUser, IdentityRole<Guid>>()
                 .AddEntityFrameworkStores<IdentityContext>()
                 .AddDefaultTokenProviders();
@@ -48,7 +45,6 @@ namespace MBA_DevXpert_PEO.Api.Configuration
                     ValidAudience = appSettings.Audience
                 };
             });
-            services.AddAuthentication();
             services.AddAuthorization(); 
             return services;
         }

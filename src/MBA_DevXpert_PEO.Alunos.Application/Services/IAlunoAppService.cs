@@ -1,6 +1,6 @@
-﻿using MBA_DevXpert_PEO.Core.DomainObjects.DTO;
+﻿using MBA_DevXpert_PEO.Alunos.Application.DTOs;
 
 public interface IAlunoAppService
 {
-    Task<IEnumerable<MatriculaDetalhadaDto>> ObterMatriculasDetalhadas();
+    Task<IEnumerable<AlunoComMatriculasDto>> ObterAlunosComMatriculas();
 }

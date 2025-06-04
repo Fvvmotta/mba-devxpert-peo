@@ -22,6 +22,8 @@ namespace MBA_DevXpert_PEO.Api.Extensions
             using var scope = app.Services.CreateScope();
             var services = scope.ServiceProvider;
 
+            Console.WriteLine($"Ambiente: {app.Environment.EnvironmentName}");
+
             var conteudoContext = services.GetRequiredService<GestaoConteudoContext>();
             var alunosContext = services.GetRequiredService<AlunosContext>();
             var pagamentosContext = services.GetRequiredService<PagamentosContext>();
@@ -33,7 +35,7 @@ namespace MBA_DevXpert_PEO.Api.Extensions
             await identityContext.Database.MigrateAsync();
 
             await SeedCursos(conteudoContext);
-            await app.SeedBaseDeTesteCompleta();
+            await SeedBaseDeTesteCompleta(services);
         }
 
         private static async Task SeedCursos(GestaoConteudoContext context)
@@ -55,20 +57,19 @@ namespace MBA_DevXpert_PEO.Api.Extensions
             context.Cursos.Add(curso);
             await context.SaveChangesAsync();
         }
-        private static async Task SeedBaseDeTesteCompleta(this WebApplication app)
-        {
-            using var scope = app.Services.CreateScope();
 
-            var conteudoContext = scope.ServiceProvider.GetRequiredService<GestaoConteudoContext>();
-            var alunosContext = scope.ServiceProvider.GetRequiredService<AlunosContext>();
-            var pagamentosContext = scope.ServiceProvider.GetRequiredService<PagamentosContext>();
+        private static async Task SeedBaseDeTesteCompleta(IServiceProvider services)
+        {
+            var conteudoContext = services.GetRequiredService<GestaoConteudoContext>();
+            var alunosContext = services.GetRequiredService<AlunosContext>();
+            var pagamentosContext = services.GetRequiredService<PagamentosContext>();
 
             var curso = await conteudoContext.Cursos.Include(c => c.Aulas).FirstOrDefaultAsync();
             if (curso == null) return;
 
-            var userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
-            var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole<Guid>>>();
-            var alunoRepository = scope.ServiceProvider.GetRequiredService<IAlunoRepository>();
+            var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
+            var roleManager = services.GetRequiredService<RoleManager<IdentityRole<Guid>>>();
+            var alunoRepository = services.GetRequiredService<IAlunoRepository>();
 
             // Admin
             const string adminEmail = "admin@teste.com";
@@ -91,7 +92,7 @@ namespace MBA_DevXpert_PEO.Api.Extensions
                 await userManager.AddToRoleAsync(adminUser, "Admin");
             }
 
-            //Aluno
+            // Aluno
             const string alunoEmail = "aluno@teste.com";
             const string alunoPassword = "Aluno@123";
             Guid alunoId;
@@ -125,8 +126,8 @@ namespace MBA_DevXpert_PEO.Api.Extensions
             }
 
             var aluno = await alunosContext.Alunos
-            .Include(a => a.Matriculas)
-            .FirstOrDefaultAsync(a => a.Id == alunoId);
+             .Include(a => a.Matriculas)
+             .FirstOrDefaultAsync(a => a.Id == alunoId);
 
             var matricula = new Matricula(curso.Id);
             aluno.Matricular(matricula);
@@ -136,17 +137,17 @@ namespace MBA_DevXpert_PEO.Api.Extensions
             {
                 matricula.RegistrarAulaConcluida();
             }
-            matricula.Concluir();
+
+            matricula.Concluir(
+                nomeAluno: aluno.Nome,
+                nomeCurso: curso.Nome,
+                cargaHorariaCurso: curso.CargaHoraria,
+                dataConclusao: DateTime.UtcNow
+            );
 
             alunosContext.Matriculas.Add(matricula);
             await alunosContext.SaveChangesAsync();
 
-
-            var cartao = new DadosCartao("Aluno Teste", "4111111111111111", "12/30", "123");
-            var pagamento = new Pagamento(matricula.Id, 499.90m, cartao);
-            pagamento.Confirmar();
-            pagamentosContext.Pagamentos.Add(pagamento);
-            await pagamentosContext.SaveChangesAsync();
         }
     }
 }

@@ -3393,6 +3393,7 @@
       "MBA_DevXpert_PEO.Alunos.Application/1.0.0": {
         "dependencies": {
           "MBA_DevXpert_PEO.Alunos.Domain": "1.0.0",
+          "MBA_DevXpert_PEO.Alunos.Infra": "1.0.0",
           "MBA_DevXpert_PEO.Core": "1.0.0"
         },
         "runtime": {

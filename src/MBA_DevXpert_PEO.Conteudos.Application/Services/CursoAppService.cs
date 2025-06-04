@@ -53,5 +53,27 @@ namespace MBA_DevXpert_PEO.Conteudos.Application.Services
                 }).ToList()
             };
         }
+        public async Task<CursoDTO?> ObterPorCursoId(Guid cursoId)
+        {
+            var curso = await _cursoRepository.ObterPorId(cursoId);
+
+            if (curso == null)
+                return null;
+
+            return new CursoDTO
+            {
+                Id = curso.Id,
+                Nome = curso.Nome,
+                CargaHoraria = curso.CargaHoraria,
+                Autor = curso.Autor,
+                Aulas = curso.Aulas.Select(aula => new AulaDTO
+                {
+                    Id = aula.Id,
+                    Titulo = aula.Titulo,
+                    Descricao = aula.Descricao,
+                    MaterialUrl = aula.MaterialUrl
+                }).ToList()
+            };
+        }
     }
 }

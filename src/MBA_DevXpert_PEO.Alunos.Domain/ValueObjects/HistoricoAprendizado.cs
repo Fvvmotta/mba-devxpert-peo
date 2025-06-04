@@ -13,7 +13,7 @@ namespace MBA_DevXpert_PEO.Alunos.Domain.ValueObjects
 
         public HistoricoAprendizado(int totalAulas, int aulasConcluidas)
         {
-            Validacoes.ValidarMinimoMaximo(totalAulas, 0, int.MaxValue, "Total de aulas inválido");
+            Validacoes.ValidarMinimoMaximo(totalAulas, 0, 1000, "Total de aulas inválido");
             Validacoes.ValidarMinimoMaximo(aulasConcluidas, 0, totalAulas, "Quantidade de aulas concluídas inválida");
 
             TotalAulas = totalAulas;

@@ -42,7 +42,6 @@ namespace MBA_DevXpert_PEO.Conteudos.Infra.Repository
                 .AsNoTracking()
                 .ToListAsync();
         }
-
         public void Remover(Curso curso)
         {
             _context.Cursos.Remove(curso);

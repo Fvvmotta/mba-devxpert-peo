@@ -6,5 +6,7 @@ namespace MBA_DevXpert_PEO.Conteudos.Application.Services
     {
         Task<IEnumerable<CursoDTO>> ObterTodos();
         Task<CursoDTO> ObterPorId(Guid id);
+        Task<CursoDTO?> ObterPorCursoId(Guid cursoId);
+
     }
 }

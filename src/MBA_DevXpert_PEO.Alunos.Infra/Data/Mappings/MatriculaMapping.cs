@@ -9,6 +9,9 @@ namespace MBA_DevXpert_PEO.Alunos.Infra.Mappings
         public void Configure(EntityTypeBuilder<Matricula> builder)
         {
             builder.HasKey(m => m.Id);
+            builder.HasOne<Aluno>()
+                .WithMany(a => a.Matriculas)
+                .HasForeignKey(m => m.AlunoId);
 
             builder.Property(m => m.CursoId)
                 .IsRequired();

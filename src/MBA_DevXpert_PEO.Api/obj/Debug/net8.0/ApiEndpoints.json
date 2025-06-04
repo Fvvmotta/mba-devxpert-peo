@@ -289,6 +289,32 @@
   },
   {
     "ContainingType": "MBA_DevXpert_PEO.Alunos.API.Controllers.AlunoController",
+    "Method": "EmitirCertificado",
+    "RelativePath": "api/alunos/{alunoId}/matriculas/{matriculaId}/emitir-certificado",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "alunoId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "matriculaId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MBA_DevXpert_PEO.Alunos.API.Controllers.AlunoController",
     "Method": "FinalizarCurso",
     "RelativePath": "api/alunos/{alunoId}/matriculas/{matriculaId}/finalizar",
     "HttpMethod": "POST",

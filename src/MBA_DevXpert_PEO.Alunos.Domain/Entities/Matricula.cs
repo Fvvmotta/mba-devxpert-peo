@@ -5,6 +5,7 @@ using MBA_DevXpert_PEO.Alunos.Domain.ValueObjects;
 
 public class Matricula : Entity
 {
+    public Guid AlunoId { get; private set; }
     public Guid CursoId { get; private set; }
     public DateTime DataMatricula { get; private set; }
     public StatusMatricula Status { get; private set; }
@@ -41,12 +42,12 @@ public class Matricula : Entity
         Status = StatusMatricula.Ativa;
     }
 
-    public void Concluir()
+    public void Concluir(string nomeAluno, string nomeCurso, int cargaHorariaCurso, DateTime dataConclusao)
     {
         if (!Historico.TodasAulasConcluidas)
             throw new InvalidOperationException("Nem todas as aulas foram concluídas.");
 
         Status = StatusMatricula.Concluida;
-        Certificado = new Certificado(Id);
+        Certificado = new Certificado(Id, nomeAluno, nomeCurso, cargaHorariaCurso, dataConclusao);
     }
 }

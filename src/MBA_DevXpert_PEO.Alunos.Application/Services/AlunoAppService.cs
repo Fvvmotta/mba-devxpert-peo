@@ -1,79 +1,42 @@
 ﻿using MBA_DevXpert_PEO.Core.DomainObjects.DTO;
-using MBA_DevXpert_PEO.Core.DomainObjects.Services;
 using MBA_DevXpert_PEO.Alunos.Domain.Repositories;
+using MBA_DevXpert_PEO.Alunos.Application.DTOs;
 
 public class AlunoAppService : IAlunoAppService
 {
     private readonly IAlunoRepository _alunoRepository;
-    private readonly IPagamentoConsultaService _pagamentoConsulta;
-    private readonly ICursoConsultaService _cursoConsulta;
-
     public AlunoAppService(
-        IAlunoRepository alunoRepository,
-        IPagamentoConsultaService pagamentoConsulta,
-        ICursoConsultaService cursoConsulta)
+        IAlunoRepository alunoRepository)
     {
         _alunoRepository = alunoRepository;
-        _pagamentoConsulta = pagamentoConsulta;
-        _cursoConsulta = cursoConsulta;
     }
 
-    public async Task<IEnumerable<MatriculaDetalhadaDto>> ObterMatriculasDetalhadas()
+    public async Task<IEnumerable<AlunoComMatriculasDto>> ObterAlunosComMatriculas()
     {
         var alunos = await _alunoRepository.ObterTodosComMatriculas();
 
-        var matriculaIds = alunos
-            .SelectMany(a => a.Matriculas)
-            .Select(m => m.Id)
-            .ToList();
-
-        var pagamentos = await _pagamentoConsulta.ObterPagamentosPorMatriculas(matriculaIds);
-        var cursos = await _cursoConsulta.ObterTodos();
-
-        var resultado = new List<MatriculaDetalhadaDto>();
-
-        foreach (var aluno in alunos)
+        return alunos.Select(aluno => new AlunoComMatriculasDto
         {
-            foreach (var matricula in aluno.Matriculas)
+            AlunoId = aluno.Id,
+            Nome = aluno.Nome,
+            Matriculas = aluno.Matriculas.Select(m => new MatriculaDto
             {
-                var pagamento = pagamentos.FirstOrDefault(p => p.MatriculaId == matricula.Id);
-                var curso = cursos.FirstOrDefault(c => c.Id == matricula.CursoId);
+                Id = m.Id,
+                CursoId = m.CursoId,
+                DataMatricula = m.DataMatricula,
+                Status = m.Status.ToString(),
+                Certificado = m.Certificado is not null
+                    ? new CertificadoDto
+                    {
+                        NomeAluno = m.Certificado.NomeAluno,
+                        NomeCurso = m.Certificado.NomeCurso,
+                        CargaHorariaCurso =m.Certificado.CargaHorariaCurso,
+                        DataConclusao = m.Certificado.DataConclusao,
+                        DataEmissao = m.Certificado.DataEmissao
 
-                var dto = new MatriculaDetalhadaDto
-                {
-                    MatriculaId = matricula.Id,
-                    AlunoId = aluno.Id,
-                    AlunoNome = aluno.Nome,
-                    CursoId = matricula.CursoId,
-                    CursoNome = curso?.Nome ?? "",
-                    DataMatricula = matricula.DataMatricula,
-                    Status = matricula.Status.ToString(),
-
-                    Certificado = matricula.Certificado is not null
-                        ? new CertificadoDto
-                        {
-                            Id = matricula.Certificado.Id,
-                            MatriculaId = matricula.Id,
-                            DataEmissao = matricula.Certificado.DataEmissao
-                        }
-                        : null,
-
-                    Pagamento = pagamento is not null
-                        ? new PagamentoDto
-                        {
-                            Id = pagamento.Id,
-                            MatriculaId = pagamento.MatriculaId,
-                            Valor = pagamento.Valor,
-                            DataPagamento = pagamento.DataPagamento,
-                            Status = pagamento.Status
-                        }
-                        : null
-                };
-
-                resultado.Add(dto);
-            }
-        }
-
-        return resultado;
+                    }
+                    : null
+            }).ToList()
+        });
     }
 }

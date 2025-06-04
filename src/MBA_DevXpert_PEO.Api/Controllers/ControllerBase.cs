@@ -2,6 +2,7 @@
 using MediatR;
 using MBA_DevXpert_PEO.Core.Messages.CommonMessages.Notifications;
 using MBA_DevXpert_PEO.Core.Communication.Mediator;
+using System.Security.Claims;
 
 namespace MBA_DevXpert_PEO.Api.Controllers
 {
@@ -10,8 +11,15 @@ namespace MBA_DevXpert_PEO.Api.Controllers
         protected readonly DomainNotificationHandler _notifications;
         protected readonly IMediatorHandler _mediatorHandler;
 
-        // Simulação de um ID fixo, depois substituímos por ID do usuário autenticado
-        protected Guid UsuarioId = Guid.Parse("4885e451-b0e4-4490-b959-04fabc806d32");
+        protected Guid UsuarioId
+        {
+            get
+            {
+                var userId = User?.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
+
+                return Guid.TryParse(userId, out var id) ? id : Guid.Empty;
+            }
+        }
 
         protected ControllerBase(
             INotificationHandler<DomainNotification> notifications,

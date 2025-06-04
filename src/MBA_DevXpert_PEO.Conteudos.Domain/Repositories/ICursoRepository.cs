@@ -9,7 +9,6 @@ namespace MBA_DevXpert_PEO.Conteudos.Domain.Repositories
     {
         Task<Curso> ObterPorId(Guid id);
         Task<IEnumerable<Curso>> ObterTodos();
-
         void Adicionar(Curso curso);
         void Atualizar(Curso curso);
         void Remover(Curso curso);

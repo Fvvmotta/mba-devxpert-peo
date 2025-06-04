@@ -51,7 +51,6 @@ namespace MBA_DevXpert_PEO.Api.Controllers
             if (!result.Succeeded)
                 return BadRequest(result.Errors);
 
-            // Criar aluno no domínio
             var aluno = Aluno.CriarComId(user.Id, dto.Nome, dto.Email);
 
             _alunoRepository.Adicionar(aluno);
