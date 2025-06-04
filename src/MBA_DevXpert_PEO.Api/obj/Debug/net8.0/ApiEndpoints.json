@@ -169,6 +169,32 @@
   },
   {
     "ContainingType": "MBA_DevXpert_PEO.Api.Controllers.AdminCursoController",
+    "Method": "DeletarAula",
+    "RelativePath": "api/AdminCurso/{cursoId}/aulas/{aulaId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cursoId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "aulaId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MBA_DevXpert_PEO.Api.Controllers.AdminCursoController",
     "Method": "ObterCursoPorId",
     "RelativePath": "api/AdminCurso/{id}",
     "HttpMethod": "GET",

@@ -21,6 +21,10 @@ namespace MBA_DevXpert_PEO.Alunos.Domain.Entities
         public void Matricular(Matricula matricula)
         {
             Validacoes.ValidarSeNulo(matricula, "Matrícula inválida.");
+
+            if (_matriculas.Any(m => m.CursoId == matricula.CursoId))
+                throw new DomainException("O aluno já está matriculado neste curso.");
+
             _matriculas.Add(matricula);
         }
 

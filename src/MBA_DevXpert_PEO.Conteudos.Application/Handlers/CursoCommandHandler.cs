@@ -15,7 +15,8 @@ namespace MBA_DevXpert_PEO.Conteudos.Application.Handlers
         IRequestHandler<CriarCursoCommand, Guid?>,
         IRequestHandler<AdicionarAulaCommand, bool>,
         IRequestHandler<UpdateCursoCommand, bool>,
-        IRequestHandler<DeleteCursoCommand, bool>
+        IRequestHandler<DeleteCursoCommand, bool>,
+        IRequestHandler<DeleteAulaCursoCommand, bool>
     {
         private readonly ICursoRepository _cursoRepository;
         private readonly IMediatorHandler _mediatorHandler;
@@ -101,6 +102,32 @@ namespace MBA_DevXpert_PEO.Conteudos.Application.Handlers
 
             return await _cursoRepository.UnitOfWork.Commit();
         }
+
+        public async Task<bool> Handle(DeleteAulaCursoCommand command, CancellationToken cancellationToken)
+        {
+            if (!command.EhValido())
+            {
+                await _mediatorHandler.PublicarNotificacao(new DomainNotification("Aula", "Dados inválidos para exclusão de aula."));
+                return false;
+            }
+
+            var curso = await _cursoRepository.ObterPorId(command.CursoId);
+            if (curso == null)
+            {
+                await _mediatorHandler.PublicarNotificacao(new DomainNotification("Curso", "Curso não encontrado."));
+                return false;
+            }
+
+            Console.WriteLine("Antes de remover: " + curso.Aulas.Count);
+            curso.RemoverAula(command.AulaId);
+            Console.WriteLine("Depois de remover: " + curso.Aulas.Count);
+            _cursoRepository.Atualizar(curso);
+
+            var sucesso = await _cursoRepository.UnitOfWork.Commit();
+
+            return sucesso;
+        }
+
 
         private async Task NotificarErros<TResponse>(Command<TResponse> command)
         {

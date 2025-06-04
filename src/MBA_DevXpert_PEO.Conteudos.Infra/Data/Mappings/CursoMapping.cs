@@ -30,8 +30,9 @@ namespace MBA_DevXpert_PEO.Services.Conteudos.Infra.Data.Mappings
             });
 
             builder.HasMany(c => c.Aulas)
-                .WithOne()
-                .HasForeignKey("CursoId");
+            .WithOne(a => a.Curso)
+            .HasForeignKey(a => a.CursoId)
+            .OnDelete(DeleteBehavior.Cascade);
 
             builder.ToTable("Cursos");
         }

@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using MBA_DevXpert_PEO.Conteudos.Application.Commands;
+using MBA_DevXpert_PEO.Alunos.Application.Handlers;
+using MBA_DevXpert_PEO.Conteudos.Application.Handlers;
 
 namespace MBA_DevXpert_PEO.Api.Configuration
 {
@@ -51,7 +53,8 @@ namespace MBA_DevXpert_PEO.Api.Configuration
 
             services.AddMediatR(cfg =>
                 cfg.RegisterServicesFromAssemblies(
-                    typeof(CriarCursoCommand).Assembly,
+                    typeof(CursoCommandHandler).Assembly,
+                    typeof(AlunoCommandHandler).Assembly,
                     typeof(Program).Assembly));
 
             return services;

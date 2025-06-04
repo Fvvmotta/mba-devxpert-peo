@@ -19,6 +19,15 @@ public class AulaMapping : IEntityTypeConfiguration<Aula>
         builder.Property(a => a.MaterialUrl)
             .HasColumnType("varchar(500)");
 
+        builder.Property(a => a.CursoId)
+            .IsRequired();
+
+        builder.HasOne(a => a.Curso)
+            .WithMany(c => c.Aulas)
+            .HasForeignKey(a => a.CursoId)
+            .OnDelete(DeleteBehavior.Cascade);
+
         builder.ToTable("Aulas");
     }
+
 }

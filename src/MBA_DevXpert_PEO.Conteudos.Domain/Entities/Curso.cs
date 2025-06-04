@@ -4,10 +4,12 @@ using MBA_DevXpert_PEO.Conteudos.Domain.ValueObjects;
 
 public class Curso : Entity, IAggregateRoot
 {
+    private readonly List<Aula> _aulas;
+    public IReadOnlyCollection<Aula> Aulas => _aulas;
+
     public string Nome { get; private set; }
     public string Autor { get; private set; }
     public int CargaHoraria { get; private set; }
-    public List<Aula> Aulas { get; private set; }
     public ConteudoProgramatico ConteudoProgramatico { get; private set; }
 
     protected Curso() { }
@@ -18,7 +20,7 @@ public class Curso : Entity, IAggregateRoot
         SetAutor(autor);
         SetCargaHoraria(cargaHoraria);
         DefinirConteudoProgramatico(conteudoProgramatico);
-        Aulas = new List<Aula>();
+        _aulas = new List<Aula>();
     }
 
     public void SetNome(string nome)
@@ -42,9 +44,16 @@ public class Curso : Entity, IAggregateRoot
     public void AdicionarAula(string titulo, string descricao, string materialUrl = null)
     {
         var aula = new Aula(titulo, descricao, materialUrl);
-        Aulas.Add(aula);
+        _aulas.Add(aula);
     }
+    public void RemoverAula(Guid aulaId)
+    {
+        var aula = _aulas.FirstOrDefault(a => a.Id == aulaId);
+        if (aula == null)
+            throw new DomainException("Aula não encontrada.");
 
+        _aulas.Remove(aula);
+    }
     public void AtualizarCurso(string nome, int cargaHoraria, string autor, ConteudoProgramatico novoConteudo)
     {
         SetNome(nome);

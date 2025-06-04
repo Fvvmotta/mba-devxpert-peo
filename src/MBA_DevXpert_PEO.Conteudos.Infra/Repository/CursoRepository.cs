@@ -31,7 +31,6 @@ namespace MBA_DevXpert_PEO.Conteudos.Infra.Repository
         {
             return await _context.Cursos
                 .Include(c => c.Aulas)
-                .AsNoTracking()
                 .FirstOrDefaultAsync(c => c.Id == id);
         }
 

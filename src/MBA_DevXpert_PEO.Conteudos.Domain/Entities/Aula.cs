@@ -8,6 +8,9 @@ namespace MBA_DevXpert_PEO.Conteudos.Domain.Entities
         public string Descricao { get; private set; }
         public string MaterialUrl { get; private set; }
 
+        public Guid CursoId { get; private set; }
+        public Curso Curso { get; private set; }
+
         protected Aula() { }
 
         public Aula(string titulo, string descricao, string materialUrl = null)

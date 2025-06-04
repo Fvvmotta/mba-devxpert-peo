@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MBA_DevXpert_PEO.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f7a7c943e4c70bbd4a44aed219e7a69db7142372")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f2007fe519756e7100bf91564c03a1f075a757a")]
 [assembly: System.Reflection.AssemblyProductAttribute("MBA_DevXpert_PEO.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MBA_DevXpert_PEO.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

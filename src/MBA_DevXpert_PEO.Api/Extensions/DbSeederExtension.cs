@@ -126,28 +126,31 @@ namespace MBA_DevXpert_PEO.Api.Extensions
             }
 
             var aluno = await alunosContext.Alunos
-             .Include(a => a.Matriculas)
-             .FirstOrDefaultAsync(a => a.Id == alunoId);
+            .Include(a => a.Matriculas)
+            .FirstOrDefaultAsync(a => a.Id == alunoId);
 
-            var matricula = new Matricula(curso.Id);
-            aluno.Matricular(matricula);
-
-            matricula.DefinirTotalAulas(curso.Aulas.Count);
-            for (int i = 0; i < curso.Aulas.Count; i++)
+            bool jaMatriculado = aluno.Matriculas.Any(m => m.CursoId == curso.Id);
+            if (!jaMatriculado)
             {
-                matricula.RegistrarAulaConcluida();
+                var matricula = new Matricula(curso.Id);
+                aluno.Matricular(matricula);
+
+                matricula.DefinirTotalAulas(curso.Aulas.Count);
+                for (int i = 0; i < curso.Aulas.Count; i++)
+                {
+                    matricula.RegistrarAulaConcluida();
+                }
+
+                matricula.Concluir(
+                    nomeAluno: aluno.Nome,
+                    nomeCurso: curso.Nome,
+                    cargaHorariaCurso: curso.CargaHoraria,
+                    dataConclusao: DateTime.UtcNow
+                );
+
+                alunosContext.Matriculas.Add(matricula);
+                await alunosContext.SaveChangesAsync();
             }
-
-            matricula.Concluir(
-                nomeAluno: aluno.Nome,
-                nomeCurso: curso.Nome,
-                cargaHorariaCurso: curso.CargaHoraria,
-                dataConclusao: DateTime.UtcNow
-            );
-
-            alunosContext.Matriculas.Add(matricula);
-            await alunosContext.SaveChangesAsync();
-
         }
     }
 }

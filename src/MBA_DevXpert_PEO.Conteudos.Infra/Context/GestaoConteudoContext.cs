@@ -23,6 +23,13 @@ namespace MBA_DevXpert_PEO.Conteudos.Infra.Context
                 property.SetColumnType("varchar(100)");
 
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(GestaoConteudoContext).Assembly);
+
+            modelBuilder.Entity<Curso>()
+            .HasMany(c => c.Aulas)
+            .WithOne(a => a.Curso)
+            .HasForeignKey(a => a.CursoId)
+            .OnDelete(DeleteBehavior.Cascade);
+
         }
 
         public async Task<bool> Commit()

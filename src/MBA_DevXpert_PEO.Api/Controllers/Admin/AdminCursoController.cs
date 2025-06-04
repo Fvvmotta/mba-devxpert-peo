@@ -135,5 +135,21 @@ namespace MBA_DevXpert_PEO.Api.Controllers
 
             return CustomResponse("Curso deletado com sucesso.");
         }
+
+        [HttpDelete("{cursoId}/aulas/{aulaId}")]
+        public async Task<IActionResult> DeletarAula(Guid cursoId, Guid aulaId)
+        {
+            var comando = new DeleteAulaCursoCommand(cursoId, aulaId);
+            var sucesso = await _mediatorHandler.EnviarComando(comando);
+
+            if (!sucesso)
+            {
+                NotificarErro("Aula", "Erro ao deletar aula.");
+                return CustomResponse();
+            }
+
+            return CustomResponse("Aula deletada com sucesso.");
+        }
+
     }
 }
