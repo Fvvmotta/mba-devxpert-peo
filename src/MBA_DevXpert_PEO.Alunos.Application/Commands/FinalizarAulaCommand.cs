@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FluentValidation;
+using FluentValidation.Results;
 using MBA_DevXpert_PEO.Core.Messages;
 
 namespace Alunos.Commands
@@ -20,7 +17,25 @@ namespace Alunos.Commands
             TotalAulasCurso = totalAulasCurso;
         }
 
-        public override bool EhValido() => AlunoId != Guid.Empty && MatriculaId != Guid.Empty && TotalAulasCurso > 0;
+        public override bool EhValido()
+        {
+            ValidationResult = new FinalizarAulaValidation().Validate(this);
+            return ValidationResult.IsValid;
+        }
     }
+    
+    public class FinalizarAulaValidation : AbstractValidator<FinalizarAulaCommand>
+    {
+        public FinalizarAulaValidation()
+        {
+            RuleFor(c => c.AlunoId)
+                .NotEqual(Guid.Empty).WithMessage("O ID do aluno é obrigatório.");
 
+            RuleFor(c => c.MatriculaId)
+                .NotEqual(Guid.Empty).WithMessage("O ID da matrícula é obrigatório.");
+
+            RuleFor(c => c.TotalAulasCurso)
+                .GreaterThan(0).WithMessage("O total de aulas do curso deve ser maior que zero.");
+        }
+    }
 }

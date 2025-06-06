@@ -13,20 +13,20 @@ namespace MBA_DevXpert_PEO.Conteudos.Application.Queries
             _context = context;
         }
 
-        public async Task<IEnumerable<CursoDTO>> ObterTodos()
+        public async Task<IEnumerable<CursoDto>> ObterTodos()
         {
             var cursos = await _context.Cursos
                 .Include(c => c.Aulas)
                 .AsNoTracking()
                 .ToListAsync();
 
-            return cursos.Select(curso => new CursoDTO
+            return cursos.Select(curso => new CursoDto
             {
                 Id = curso.Id,
                 Nome = curso.Nome,
                 CargaHoraria = curso.CargaHoraria,
                 Autor = curso.Autor,
-                Aulas = curso.Aulas.Select(aula => new AulaDTO
+                Aulas = curso.Aulas.Select(aula => new AulaDto
                 {
                     Id = aula.Id,
                     Titulo = aula.Titulo,
@@ -36,7 +36,7 @@ namespace MBA_DevXpert_PEO.Conteudos.Application.Queries
             });
         }
 
-        public async Task<CursoDTO?> ObterPorId(Guid id)
+        public async Task<CursoDto?> ObterPorId(Guid id)
         {
             var curso = await _context.Cursos
                 .Include(c => c.Aulas)
@@ -45,13 +45,13 @@ namespace MBA_DevXpert_PEO.Conteudos.Application.Queries
 
             if (curso == null) return null;
 
-            return new CursoDTO
+            return new CursoDto
             {
                 Id = curso.Id,
                 Nome = curso.Nome,
                 CargaHoraria = curso.CargaHoraria,
                 Autor = curso.Autor,
-                Aulas = curso.Aulas.Select(aula => new AulaDTO
+                Aulas = curso.Aulas.Select(aula => new AulaDto
                 {
                     Id = aula.Id,
                     Titulo = aula.Titulo,
@@ -60,12 +60,6 @@ namespace MBA_DevXpert_PEO.Conteudos.Application.Queries
                 }).ToList()
             };
         }
-
-        public async Task<CursoDTO?> ObterPorCursoId(Guid cursoId)
-        {
-            return await ObterPorId(cursoId);
-        }
-
         public async Task<CursoResumoDto?> ObterResumoCurso(Guid cursoId)
         {
             return await _context.Cursos

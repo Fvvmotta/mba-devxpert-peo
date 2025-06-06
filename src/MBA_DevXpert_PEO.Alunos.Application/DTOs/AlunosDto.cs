@@ -32,27 +32,6 @@ namespace MBA_DevXpert_PEO.Alunos.Application.DTOs
         [Required(ErrorMessage = "O ID do curso é obrigatório.")]
         public Guid CursoId { get; set; }
     }
-    public class AtualizarAlunoDto
-    {
-        [Required(ErrorMessage = "O ID do aluno é obrigatório.")]
-        public Guid Id { get; set; }
-
-        [Required(ErrorMessage = "O nome é obrigatório.")]
-        public string Nome { get; set; }
-
-        [Required(ErrorMessage = "O e-mail é obrigatório.")]
-        [EmailAddress(ErrorMessage = "O e-mail está em formato inválido.")]
-        public string Email { get; set; }
-    }
-    public class CriarAlunoDto
-    {
-        [Required(ErrorMessage = "O nome é obrigatório.")]
-        public string Nome { get; set; }
-
-        [Required(ErrorMessage = "O e-mail é obrigatório.")]
-        [EmailAddress(ErrorMessage = "O e-mail está em formato inválido.")]
-        public string Email { get; set; }
-    }
     public class MatriculaCompletaDto
     {
         public Guid Id { get; set; }
@@ -88,11 +67,4 @@ namespace MBA_DevXpert_PEO.Alunos.Application.DTOs
         public DateTime DataConclusao { get; set; }
         public DateTime DataEmissao { get; set; }
     }
-
-    public class AlunoCertificadoDto
-    {
-        public string Nome { get; set; }
-        public DateTime DataEmissao { get; set; }
-    }
-
 }

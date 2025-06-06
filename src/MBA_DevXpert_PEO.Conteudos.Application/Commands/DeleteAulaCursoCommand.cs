@@ -1,5 +1,6 @@
-﻿using MBA_DevXpert_PEO.Core.Messages;
-using System;
+﻿using FluentValidation;
+using FluentValidation.Results;
+using MBA_DevXpert_PEO.Core.Messages;
 
 namespace MBA_DevXpert_PEO.Conteudos.Application.Commands
 {
@@ -16,7 +17,19 @@ namespace MBA_DevXpert_PEO.Conteudos.Application.Commands
 
         public override bool EhValido()
         {
-            return CursoId != Guid.Empty && AulaId != Guid.Empty;
+            ValidationResult = new DeleteAulaCursoValidation().Validate(this);
+            return ValidationResult.IsValid;
+        }
+    }
+    public class DeleteAulaCursoValidation : AbstractValidator<DeleteAulaCursoCommand>
+    {
+        public DeleteAulaCursoValidation()
+        {
+            RuleFor(c => c.CursoId)
+                .NotEqual(Guid.Empty).WithMessage("O ID do curso é obrigatório.");
+
+            RuleFor(c => c.AulaId)
+                .NotEqual(Guid.Empty).WithMessage("O ID da aula é obrigatório.");
         }
     }
 }

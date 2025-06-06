@@ -1,15 +1,11 @@
 ﻿using MediatR;
-using System.Threading;
-using System.Threading.Tasks;
 using MBA_DevXpert_PEO.Alunos.Domain.Repositories;
 using MBA_DevXpert_PEO.Alunos.Application.Commands;
-using MBA_DevXpert_PEO.Alunos.Domain.Entities;
 using MBA_DevXpert_PEO.Core.Communication.Mediator;
 using MBA_DevXpert_PEO.Core.Messages.CommonMessages.Notifications;
 using MBA_DevXpert_PEO.Alunos.Application.Events;
 using Alunos.Commands;
-using MBA_DevXpert_PEO.Alunos.Domain.Entities.Enum;
-using MBA_DevXpert_PEO.Core.DomainObjects;
+using MBA_DevXpert_PEO.Alunos.Domain.Entities;
 
 namespace MBA_DevXpert_PEO.Alunos.Application.Handlers
 {
@@ -17,6 +13,7 @@ namespace MBA_DevXpert_PEO.Alunos.Application.Handlers
         IRequestHandler<CriarMatriculaCommand, bool>,
         IRequestHandler<FinalizarCursoCommand, bool>,
         IRequestHandler<FinalizarAulaCommand, bool>,
+        IRequestHandler<CriarAlunoCommand, bool>,
         IRequestHandler<AtualizarAlunoCommand, bool>
         
     {
@@ -80,7 +77,13 @@ namespace MBA_DevXpert_PEO.Alunos.Application.Handlers
             matricula.RegistrarAulaConcluida();
 
             _alunoRepository.Atualizar(aluno);
-            return await _alunoRepository.UnitOfWork.Commit();
+            var sucesso = await _alunoRepository.UnitOfWork.Commit();
+
+            if (sucesso)
+            {
+                await _mediator.PublicarEvento(new AulaFinalizadaEvent(command.AlunoId, command.MatriculaId));
+            }
+            return sucesso;
         }
 
         public async Task<bool> Handle(FinalizarCursoCommand command, CancellationToken cancellationToken)
@@ -123,7 +126,23 @@ namespace MBA_DevXpert_PEO.Alunos.Application.Handlers
 
             return true;
         }
+        public async Task<bool> Handle(CriarAlunoCommand command, CancellationToken cancellationToken)
+        {
+            if (!command.EhValido())
+            {
+                await _mediator.PublicarNotificacao(new DomainNotification("Command inválido", "Dados inválidos para criação do aluno."));
+                return false;
+            }
 
+            var aluno = Aluno.CriarComId(command.AlunoId, command.Nome, command.Email);
+            _alunoRepository.Adicionar(aluno);
+            var sucesso = await _alunoRepository.UnitOfWork.Commit();
+            if (!sucesso) return false;
+
+            await _mediator.PublicarEvento(new AlunoCriadoEvent(aluno.Id, aluno.Nome, aluno.Email));
+
+            return true;
+        }
 
         public async Task<bool> Handle(AtualizarAlunoCommand command, CancellationToken cancellationToken)
         {
@@ -136,7 +155,13 @@ namespace MBA_DevXpert_PEO.Alunos.Application.Handlers
 
             aluno.AtualizarDados(command.Nome, command.Email);
             _alunoRepository.Atualizar(aluno);
-            return await _alunoRepository.UnitOfWork.Commit();
+            var sucesso = await _alunoRepository.UnitOfWork.Commit();
+            if (sucesso)
+            {
+                await _mediator.PublicarEvento(new AlunoAtualizadoEvent(command.AlunoId));
+            }
+            return sucesso;
+
         }
 
 

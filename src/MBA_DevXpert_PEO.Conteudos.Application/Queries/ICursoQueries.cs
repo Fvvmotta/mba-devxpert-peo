@@ -7,9 +7,8 @@ namespace MBA_DevXpert_PEO.Conteudos.Application.Queries
 {
     public interface ICursoQueries
     {
-        Task<IEnumerable<CursoDTO>> ObterTodos();
-        Task<CursoDTO?> ObterPorId(Guid id);
-        Task<CursoDTO?> ObterPorCursoId(Guid cursoId);
+        Task<IEnumerable<CursoDto>> ObterTodos();
+        Task<CursoDto?> ObterPorId(Guid id);
         Task<CursoResumoDto?> ObterResumoCurso(Guid cursoId);
     }
 

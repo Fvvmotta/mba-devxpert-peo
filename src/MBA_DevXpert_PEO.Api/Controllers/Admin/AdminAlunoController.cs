@@ -1,4 +1,6 @@
-﻿using Alunos.Queries;
+﻿using Alunos.Commands;
+using Alunos.Queries;
+using MBA_DevXpert_PEO.Alunos.Application.Commands;
 using MBA_DevXpert_PEO.Alunos.Domain.Entities;
 using MBA_DevXpert_PEO.Alunos.Domain.Repositories;
 using MBA_DevXpert_PEO.Api.Controllers;
@@ -70,9 +72,11 @@ public class AdminAlunoController : BaseController
             return BadRequest(ModelState);
         }
 
-        var aluno = Aluno.CriarComId(alunoId, dto.Nome, dto.Email);
-        _alunoRepository.Adicionar(aluno);
-        await _alunoRepository.UnitOfWork.Commit();
+        var command = new CriarAlunoCommand(alunoId, dto.Nome, dto.Email);
+        var sucesso = await _mediatorHandler.EnviarComando(command);
+
+        if (!sucesso)
+            return BadRequest("Erro ao criar o aluno no domínio.");
 
         return CustomResponse("Aluno criado com sucesso.");
     }

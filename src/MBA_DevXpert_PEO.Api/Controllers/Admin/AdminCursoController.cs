@@ -45,7 +45,7 @@ namespace MBA_DevXpert_PEO.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CriarCurso([FromBody] CursoInputDTO dto)
+        public async Task<IActionResult> CriarCurso([FromBody] AdicionarCursoDto dto)
         {
             if (!ModelState.IsValid)
             {
@@ -67,7 +67,7 @@ namespace MBA_DevXpert_PEO.Api.Controllers
         }
 
         [HttpPost("{cursoId}/aulas")]
-        public async Task<IActionResult> AdicionarAula(Guid cursoId, [FromBody] AdicionarAulaInputDTO dto)
+        public async Task<IActionResult> AdicionarAula(Guid cursoId, [FromBody] AdicionarAulaDto dto)
         {
             if (cursoId != dto.CursoId)
             {
@@ -95,7 +95,7 @@ namespace MBA_DevXpert_PEO.Api.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> AtualizarCurso(Guid id, [FromBody] UpdateCursoInputDTO dto)
+        public async Task<IActionResult> AtualizarCurso(Guid id, [FromBody] AtualizarCursoDto dto)
         {
             if (id != dto.Id)
             {

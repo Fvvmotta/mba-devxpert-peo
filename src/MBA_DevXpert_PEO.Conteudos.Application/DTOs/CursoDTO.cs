@@ -2,7 +2,7 @@
 
 namespace MBA_DevXpert_PEO.Conteudos.Application.DTOs
 {
-    public class CursoInputDTO
+    public class AdicionarCursoDto
     {
         [Required]
         public string Nome { get; set; }
@@ -16,13 +16,13 @@ namespace MBA_DevXpert_PEO.Conteudos.Application.DTOs
         public string DescricaoConteudoProgramatico { get; set; }
     }
 
-    public class UpdateCursoInputDTO : CursoInputDTO
+    public class AtualizarCursoDto : AdicionarCursoDto
     {
         [Required]
         public Guid Id { get; set; }
     }
 
-    public class AdicionarAulaInputDTO
+    public class AdicionarAulaDto
     {
         [Required]
         public Guid CursoId { get; set; }
@@ -34,16 +34,16 @@ namespace MBA_DevXpert_PEO.Conteudos.Application.DTOs
         public string MaterialUrl { get; set; }
     }
 
-    public class CursoDTO
+    public class CursoDto
     {
         public Guid Id { get; set; }
         public string Nome { get; set; }
         public string Autor { get; set; }
         public int CargaHoraria { get; set; }
-        public List<AulaDTO> Aulas { get; set; } = new();
+        public List<AulaDto> Aulas { get; set; } = new();
     }
 
-    public class AulaDTO
+    public class AulaDto
     {
         public Guid Id { get; set; }
         public string Titulo { get; set; }

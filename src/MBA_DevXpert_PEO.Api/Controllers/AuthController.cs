@@ -7,6 +7,7 @@ using MBA_DevXpert_PEO.Core.Communication.Mediator;
 using MBA_DevXpert_PEO.Core.Messages.CommonMessages.Notifications;
 using MediatR;
 using MBA_DevXpert_PEO.Api.Identity;
+using Alunos.Commands;
 
 namespace MBA_DevXpert_PEO.Api.Controllers
 {
@@ -47,18 +48,19 @@ namespace MBA_DevXpert_PEO.Api.Controllers
             };
 
             var result = await _userManager.CreateAsync(user, dto.Senha);
-
             if (!result.Succeeded)
                 return BadRequest(result.Errors);
 
-            var aluno = Aluno.CriarComId(user.Id, dto.Nome, dto.Email);
+            var command = new CriarAlunoCommand(user.Id, dto.Nome, dto.Email);
+            var sucesso = await _mediatorHandler.EnviarComando(command);
 
-            _alunoRepository.Adicionar(aluno);
-            await _alunoRepository.UnitOfWork.Commit();
+            if (!sucesso)
+                return BadRequest("Erro ao criar o aluno no domínio.");
 
             var token = _tokenService.GenerateToken(user);
             return Ok(new { token });
         }
+
 
         [HttpPost("login")]
         public async Task<IActionResult> Login(UserLoginDto dto)

@@ -66,7 +66,7 @@ namespace MBA_DevXpert_PEO.Alunos.API.Controllers
                 return CustomResponse();
             }
 
-            var curso = await _cursoQueries.ObterPorCursoId(matricula.CursoId);
+            var curso = await _cursoQueries.ObterPorId(matricula.CursoId);
             if (curso == null)
             {
                 await _mediatorHandler.PublicarNotificacao(new DomainNotification("Curso", "Curso não encontrado."));
@@ -142,7 +142,7 @@ namespace MBA_DevXpert_PEO.Alunos.API.Controllers
             if (matricula == null)
                 return BadRequest("Matrícula não encontrada.");
 
-            var curso = await _cursoQueries.ObterPorCursoId(matricula.CursoId);
+            var curso = await _cursoQueries.ObterPorId(matricula.CursoId);
             if (curso == null)
                 return BadRequest("Curso não encontrado.");
             var aluno = await _alunoQueries.ObterPorId(alunoId);
