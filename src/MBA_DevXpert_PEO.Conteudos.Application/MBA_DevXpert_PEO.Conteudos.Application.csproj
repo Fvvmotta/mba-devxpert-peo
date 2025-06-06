@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MBA_DevXpert_PEO.Conteudos.Domain\MBA_DevXpert_PEO.Conteudos.Domain.csproj" />
+    <ProjectReference Include="..\MBA_DevXpert_PEO.Conteudos.Infra\MBA_DevXpert_PEO.Conteudos.Infra.csproj" />
   </ItemGroup>
 
 </Project>

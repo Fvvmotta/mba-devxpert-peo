@@ -4,8 +4,6 @@ using MBA_DevXpert_PEO.Conteudos.Infra.Context;
 using MBA_DevXpert_PEO.Conteudos.Domain.Entities;
 using MBA_DevXpert_PEO.Conteudos.Domain.ValueObjects;
 using MBA_DevXpert_PEO.Alunos.Infra.Context;
-using MBA_DevXpert_PEO.Pagamentos.Domain.Entities;
-using MBA_DevXpert_PEO.Pagamentos.Domain.ValueObjects;
 using MBA_DevXpert_PEO.Pagamentos.Infra.Context;
 using MBA_DevXpert_PEO.Alunos.Domain.Entities;
 using MBA_DevXpert_PEO.Alunos.Domain.Repositories;
@@ -126,13 +124,13 @@ namespace MBA_DevXpert_PEO.Api.Extensions
             }
 
             var aluno = await alunosContext.Alunos
-            .Include(a => a.Matriculas)
-            .FirstOrDefaultAsync(a => a.Id == alunoId);
+                .Include(a => a.Matriculas)
+                .FirstOrDefaultAsync(a => a.Id == alunoId);
 
             bool jaMatriculado = aluno.Matriculas.Any(m => m.CursoId == curso.Id);
             if (!jaMatriculado)
             {
-                var matricula = new Matricula(curso.Id);
+                var matricula = new Matricula(alunoId, curso.Id, curso.Valor);
                 aluno.Matricular(matricula);
 
                 matricula.DefinirTotalAulas(curso.Aulas.Count);
@@ -141,16 +139,24 @@ namespace MBA_DevXpert_PEO.Api.Extensions
                     matricula.RegistrarAulaConcluida();
                 }
 
-                matricula.Concluir(
+                var sucesso = matricula.Concluir(
                     nomeAluno: aluno.Nome,
                     nomeCurso: curso.Nome,
                     cargaHorariaCurso: curso.CargaHoraria,
-                    dataConclusao: DateTime.UtcNow
+                    dataConclusao: DateTime.UtcNow,
+                    out var erro
                 );
+                if (!sucesso)
+                {
+                    Console.WriteLine($"⚠️ Erro ao concluir matrícula no seeder: {erro}");
+                }
 
                 alunosContext.Matriculas.Add(matricula);
+                alunosContext.Certificados.Add(matricula.Certificado); // explícito
                 await alunosContext.SaveChangesAsync();
+
             }
+
         }
     }
 }

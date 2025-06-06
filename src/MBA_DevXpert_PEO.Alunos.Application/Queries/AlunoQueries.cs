@@ -15,15 +15,33 @@ public class AlunoQueries : IAlunoQueries
     public async Task<AlunoDto> ObterPorId(Guid alunoId)
     {
         return await _alunoContext.Alunos
+            .AsNoTracking()
+            .Include(a => a.Matriculas)
             .Where(a => a.Id == alunoId)
             .Select(a => new AlunoDto
+            {
+                Id = a.Id,
+                Nome = a.Nome,
+                Email = a.Email,
+                Matriculas = a.Matriculas.Select(m => new MatriculaCompletaDto
                 {
-                    Id = a.Id,
-                    Nome = a.Nome,
-                    Email = a.Email
-                })
-                .FirstOrDefaultAsync();
+                    Id = m.Id,
+                    CursoId = m.CursoId,
+                    Valor = m.ValorCurso,
+                    DataMatricula = m.DataMatricula,
+                    Status = m.Status.ToString(),
+                    Historico = new HistoricoAprendizadoDto
+                    {
+                        TotalAulas = m.Historico.TotalAulas,
+                        AulasConcluidas = m.Historico.AulasConcluidas,
+                        TodasAulasConcluidas = m.Historico.TodasAulasConcluidas
+                    }
+                }).ToList()
+            })
+            .FirstOrDefaultAsync();
     }
+
+
     public async Task<MatriculaComCursoDto?> ObterMatriculaComCurso(Guid alunoId, Guid matriculaId)
     {
         return await _alunoContext.Matriculas
@@ -54,5 +72,20 @@ public class AlunoQueries : IAlunoQueries
                 }))
             .FirstOrDefaultAsync();
     }
+    public async Task<MatriculaDto?> ObterMatriculaPorId(Guid matriculaId)
+    {
+        return await _alunoContext.Matriculas
+            .Where(m => m.Id == matriculaId)
+            .Select(m => new MatriculaDto
+            {
+                Id = m.Id,
+                CursoId = m.CursoId,
+                AlunoId = m.AlunoId,
+                Valor = m.ValorCurso,
+                Status = m.Status.ToString()
+            })
+            .FirstOrDefaultAsync();
+    }
+
 
 }

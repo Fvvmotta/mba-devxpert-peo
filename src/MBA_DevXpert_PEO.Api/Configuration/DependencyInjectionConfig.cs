@@ -9,11 +9,16 @@ using MBA_DevXpert_PEO.Conteudos.Application.Handlers;
 using MBA_DevXpert_PEO.Conteudos.Application.Services;
 using MBA_DevXpert_PEO.Conteudos.Domain.Repositories;
 using MBA_DevXpert_PEO.Conteudos.Infra.Repository;
-using MBA_DevXpert_PEO.Pagamentos.Infra.Repositories;
-using MBA_DevXpert_PEO.Pagamentos.Domain.Repositories;
 using MediatR;
 using MBA_DevXpert_PEO.Api.Identity;
 using Alunos.Queries;
+using MBA_DevXpert_PEO.Pagamentos.Business;
+using MBA_DevXpert_PEO.Pagamentos.Infra.Context;
+using MBA_DevXpert_PEO.Pagamentos.AntiCorruption;
+using MBA_DevXpert_PEO.Conteudos.Application.Queries;
+using Pagamentos.Repository;
+using MBA_DevXpert_PEO.Core.Messages.CommonMessages.IntegrationEvents;
+using MBA_DevXpert_PEO.Pagamentos.Business.Events;
 
 namespace MBA_DevXpert_PEO.Api.Configuration
 {
@@ -39,6 +44,7 @@ namespace MBA_DevXpert_PEO.Api.Configuration
 
             // Queries
             services.AddScoped<IAlunoQueries, AlunoQueries>();
+            services.AddScoped<ICursoQueries, CursoQueries>();
 
             // Services 
             services.AddScoped<ICursoAppService, CursoAppService>();
@@ -52,6 +58,14 @@ namespace MBA_DevXpert_PEO.Api.Configuration
             services.AddScoped<ICursoRepository, CursoRepository>();
             services.AddScoped<IAlunoRepository, AlunoRepository>();
             services.AddScoped<IPagamentoRepository, PagamentoRepository>();
+
+
+            // Pagamento
+            services.AddScoped<IPagamentoService, PagamentoService>();
+            services.AddScoped<IPagamentoCartaoCreditoFacade, PagamentoCartaoCreditoFacade>();
+            services.AddScoped<IPayPalGateway, PayPalGateway>();
+            services.AddScoped<Pagamentos.AntiCorruption.IConfigurationManager, Pagamentos.AntiCorruption.ConfigurationManager>();
+            services.AddScoped<PagamentosContext>();
         }
     }
 }

@@ -10,6 +10,8 @@ namespace MBA_DevXpert_PEO.Alunos.Application.DTOs
         public Guid Id { get; set; }
         public string Nome { get; set; }
         public string Email { get; set; }
+
+        public List<MatriculaCompletaDto> Matriculas { get; set; } = new();
     }
     public class AlunoComMatriculasDto
     {
@@ -51,10 +53,28 @@ namespace MBA_DevXpert_PEO.Alunos.Application.DTOs
         [EmailAddress(ErrorMessage = "O e-mail está em formato inválido.")]
         public string Email { get; set; }
     }
+    public class MatriculaCompletaDto
+    {
+        public Guid Id { get; set; }
+        public Guid CursoId { get; set; }
+        public decimal Valor { get; set; }
+        public DateTime DataMatricula { get; set; }
+        public string Status { get; set; }
+
+        public HistoricoAprendizadoDto Historico { get; set; }
+    }
+    public class HistoricoAprendizadoDto
+    {
+        public int TotalAulas { get; set; }
+        public int AulasConcluidas { get; set; }
+        public bool TodasAulasConcluidas { get; set; }
+    }
     public class MatriculaDto
     {
         public Guid Id { get; set; }
         public Guid CursoId { get; set; }
+        public Guid AlunoId { get; set; }
+        public decimal Valor { get; set; }
         public DateTime DataMatricula { get; set; }
         public string Status { get; set; }
         public CertificadoDto? Certificado { get; set; }

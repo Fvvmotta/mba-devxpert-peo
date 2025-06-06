@@ -379,11 +379,8 @@
               "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Conteudos.Infra\\MBA_DevXpert_PEO.Conteudos.Infra.csproj": {
                 "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Conteudos.Infra\\MBA_DevXpert_PEO.Conteudos.Infra.csproj"
               },
-              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Application\\MBA_DevXpert_PEO.Pagamentos.Application.csproj": {
-                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Application\\MBA_DevXpert_PEO.Pagamentos.Application.csproj"
-              },
-              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Domain\\MBA_DevXpert_PEO.Pagamentos.Domain.csproj": {
-                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Domain\\MBA_DevXpert_PEO.Pagamentos.Domain.csproj"
+              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.AntiCorruption\\MBA_DevXpert_PEO.Pagamentos.AntiCorruption.csproj": {
+                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.AntiCorruption\\MBA_DevXpert_PEO.Pagamentos.AntiCorruption.csproj"
               },
               "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Infra\\MBA_DevXpert_PEO.Pagamentos.Infra.csproj": {
                 "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Infra\\MBA_DevXpert_PEO.Pagamentos.Infra.csproj"
@@ -507,6 +504,9 @@
             "projectReferences": {
               "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Conteudos.Domain\\MBA_DevXpert_PEO.Conteudos.Domain.csproj": {
                 "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Conteudos.Domain\\MBA_DevXpert_PEO.Conteudos.Domain.csproj"
+              },
+              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Conteudos.Infra\\MBA_DevXpert_PEO.Conteudos.Infra.csproj": {
+                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Conteudos.Infra\\MBA_DevXpert_PEO.Conteudos.Infra.csproj"
               }
             }
           }
@@ -798,14 +798,14 @@
         }
       }
     },
-    "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Application\\MBA_DevXpert_PEO.Pagamentos.Application.csproj": {
+    "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.AntiCorruption\\MBA_DevXpert_PEO.Pagamentos.AntiCorruption.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Application\\MBA_DevXpert_PEO.Pagamentos.Application.csproj",
-        "projectName": "MBA_DevXpert_PEO.Pagamentos.Application",
-        "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Application\\MBA_DevXpert_PEO.Pagamentos.Application.csproj",
+        "projectUniqueName": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.AntiCorruption\\MBA_DevXpert_PEO.Pagamentos.AntiCorruption.csproj",
+        "projectName": "MBA_DevXpert_PEO.Pagamentos.AntiCorruption",
+        "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.AntiCorruption\\MBA_DevXpert_PEO.Pagamentos.AntiCorruption.csproj",
         "packagesPath": "C:\\Users\\adm\\.nuget\\packages\\",
-        "outputPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Application\\obj\\",
+        "outputPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.AntiCorruption\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -826,11 +826,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj": {
-                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj"
-              },
-              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Domain\\MBA_DevXpert_PEO.Pagamentos.Domain.csproj": {
-                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Domain\\MBA_DevXpert_PEO.Pagamentos.Domain.csproj"
+              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Business\\MBA_DevXpert_PEO.Pagamentos.Business.csproj": {
+                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Business\\MBA_DevXpert_PEO.Pagamentos.Business.csproj"
               }
             }
           }
@@ -870,14 +867,14 @@
         }
       }
     },
-    "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Domain\\MBA_DevXpert_PEO.Pagamentos.Domain.csproj": {
+    "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Business\\MBA_DevXpert_PEO.Pagamentos.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Domain\\MBA_DevXpert_PEO.Pagamentos.Domain.csproj",
-        "projectName": "MBA_DevXpert_PEO.Pagamentos.Domain",
-        "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Domain\\MBA_DevXpert_PEO.Pagamentos.Domain.csproj",
+        "projectUniqueName": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Business\\MBA_DevXpert_PEO.Pagamentos.Business.csproj",
+        "projectName": "MBA_DevXpert_PEO.Pagamentos.Business",
+        "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Business\\MBA_DevXpert_PEO.Pagamentos.Business.csproj",
         "packagesPath": "C:\\Users\\adm\\.nuget\\packages\\",
-        "outputPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Domain\\obj\\",
+        "outputPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Business\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -970,8 +967,8 @@
               "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj": {
                 "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core\\MBA_DevXpert_PEO.Core.csproj"
               },
-              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Domain\\MBA_DevXpert_PEO.Pagamentos.Domain.csproj": {
-                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Domain\\MBA_DevXpert_PEO.Pagamentos.Domain.csproj"
+              "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Business\\MBA_DevXpert_PEO.Pagamentos.Business.csproj": {
+                "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Business\\MBA_DevXpert_PEO.Pagamentos.Business.csproj"
               }
             }
           }

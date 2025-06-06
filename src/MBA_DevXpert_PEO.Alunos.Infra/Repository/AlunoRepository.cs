@@ -47,6 +47,10 @@ namespace MBA_DevXpert_PEO.Alunos.Infra.Repositories
         {
             _context.Alunos.Add(aluno);
         }
+        public void AdicionarMatricula(Matricula matricula)
+        {
+            _context.Matriculas.Add(matricula);
+        }
 
         public void Atualizar(Aluno aluno)
         {

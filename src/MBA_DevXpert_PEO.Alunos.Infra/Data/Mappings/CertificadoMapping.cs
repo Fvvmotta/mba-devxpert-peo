@@ -10,8 +10,11 @@ namespace MBA_DevXpert_PEO.Alunos.Infra.Mappings
         {
             builder.HasKey(c => c.Id);
 
-            builder.Property(c => c.MatriculaId)
-                .IsRequired();
+            builder.HasOne<Matricula>()
+             .WithOne(m => m.Certificado)
+             .HasForeignKey<Certificado>(c => c.MatriculaId)
+             .OnDelete(DeleteBehavior.Restrict);
+
 
             builder.Property(c => c.DataEmissao)
                 .IsRequired();

@@ -25,7 +25,7 @@
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "MBA_DevXpert_PEO.Alunos.Application.DTOs.CriarAlunoDto",
+        "Type": "MBA_DevXpert_PEO.Api.DTOs.UserRegisterDto",
         "IsRequired": true
       },
       {
@@ -72,7 +72,7 @@
       },
       {
         "Name": "dto",
-        "Type": "MBA_DevXpert_PEO.Alunos.Application.DTOs.AtualizarAlunoDto",
+        "Type": "AtualizarAlunoIdentityDto",
         "IsRequired": true
       },
       {
@@ -96,6 +96,22 @@
         "Type": "System.Guid",
         "IsRequired": true
       },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MBA_DevXpert_PEO.Api.Controllers.AdminAlunoController",
+    "Method": "ObterMatriculasDetalhadas",
+    "RelativePath": "api/adminaluno/matriculas-detalhadas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
       {
         "Name": "api-version",
         "Type": "System.String",
@@ -263,9 +279,9 @@
   },
   {
     "ContainingType": "MBA_DevXpert_PEO.Alunos.API.Controllers.AlunoController",
-    "Method": "AtualizarAluno",
-    "RelativePath": "api/alunos/{alunoId}",
-    "HttpMethod": "PUT",
+    "Method": "FinalizarAula",
+    "RelativePath": "api/alunos/{alunoId}/matricula/{matriculaId}/aula/finalizar",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -275,8 +291,8 @@
         "IsRequired": true
       },
       {
-        "Name": "dto",
-        "Type": "MBA_DevXpert_PEO.Alunos.Application.DTOs.AtualizarAlunoDto",
+        "Name": "matriculaId",
+        "Type": "System.Guid",
         "IsRequired": true
       },
       {
@@ -367,12 +383,85 @@
   },
   {
     "ContainingType": "MBA_DevXpert_PEO.Alunos.API.Controllers.AlunoController",
-    "Method": "ObterMatriculasDetalhadas",
-    "RelativePath": "api/alunos/matriculas-detalhadas",
+    "Method": "PagarMatricula",
+    "RelativePath": "api/alunos/{matriculaId}/pagar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "matriculaId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "MBA_DevXpert_PEO.Core.DomainObjects.DTO.PagamentoPedido",
+        "IsRequired": true
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MBA_DevXpert_PEO.Alunos.API.Controllers.AlunoController",
+    "Method": "ObterPerfil",
+    "RelativePath": "api/alunos/perfil",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MBA_DevXpert_PEO.Alunos.API.Controllers.AlunoController",
+    "Method": "AtualizarPerfil",
+    "RelativePath": "api/alunos/perfil",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "AtualizarAlunoIdentityDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "api-version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MBA_DevXpert_PEO.Alunos.API.Controllers.AlunoController",
+    "Method": "ObterProgresso",
+    "RelativePath": "api/alunos/progresso",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "matriculaId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "cursoId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
       {
         "Name": "api-version",
         "Type": "System.String",
@@ -426,27 +515,6 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [
-      {
-        "Name": "api-version",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "MBA_DevXpert_PEO.Api.Controllers.PagamentosController",
-    "Method": "RealizarPagamento",
-    "RelativePath": "api/pagamentos",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "MBA_DevXpert_PEO.Pagamentos.Application.DTOs.RealizarPagamentoDto",
-        "IsRequired": true
-      },
       {
         "Name": "api-version",
         "Type": "System.String",

@@ -11,6 +11,7 @@ namespace MBA_DevXpert_PEO.Alunos.Domain.Repositories
         Task<IEnumerable<Aluno>> ObterTodos();
         Task<IEnumerable<Aluno>> ObterTodosComMatriculas(); 
         void Adicionar(Aluno aluno);
+        void AdicionarMatricula(Matricula matricula);
         void Atualizar(Aluno aluno);
         void Remover(Aluno aluno);
     }

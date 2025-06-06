@@ -49,4 +49,11 @@ namespace MBA_DevXpert_PEO.Conteudos.Application.DTOs
         public string? Descricao { get; set; }
         public string? MaterialUrl { get; set; }
     }
+    public class CursoResumoDto
+    {
+        public Guid CursoId { get; set; }
+        public string Nome { get; set; }
+        public decimal Valor { get; set; }
+        public int TotalAulas { get; set; }
+    }
 }

@@ -12,7 +12,7 @@ namespace MBA_DevXpert_PEO.Api.Controllers
 {
     [ApiController]
     [Route("auth")]
-    public class AuthController : ControllerBase
+    public class AuthController : BaseController
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
@@ -46,7 +46,7 @@ namespace MBA_DevXpert_PEO.Api.Controllers
                 EmailConfirmed = true
             };
 
-            var result = await _userManager.CreateAsync(user, dto.Password);
+            var result = await _userManager.CreateAsync(user, dto.Senha);
 
             if (!result.Succeeded)
                 return BadRequest(result.Errors);

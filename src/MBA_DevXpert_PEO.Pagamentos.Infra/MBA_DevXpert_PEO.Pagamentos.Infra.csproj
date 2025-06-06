@@ -24,7 +24,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MBA_DevXpert_PEO.Core\MBA_DevXpert_PEO.Core.csproj" />
-    <ProjectReference Include="..\MBA_DevXpert_PEO.Pagamentos.Domain\MBA_DevXpert_PEO.Pagamentos.Domain.csproj" />
+    <ProjectReference Include="..\MBA_DevXpert_PEO.Pagamentos.Business\MBA_DevXpert_PEO.Pagamentos.Business.csproj" />
   </ItemGroup>
 
 </Project>

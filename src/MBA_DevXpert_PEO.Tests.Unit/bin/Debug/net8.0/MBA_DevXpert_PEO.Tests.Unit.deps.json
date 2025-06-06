@@ -2005,7 +2005,8 @@
       },
       "MBA_DevXpert_PEO.Conteudos.Application/1.0.0": {
         "dependencies": {
-          "MBA_DevXpert_PEO.Conteudos.Domain": "1.0.0"
+          "MBA_DevXpert_PEO.Conteudos.Domain": "1.0.0",
+          "MBA_DevXpert_PEO.Conteudos.Infra": "1.0.0"
         },
         "runtime": {
           "MBA_DevXpert_PEO.Conteudos.Application.dll": {
@@ -2021,6 +2022,22 @@
         },
         "runtime": {
           "MBA_DevXpert_PEO.Conteudos.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "MBA_DevXpert_PEO.Conteudos.Infra/1.0.0": {
+        "dependencies": {
+          "MBA_DevXpert_PEO.Conteudos.Domain": "1.0.0",
+          "MBA_DevXpert_PEO.Core": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "9.0.4",
+          "Microsoft.EntityFrameworkCore.Sqlite": "9.0.4",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.4",
+          "Microsoft.Extensions.Configuration.Json": "9.0.4"
+        },
+        "runtime": {
+          "MBA_DevXpert_PEO.Conteudos.Infra.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -3201,6 +3218,11 @@
       "sha512": ""
     },
     "MBA_DevXpert_PEO.Conteudos.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MBA_DevXpert_PEO.Conteudos.Infra/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

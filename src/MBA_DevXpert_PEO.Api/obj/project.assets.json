@@ -3997,7 +3997,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "MBA_DevXpert_PEO.Conteudos.Domain": "1.0.0"
+          "MBA_DevXpert_PEO.Conteudos.Domain": "1.0.0",
+          "MBA_DevXpert_PEO.Conteudos.Infra": "1.0.0"
         },
         "compile": {
           "bin/placeholder/MBA_DevXpert_PEO.Conteudos.Application.dll": {}
@@ -4052,31 +4053,30 @@
           "bin/placeholder/MBA_DevXpert_PEO.Core.dll": {}
         }
       },
-      "MBA_DevXpert_PEO.Pagamentos.Application/1.0.0": {
+      "MBA_DevXpert_PEO.Pagamentos.AntiCorruption/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "MBA_DevXpert_PEO.Core": "1.0.0",
-          "MBA_DevXpert_PEO.Pagamentos.Domain": "1.0.0"
+          "MBA_DevXpert_PEO.Pagamentos.Business": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/MBA_DevXpert_PEO.Pagamentos.Application.dll": {}
+          "bin/placeholder/MBA_DevXpert_PEO.Pagamentos.AntiCorruption.dll": {}
         },
         "runtime": {
-          "bin/placeholder/MBA_DevXpert_PEO.Pagamentos.Application.dll": {}
+          "bin/placeholder/MBA_DevXpert_PEO.Pagamentos.AntiCorruption.dll": {}
         }
       },
-      "MBA_DevXpert_PEO.Pagamentos.Domain/1.0.0": {
+      "MBA_DevXpert_PEO.Pagamentos.Business/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "MBA_DevXpert_PEO.Core": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/MBA_DevXpert_PEO.Pagamentos.Domain.dll": {}
+          "bin/placeholder/MBA_DevXpert_PEO.Pagamentos.Business.dll": {}
         },
         "runtime": {
-          "bin/placeholder/MBA_DevXpert_PEO.Pagamentos.Domain.dll": {}
+          "bin/placeholder/MBA_DevXpert_PEO.Pagamentos.Business.dll": {}
         }
       },
       "MBA_DevXpert_PEO.Pagamentos.Infra/1.0.0": {
@@ -4084,7 +4084,7 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "MBA_DevXpert_PEO.Core": "1.0.0",
-          "MBA_DevXpert_PEO.Pagamentos.Domain": "1.0.0",
+          "MBA_DevXpert_PEO.Pagamentos.Business": "1.0.0",
           "Microsoft.EntityFrameworkCore": "9.0.4",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.4",
           "Microsoft.EntityFrameworkCore.Sqlite": "9.0.4",
@@ -10984,15 +10984,15 @@
       "path": "../MBA_DevXpert_PEO.Core/MBA_DevXpert_PEO.Core.csproj",
       "msbuildProject": "../MBA_DevXpert_PEO.Core/MBA_DevXpert_PEO.Core.csproj"
     },
-    "MBA_DevXpert_PEO.Pagamentos.Application/1.0.0": {
+    "MBA_DevXpert_PEO.Pagamentos.AntiCorruption/1.0.0": {
       "type": "project",
-      "path": "../MBA_DevXpert_PEO.Pagamentos.Application/MBA_DevXpert_PEO.Pagamentos.Application.csproj",
-      "msbuildProject": "../MBA_DevXpert_PEO.Pagamentos.Application/MBA_DevXpert_PEO.Pagamentos.Application.csproj"
+      "path": "../MBA_DevXpert_PEO.Pagamentos.AntiCorruption/MBA_DevXpert_PEO.Pagamentos.AntiCorruption.csproj",
+      "msbuildProject": "../MBA_DevXpert_PEO.Pagamentos.AntiCorruption/MBA_DevXpert_PEO.Pagamentos.AntiCorruption.csproj"
     },
-    "MBA_DevXpert_PEO.Pagamentos.Domain/1.0.0": {
+    "MBA_DevXpert_PEO.Pagamentos.Business/1.0.0": {
       "type": "project",
-      "path": "../MBA_DevXpert_PEO.Pagamentos.Domain/MBA_DevXpert_PEO.Pagamentos.Domain.csproj",
-      "msbuildProject": "../MBA_DevXpert_PEO.Pagamentos.Domain/MBA_DevXpert_PEO.Pagamentos.Domain.csproj"
+      "path": "../MBA_DevXpert_PEO.Pagamentos.Business/MBA_DevXpert_PEO.Pagamentos.Business.csproj",
+      "msbuildProject": "../MBA_DevXpert_PEO.Pagamentos.Business/MBA_DevXpert_PEO.Pagamentos.Business.csproj"
     },
     "MBA_DevXpert_PEO.Pagamentos.Infra/1.0.0": {
       "type": "project",
@@ -11008,8 +11008,7 @@
       "MBA_DevXpert_PEO.Alunos.Infra >= 1.0.0",
       "MBA_DevXpert_PEO.Conteudos.Application >= 1.0.0",
       "MBA_DevXpert_PEO.Conteudos.Infra >= 1.0.0",
-      "MBA_DevXpert_PEO.Pagamentos.Application >= 1.0.0",
-      "MBA_DevXpert_PEO.Pagamentos.Domain >= 1.0.0",
+      "MBA_DevXpert_PEO.Pagamentos.AntiCorruption >= 1.0.0",
       "MBA_DevXpert_PEO.Pagamentos.Infra >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.4",
       "Microsoft.AspNetCore.Http >= 2.3.0",
@@ -11074,11 +11073,8 @@
             "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Conteudos.Infra\\MBA_DevXpert_PEO.Conteudos.Infra.csproj": {
               "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Conteudos.Infra\\MBA_DevXpert_PEO.Conteudos.Infra.csproj"
             },
-            "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Application\\MBA_DevXpert_PEO.Pagamentos.Application.csproj": {
-              "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Application\\MBA_DevXpert_PEO.Pagamentos.Application.csproj"
-            },
-            "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Domain\\MBA_DevXpert_PEO.Pagamentos.Domain.csproj": {
-              "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Domain\\MBA_DevXpert_PEO.Pagamentos.Domain.csproj"
+            "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.AntiCorruption\\MBA_DevXpert_PEO.Pagamentos.AntiCorruption.csproj": {
+              "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.AntiCorruption\\MBA_DevXpert_PEO.Pagamentos.AntiCorruption.csproj"
             },
             "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Infra\\MBA_DevXpert_PEO.Pagamentos.Infra.csproj": {
               "projectPath": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Infra\\MBA_DevXpert_PEO.Pagamentos.Infra.csproj"

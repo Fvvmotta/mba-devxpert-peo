@@ -2,13 +2,19 @@
 using MBA_DevXpert_PEO.Core.Messages;
 using MBA_DevXpert_PEO.Conteudos.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using MBA_DevXpert_PEO.Core.Communication.Mediator;
 
 namespace MBA_DevXpert_PEO.Conteudos.Infra.Context
 {
     public class GestaoConteudoContext : DbContext, IUnitOfWork
     {
-        public GestaoConteudoContext(DbContextOptions<GestaoConteudoContext> options)
-            : base(options) { }
+        private readonly IMediatorHandler _mediatorHandler;
+
+        public GestaoConteudoContext(DbContextOptions<GestaoConteudoContext> options, IMediatorHandler mediatorHandler)
+        : base(options)
+        {
+            _mediatorHandler = mediatorHandler;
+        }
 
         public DbSet<Curso> Cursos { get; set; }
         public DbSet<Aula> Aulas { get; set; }

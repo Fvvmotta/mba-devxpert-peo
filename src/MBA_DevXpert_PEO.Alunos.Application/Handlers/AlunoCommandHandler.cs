@@ -7,11 +7,18 @@ using MBA_DevXpert_PEO.Alunos.Domain.Entities;
 using MBA_DevXpert_PEO.Core.Communication.Mediator;
 using MBA_DevXpert_PEO.Core.Messages.CommonMessages.Notifications;
 using MBA_DevXpert_PEO.Alunos.Application.Events;
+using Alunos.Commands;
+using MBA_DevXpert_PEO.Alunos.Domain.Entities.Enum;
+using MBA_DevXpert_PEO.Core.DomainObjects;
 
 namespace MBA_DevXpert_PEO.Alunos.Application.Handlers
 {
     public class AlunoCommandHandler :
-        IRequestHandler<CriarMatriculaCommand, bool>
+        IRequestHandler<CriarMatriculaCommand, bool>,
+        IRequestHandler<FinalizarCursoCommand, bool>,
+        IRequestHandler<FinalizarAulaCommand, bool>,
+        IRequestHandler<AtualizarAlunoCommand, bool>
+        
     {
         private readonly IAlunoRepository _alunoRepository;
         private readonly IMediatorHandler _mediator;
@@ -37,9 +44,11 @@ namespace MBA_DevXpert_PEO.Alunos.Application.Handlers
                 return false;
             }
 
-            var matricula = new Matricula(command.CursoId);
+            var matricula = new Matricula(command.AlunoId, command.CursoId, command.Valor);
+            matricula.DefinirTotalAulas(command.TotalAulas);
+
             aluno.Matricular(matricula);
-            _alunoRepository.Atualizar(aluno);
+            _alunoRepository.AdicionarMatricula(matricula);
 
             var sucesso = await _alunoRepository.UnitOfWork.Commit();
 
@@ -50,6 +59,30 @@ namespace MBA_DevXpert_PEO.Alunos.Application.Handlers
 
             return sucesso;
         }
+
+        public async Task<bool> Handle(FinalizarAulaCommand command, CancellationToken cancellationToken)
+        {
+            var aluno = await _alunoRepository.ObterPorId(command.AlunoId);
+            if (aluno == null)
+            {
+                await _mediator.PublicarNotificacao(new DomainNotification("Aluno", "Aluno não encontrado."));
+                return false;
+            }
+
+            var matricula = aluno.Matriculas.FirstOrDefault(m => m.Id == command.MatriculaId);
+            if (matricula == null)
+            {
+                await _mediator.PublicarNotificacao(new DomainNotification("Matrícula", "Matrícula não encontrada."));
+                return false;
+            }
+
+            matricula.DefinirTotalAulas(command.TotalAulasCurso); 
+            matricula.RegistrarAulaConcluida();
+
+            _alunoRepository.Atualizar(aluno);
+            return await _alunoRepository.UnitOfWork.Commit();
+        }
+
         public async Task<bool> Handle(FinalizarCursoCommand command, CancellationToken cancellationToken)
         {
             if (!command.EhValido())
@@ -65,33 +98,32 @@ namespace MBA_DevXpert_PEO.Alunos.Application.Handlers
                 return false;
             }
 
-            try
+            var sucesso = aluno.ConcluirMatricula(
+                command.MatriculaId,
+                command.AlunoNome,
+                command.CursoNome,
+                command.CargaHoraria,
+                DateTime.UtcNow,
+                out var erro
+            );
+
+            if (!sucesso)
             {
-                aluno.ConcluirMatricula(
-                    command.MatriculaId,
-                    command.AlunoNome,
-                    command.CursoNome,
-                    command.CargaHoraria,
-                    DateTime.UtcNow
-                );
-            }
-            catch (Exception ex)
-            {
-                await _mediator.PublicarNotificacao(new DomainNotification("Erro ao concluir", ex.Message));
+                await _mediator.PublicarNotificacao(new DomainNotification("Erro ao concluir matrícula", erro));
                 return false;
             }
 
             _alunoRepository.Atualizar(aluno);
-            var sucesso = await _alunoRepository.UnitOfWork.Commit();
+            await _alunoRepository.UnitOfWork.Commit();
 
-            if (sucesso)
-            {
-                var matricula = aluno.Matriculas.FirstOrDefault(m => m.Id == command.MatriculaId);
-                var certificadoId = matricula?.Certificado?.Id ?? Guid.Empty;
-                await _mediator.PublicarEvento(new CursoFinalizadoEvent(command.AlunoId, command.MatriculaId, certificadoId));
-            }
-            return sucesso;
+            var matricula = aluno.Matriculas.FirstOrDefault(m => m.Id == command.MatriculaId);
+            var certificadoId = matricula?.Certificado?.Id ?? Guid.Empty;
+
+            await _mediator.PublicarEvento(new CursoFinalizadoEvent(command.AlunoId, command.MatriculaId, certificadoId));
+
+            return true;
         }
+
 
         public async Task<bool> Handle(AtualizarAlunoCommand command, CancellationToken cancellationToken)
         {

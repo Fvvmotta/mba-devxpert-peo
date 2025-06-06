@@ -55,17 +55,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CriarAlunoDto"
+                "$ref": "#/components/schemas/UserRegisterDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CriarAlunoDto"
+                "$ref": "#/components/schemas/UserRegisterDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CriarAlunoDto"
+                "$ref": "#/components/schemas/UserRegisterDto"
               }
             }
           }
@@ -136,17 +136,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/AtualizarAlunoDto"
+                "$ref": "#/components/schemas/AtualizarAlunoIdentityDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/AtualizarAlunoDto"
+                "$ref": "#/components/schemas/AtualizarAlunoIdentityDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/AtualizarAlunoDto"
+                "$ref": "#/components/schemas/AtualizarAlunoIdentityDto"
               }
             }
           }
@@ -171,6 +171,29 @@
               "format": "uuid"
             }
           },
+          {
+            "name": "api-version",
+            "in": "query",
+            "description": "The requested API version",
+            "schema": {
+              "type": "string",
+              "default": "1.0"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/adminaluno/matriculas-detalhadas": {
+      "get": {
+        "tags": [
+          "AdminAluno"
+        ],
+        "parameters": [
           {
             "name": "api-version",
             "in": "query",
@@ -505,7 +528,58 @@
         }
       }
     },
-    "/api/alunos/{alunoId}/matriculas/{matriculaId}/finalizar": {
+    "/api/alunos/{matriculaId}/pagar": {
+      "post": {
+        "tags": [
+          "Aluno"
+        ],
+        "parameters": [
+          {
+            "name": "matriculaId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "api-version",
+            "in": "query",
+            "description": "The requested API version",
+            "schema": {
+              "type": "string",
+              "default": "1.0"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PagamentoPedido"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PagamentoPedido"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PagamentoPedido"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/alunos/{alunoId}/matricula/{matriculaId}/aula/finalizar": {
       "post": {
         "tags": [
           "Aluno"
@@ -546,16 +620,23 @@
         }
       }
     },
-    "/api/alunos/{alunoId}": {
-      "put": {
+    "/api/alunos/progresso": {
+      "get": {
         "tags": [
           "Aluno"
         ],
         "parameters": [
           {
-            "name": "alunoId",
-            "in": "path",
-            "required": true,
+            "name": "matriculaId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "cursoId",
+            "in": "query",
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -571,25 +652,6 @@
             }
           }
         ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AtualizarAlunoDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AtualizarAlunoDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/AtualizarAlunoDto"
-              }
-            }
-          }
-        },
         "responses": {
           "200": {
             "description": "OK"
@@ -597,12 +659,30 @@
         }
       }
     },
-    "/api/alunos/matriculas-detalhadas": {
-      "get": {
+    "/api/alunos/{alunoId}/matriculas/{matriculaId}/finalizar": {
+      "post": {
         "tags": [
           "Aluno"
         ],
         "parameters": [
+          {
+            "name": "alunoId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "matriculaId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
           {
             "name": "api-version",
             "in": "query",
@@ -654,6 +734,69 @@
             }
           }
         ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/alunos/perfil": {
+      "get": {
+        "tags": [
+          "Aluno"
+        ],
+        "parameters": [
+          {
+            "name": "api-version",
+            "in": "query",
+            "description": "The requested API version",
+            "schema": {
+              "type": "string",
+              "default": "1.0"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Aluno"
+        ],
+        "parameters": [
+          {
+            "name": "api-version",
+            "in": "query",
+            "description": "The requested API version",
+            "schema": {
+              "type": "string",
+              "default": "1.0"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AtualizarAlunoIdentityDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AtualizarAlunoIdentityDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AtualizarAlunoIdentityDto"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -822,48 +965,6 @@
           }
         }
       }
-    },
-    "/api/pagamentos": {
-      "post": {
-        "tags": [
-          "Pagamentos"
-        ],
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "query",
-            "description": "The requested API version",
-            "schema": {
-              "type": "string",
-              "default": "1.0"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RealizarPagamentoDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RealizarPagamentoDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/RealizarPagamentoDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
     }
   },
   "components": {
@@ -890,12 +991,7 @@
         },
         "additionalProperties": false
       },
-      "AtualizarAlunoDto": {
-        "required": [
-          "email",
-          "id",
-          "nome"
-        ],
+      "AtualizarAlunoIdentityDto": {
         "type": "object",
         "properties": {
           "id": {
@@ -903,32 +999,20 @@
             "format": "uuid"
           },
           "nome": {
-            "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "email": {
-            "minLength": 1,
             "type": "string",
-            "format": "email"
-          }
-        },
-        "additionalProperties": false
-      },
-      "CriarAlunoDto": {
-        "required": [
-          "email",
-          "nome"
-        ],
-        "type": "object",
-        "properties": {
-          "nome": {
-            "minLength": 1,
-            "type": "string"
+            "nullable": true
           },
-          "email": {
-            "minLength": 1,
+          "novaSenha": {
             "type": "string",
-            "format": "email"
+            "nullable": true
+          },
+          "confirmarSenha": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -974,10 +1058,14 @@
         },
         "additionalProperties": false
       },
-      "RealizarPagamentoDto": {
+      "PagamentoPedido": {
         "type": "object",
         "properties": {
           "matriculaId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "alunoId": {
             "type": "string",
             "format": "uuid"
           },
@@ -985,7 +1073,7 @@
             "type": "number",
             "format": "double"
           },
-          "nomeTitular": {
+          "nomeCartao": {
             "type": "string",
             "nullable": true
           },
@@ -993,11 +1081,11 @@
             "type": "string",
             "nullable": true
           },
-          "vencimento": {
+          "expiracaoCartao": {
             "type": "string",
             "nullable": true
           },
-          "cvv": {
+          "cvvCartao": {
             "type": "string",
             "nullable": true
           }
@@ -1060,7 +1148,7 @@
         "required": [
           "email",
           "nome",
-          "password"
+          "senha"
         ],
         "type": "object",
         "properties": {
@@ -1073,7 +1161,7 @@
             "type": "string",
             "format": "email"
           },
-          "password": {
+          "senha": {
             "minLength": 6,
             "type": "string"
           }

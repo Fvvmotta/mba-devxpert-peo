@@ -3,21 +3,16 @@
 using Microsoft.AspNetCore.Mvc;
 using MediatR;
 using MBA_DevXpert_PEO.Core.Communication.Mediator;
-using Commands = MBA_DevXpert_PEO.Conteudos.Application.Commands;
-using MBA_DevXpert_PEO.Conteudos.Application.Handlers;
 using MBA_DevXpert_PEO.Core.Messages.CommonMessages.Notifications;
-using MBA_DevXpert_PEO.Conteudos.Domain.Entities;
-using Microsoft.EntityFrameworkCore;
-using MBA_DevXpert_PEO.Conteudos.Application.DTOs;
-using MBA_DevXpert_PEO.Conteudos.Domain.Repositories;
 using MBA_DevXpert_PEO.Conteudos.Application.Services;
-using MBA_DevXpert_PEO.Conteudos.Application.Commands;
+using MBA_DevXpert_PEO.Core.Messages.CommonMessages.IntegrationEvents;
+using MBA_DevXpert_PEO.Core.DomainObjects.DTO;
 
 namespace MBA_DevXpert_PEO.Api.Controllers.Admin
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class CursoController : ControllerBase
+    public class CursoController : BaseController
     {
         private readonly ICursoAppService _cursoAppService;
 

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MBA_DevXpert_PEO.Tests.Unit")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f2007fe519756e7100bf91564c03a1f075a757a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d9d4d7fc194ddc88cdf4501094d7f9fb79d85ced")]
 [assembly: System.Reflection.AssemblyProductAttribute("MBA_DevXpert_PEO.Tests.Unit")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MBA_DevXpert_PEO.Tests.Unit")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -30,8 +30,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MBA_DevXpert_PEO.Conteudos.Application\MBA_DevXpert_PEO.Conteudos.Application.csproj" />
-    <ProjectReference Include="..\MBA_DevXpert_PEO.Pagamentos.Application\MBA_DevXpert_PEO.Pagamentos.Application.csproj" />
-    <ProjectReference Include="..\MBA_DevXpert_PEO.Pagamentos.Domain\MBA_DevXpert_PEO.Pagamentos.Domain.csproj" />
+    <ProjectReference Include="..\MBA_DevXpert_PEO.Pagamentos.AntiCorruption\MBA_DevXpert_PEO.Pagamentos.AntiCorruption.csproj" />
     <ProjectReference Include="..\MBA_DevXpert_PEO.Pagamentos.Infra\MBA_DevXpert_PEO.Pagamentos.Infra.csproj" />
   </ItemGroup>
 

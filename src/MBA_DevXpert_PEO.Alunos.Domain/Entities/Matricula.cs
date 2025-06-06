@@ -7,18 +7,23 @@ public class Matricula : Entity
 {
     public Guid AlunoId { get; private set; }
     public Guid CursoId { get; private set; }
+    public decimal ValorCurso { get; private set; }
     public DateTime DataMatricula { get; private set; }
     public StatusMatricula Status { get; private set; }
+
+    public Aluno Aluno { get; private set; }
 
     public Certificado? Certificado { get; private set; }
     public HistoricoAprendizado Historico { get; private set; }
 
     protected Matricula() { }
 
-    public Matricula(Guid cursoId)
+    public Matricula(Guid alunoId, Guid cursoId, decimal valorCurso)
     {
         Id = Guid.NewGuid();
+        AlunoId = alunoId;
         CursoId = cursoId;
+        ValorCurso = valorCurso;
         DataMatricula = DateTime.UtcNow;
         Status = StatusMatricula.PendentePagamento;
         Historico = new HistoricoAprendizado(0, 0);
@@ -34,20 +39,45 @@ public class Matricula : Entity
         Historico = Historico.RegistrarAulaConcluida();
     }
 
-    public void ConfirmarPagamento()
+    public bool ConfirmarPagamento(out string? erro)
     {
-        if (Status != StatusMatricula.PendentePagamento)
-            throw new InvalidOperationException("Pagamento já processado.");
-
+        if (Status == StatusMatricula.Ativa || Status == StatusMatricula.Concluida)
+        {
+            erro = "A matrícula já está ativa ou concluída.";
+            return false;
+        }
         Status = StatusMatricula.Ativa;
+        erro = null;
+        return true;
     }
 
-    public void Concluir(string nomeAluno, string nomeCurso, int cargaHorariaCurso, DateTime dataConclusao)
+    public bool RecusarPagamento(out string? erro)
     {
+        if (Status == StatusMatricula.Ativa || Status == StatusMatricula.Concluida)
+        {
+            erro = "A matrícula já está ativa ou concluída. Não é possível recusar o pagamento.";
+            return false;
+        }
+        Status = StatusMatricula.PagamentoRecusado;
+        erro = null;
+        return true;
+    }
+
+
+    public bool Concluir(string nomeAluno, string nomeCurso, int cargaHorariaCurso, DateTime dataConclusao, out string erro)
+    {
+        erro = string.Empty;
+
         if (!Historico.TodasAulasConcluidas)
-            throw new InvalidOperationException("Nem todas as aulas foram concluídas.");
+        {
+            erro = "Nem todas as aulas foram concluídas.";
+            return false;
+        }
 
         Status = StatusMatricula.Concluida;
         Certificado = new Certificado(Id, nomeAluno, nomeCurso, cargaHorariaCurso, dataConclusao);
+        return true;
     }
+
+
 }

@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 using MBA_DevXpert_PEO.Conteudos.Application.Commands;
 using MBA_DevXpert_PEO.Alunos.Application.Handlers;
 using MBA_DevXpert_PEO.Conteudos.Application.Handlers;
+using MBA_DevXpert_PEO.Pagamentos.Business.Events;
+using MBA_DevXpert_PEO.Core.Messages.CommonMessages.IntegrationEvents;
 
 namespace MBA_DevXpert_PEO.Api.Configuration
 {
@@ -54,7 +56,9 @@ namespace MBA_DevXpert_PEO.Api.Configuration
             services.AddMediatR(cfg =>
                 cfg.RegisterServicesFromAssemblies(
                     typeof(CursoCommandHandler).Assembly,
+                    typeof(AlunoEventHandler).Assembly,
                     typeof(AlunoCommandHandler).Assembly,
+                    typeof(PagamentoEventHandler).Assembly,
                     typeof(Program).Assembly));
 
             return services;

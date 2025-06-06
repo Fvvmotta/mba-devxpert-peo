@@ -19,8 +19,10 @@ namespace MBA_DevXpert_PEO.Alunos.Infra.Mappings
                 .HasColumnType("varchar(150)");
 
             builder.HasMany(a => a.Matriculas)
-                .WithOne()
-                .OnDelete(DeleteBehavior.Cascade);
+                .WithOne(m => m.Aluno) 
+                .HasForeignKey(m => m.AlunoId)
+                .OnDelete(DeleteBehavior.Restrict);
+
 
             builder.ToTable("Alunos");
         }

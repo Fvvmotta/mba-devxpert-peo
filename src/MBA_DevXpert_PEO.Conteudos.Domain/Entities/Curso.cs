@@ -10,6 +10,8 @@ public class Curso : Entity, IAggregateRoot
     public string Nome { get; private set; }
     public string Autor { get; private set; }
     public int CargaHoraria { get; private set; }
+    public decimal Valor { get; private set; }
+
     public ConteudoProgramatico ConteudoProgramatico { get; private set; }
 
     protected Curso() { }

@@ -28,13 +28,18 @@ namespace MBA_DevXpert_PEO.Alunos.Domain.Entities
             _matriculas.Add(matricula);
         }
 
-        public void ConcluirMatricula(Guid matriculaId, string nomeAluno, string nomeCurso, int cargaHorariaCurso, DateTime dataConclusao)
+        public bool ConcluirMatricula(Guid matriculaId, string nomeAluno, string nomeCurso, int cargaHorariaCurso, DateTime dataConclusao, out string erro)
         {
+            erro = string.Empty;
+
             var matricula = _matriculas.FirstOrDefault(m => m.Id == matriculaId);
             if (matricula == null)
-                throw new DomainException("Matrícula não encontrada.");
+            {
+                erro = "Matrícula não encontrada.";
+                return false;
+            }
 
-            matricula.Concluir(nomeAluno, nomeCurso, cargaHorariaCurso, dataConclusao);
+            return matricula.Concluir(nomeAluno, nomeCurso, cargaHorariaCurso, dataConclusao, out erro);
         }
 
         public void AtualizarDados(string nome, string email)

@@ -3,7 +3,10 @@
     public enum StatusMatricula
     {
         PendentePagamento,
+        PagamentoRecusado,
         Ativa,
-        Concluida
+        Concluida,
+        Cancelada
     }
+
 }

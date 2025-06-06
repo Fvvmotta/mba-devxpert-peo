@@ -3447,8 +3447,7 @@
           "MBA_DevXpert_PEO.Alunos.Infra": "1.0.0",
           "MBA_DevXpert_PEO.Conteudos.Application": "1.0.0",
           "MBA_DevXpert_PEO.Conteudos.Infra": "1.0.0",
-          "MBA_DevXpert_PEO.Pagamentos.Application": "1.0.0",
-          "MBA_DevXpert_PEO.Pagamentos.Domain": "1.0.0",
+          "MBA_DevXpert_PEO.Pagamentos.AntiCorruption": "1.0.0",
           "MBA_DevXpert_PEO.Pagamentos.Infra": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.4",
           "Microsoft.AspNetCore.Http": "2.3.0",
@@ -3473,7 +3472,8 @@
       },
       "MBA_DevXpert_PEO.Conteudos.Application/1.0.0": {
         "dependencies": {
-          "MBA_DevXpert_PEO.Conteudos.Domain": "1.0.0"
+          "MBA_DevXpert_PEO.Conteudos.Domain": "1.0.0",
+          "MBA_DevXpert_PEO.Conteudos.Infra": "1.0.0"
         },
         "runtime": {
           "MBA_DevXpert_PEO.Conteudos.Application.dll": {
@@ -3534,39 +3534,38 @@
           "MBA_DevXpert_PEO.Core.dll": {}
         }
       },
-      "MBA_DevXpert_PEO.Pagamentos.Application/1.0.0": {
+      "MBA_DevXpert_PEO.Pagamentos.AntiCorruption/1.0.0": {
         "dependencies": {
-          "MBA_DevXpert_PEO.Core": "1.0.0",
-          "MBA_DevXpert_PEO.Pagamentos.Domain": "1.0.0"
+          "MBA_DevXpert_PEO.Pagamentos.Business": "1.0.0"
         },
         "runtime": {
-          "MBA_DevXpert_PEO.Pagamentos.Application.dll": {
+          "MBA_DevXpert_PEO.Pagamentos.AntiCorruption.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         },
         "compile": {
-          "MBA_DevXpert_PEO.Pagamentos.Application.dll": {}
+          "MBA_DevXpert_PEO.Pagamentos.AntiCorruption.dll": {}
         }
       },
-      "MBA_DevXpert_PEO.Pagamentos.Domain/1.0.0": {
+      "MBA_DevXpert_PEO.Pagamentos.Business/1.0.0": {
         "dependencies": {
           "MBA_DevXpert_PEO.Core": "1.0.0"
         },
         "runtime": {
-          "MBA_DevXpert_PEO.Pagamentos.Domain.dll": {
+          "MBA_DevXpert_PEO.Pagamentos.Business.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         },
         "compile": {
-          "MBA_DevXpert_PEO.Pagamentos.Domain.dll": {}
+          "MBA_DevXpert_PEO.Pagamentos.Business.dll": {}
         }
       },
       "MBA_DevXpert_PEO.Pagamentos.Infra/1.0.0": {
         "dependencies": {
           "MBA_DevXpert_PEO.Core": "1.0.0",
-          "MBA_DevXpert_PEO.Pagamentos.Domain": "1.0.0",
+          "MBA_DevXpert_PEO.Pagamentos.Business": "1.0.0",
           "Microsoft.EntityFrameworkCore": "9.0.4",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.4",
           "Microsoft.EntityFrameworkCore.Sqlite": "9.0.4",
@@ -7112,12 +7111,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "MBA_DevXpert_PEO.Pagamentos.Application/1.0.0": {
+    "MBA_DevXpert_PEO.Pagamentos.AntiCorruption/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "MBA_DevXpert_PEO.Pagamentos.Domain/1.0.0": {
+    "MBA_DevXpert_PEO.Pagamentos.Business/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

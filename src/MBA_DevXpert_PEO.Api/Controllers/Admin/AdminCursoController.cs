@@ -10,7 +10,7 @@ namespace MBA_DevXpert_PEO.Api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class AdminCursoController : ControllerBase
+    public class AdminCursoController : BaseController
     {
         private readonly ICursoAppService _cursoAppService;
 

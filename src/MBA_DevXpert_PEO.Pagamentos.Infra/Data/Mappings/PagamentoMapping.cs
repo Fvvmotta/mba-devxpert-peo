@@ -1,57 +1,41 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using MBA_DevXpert_PEO.Pagamentos.Business;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using MBA_DevXpert_PEO.Pagamentos.Domain.Entities;
-using MBA_DevXpert_PEO.Pagamentos.Domain.ValueObjects;
+using Microsoft.EntityFrameworkCore;
 
-namespace MBA_DevXpert_PEO.Pagamentos.Infra.Data.Mappings
+namespace Pagamentos.Data.Mappings
 {
     public class PagamentoMapping : IEntityTypeConfiguration<Pagamento>
     {
         public void Configure(EntityTypeBuilder<Pagamento> builder)
         {
+            builder.HasKey(c => c.Id);
+
+            builder.Property(c => c.NomeCartao)
+                .IsRequired()
+                .HasColumnType("varchar(250)");
+
+            builder.Property(c => c.NumeroCartao)
+                .IsRequired()
+                .HasColumnType("varchar(16)");
+
+            builder.Property(c => c.ExpiracaoCartao)
+                .IsRequired()
+                .HasColumnType("varchar(10)");
+
+            builder.Property(c => c.CvvCartao)
+                .IsRequired()
+                .HasColumnType("varchar(4)");
+
+            // 1 : 1 => Pagamento : Transacao
+            builder.HasOne(c => c.Transacao)
+                .WithOne(c => c.Pagamento);
+
             builder.ToTable("Pagamentos");
-
-            builder.HasKey(p => p.Id);
-
-            builder.Property(p => p.MatriculaId)
-                .IsRequired();
-
-            builder.Property(p => p.Valor)
-                .HasColumnType("decimal(18,2)");
-
-            builder.Property(p => p.DataPagamento)
-                .IsRequired();
-
-            builder.OwnsOne(p => p.Cartao, cartao =>
-            {
-                cartao.Property(c => c.NomeTitular)
-                    .HasColumnName("NomeTitular")
-                    .HasColumnType("varchar(100)")
-                    .IsRequired();
-
-                cartao.Property(c => c.NumeroCartao)
-                    .HasColumnName("NumeroCartao")
-                    .HasColumnType("varchar(19)")
-                    .IsRequired();
-
-                cartao.Property(c => c.Vencimento)
-                    .HasColumnName("Vencimento")
-                    .HasColumnType("varchar(5)")
-                    .IsRequired();
-
-                cartao.Property(c => c.CVV)
-                    .HasColumnName("CVV")
-                    .HasColumnType("varchar(4)")
-                    .IsRequired();
-            });
-
-            builder.OwnsOne(p => p.Status, status =>
-            {
-                status.Property(s => s.Valor)
-                    .HasColumnName("StatusPagamento")
-                    .IsRequired()
-                    .HasConversion<int>(); 
-            });
         }
     }
 }

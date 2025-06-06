@@ -8,7 +8,7 @@
   "MBA_DevXpert_PEO.Conteudos.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Conteudos.Domain",
   "MBA_DevXpert_PEO.Conteudos.Infra, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Conteudos.Infra",
   "MBA_DevXpert_PEO.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Core",
-  "MBA_DevXpert_PEO.Pagamentos.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Application",
-  "MBA_DevXpert_PEO.Pagamentos.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Domain",
+  "MBA_DevXpert_PEO.Pagamentos.AntiCorruption, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.AntiCorruption",
+  "MBA_DevXpert_PEO.Pagamentos.Business, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Business",
   "MBA_DevXpert_PEO.Pagamentos.Infra, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Labs\\mba-devxpert-peo\\src\\MBA_DevXpert_PEO.Pagamentos.Infra"
 }

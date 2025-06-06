@@ -30,4 +30,9 @@
     <Using Include="Xunit" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="GestaoDeAlunos\Handlers\" />
+    <Folder Include="GestaoDeConteudo\Handlers\" />
+  </ItemGroup>
+
 </Project>

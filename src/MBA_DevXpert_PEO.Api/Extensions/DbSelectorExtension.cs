@@ -27,7 +27,7 @@ public static class DatabaseSelectorExtension
     private static void RegisterDbContext<T>(IServiceCollection services, string connection, bool useSqlServer) where T : DbContext
     {
         if (useSqlServer)
-            services.AddDbContext<T>(options => options.UseSqlServer(connection));
+            services.AddDbContext<T>(options => options.UseSqlServer(connection).EnableSensitiveDataLogging().LogTo(Console.WriteLine));
         else
             services.AddDbContext<T>(options => options.UseSqlite(connection));
     }
