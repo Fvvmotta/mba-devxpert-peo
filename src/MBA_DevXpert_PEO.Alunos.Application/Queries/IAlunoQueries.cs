@@ -6,6 +6,7 @@ namespace Alunos.Queries
     {
         Task<AlunoDto> ObterPorId(Guid alunoId);
         Task<MatriculaDto> ObterMatriculaPorId(Guid matriculaId);
+        Task<IEnumerable<AlunoComMatriculasDto>> ObterAlunosComMatriculas();
         Task<MatriculaComCursoDto?> ObterMatriculaComCurso(Guid alunoId, Guid matriculaId);
         Task<CertificadoDto?> ObterCertificado(Guid alunoId, Guid matriculaId);
 

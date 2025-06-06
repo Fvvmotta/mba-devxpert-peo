@@ -42,11 +42,11 @@ public class Curso : Entity, IAggregateRoot
         Validacoes.ValidarSeMenorQue(cargaHoraria, 1, "Carga horária deve ser maior que zero.");
         CargaHoraria = cargaHoraria;
     }
-
-    public void AdicionarAula(string titulo, string descricao, string materialUrl = null)
+    public Aula AdicionarAula(string titulo, string descricao, string materialUrl = null)
     {
-        var aula = new Aula(titulo, descricao, materialUrl);
+        var aula = new Aula(this.Id, titulo, descricao, materialUrl);
         _aulas.Add(aula);
+        return aula;
     }
     public void RemoverAula(Guid aulaId)
     {

@@ -47,20 +47,19 @@ namespace MBA_DevXpert_PEO.Conteudos.Application.Handlers
         {
             if (!command.EhValido())
             {
-                await NotificarErros(command);
+                await NotificarErros(command); 
                 return false;
             }
 
             var curso = await _cursoRepository.ObterPorId(command.CursoId);
-
             if (curso == null)
             {
                 await _mediatorHandler.PublicarNotificacao(new DomainNotification("Curso", "Curso não encontrado."));
                 return false;
             }
 
-            curso.AdicionarAula(command.Titulo, command.Descricao, command.MaterialUrl);
-            _cursoRepository.Atualizar(curso);
+            var aula = curso.AdicionarAula(command.Titulo, command.Descricao, command.MaterialUrl);
+            _cursoRepository.AdicionarAula(aula);
 
             return await _cursoRepository.UnitOfWork.Commit();
         }

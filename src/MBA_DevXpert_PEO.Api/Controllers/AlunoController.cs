@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using MBA_DevXpert_PEO.Alunos.Application.Commands;
 using MBA_DevXpert_PEO.Alunos.Application.DTOs;
-using MBA_DevXpert_PEO.Conteudos.Application.Services;
 using Alunos.Queries;
 using MBA_DevXpert_PEO.Core.DomainObjects.DTO;
 using MBA_DevXpert_PEO.Core.Messages.CommonMessages.IntegrationEvents;
@@ -24,10 +23,8 @@ namespace MBA_DevXpert_PEO.Alunos.API.Controllers
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly IAlunoQueries _alunoQueries;
         private readonly ICursoQueries _cursoQueries;
-        private readonly ICursoAppService _cursoAppService;
 
         public AlunoController(IAlunoQueries alunoQueries,
-                                ICursoAppService cursoAppService,
                                 ICursoQueries cursoQueries,
                                 INotificationHandler<DomainNotification> notifications,
                                 UserManager<ApplicationUser> userManager,
@@ -36,7 +33,6 @@ namespace MBA_DevXpert_PEO.Alunos.API.Controllers
             _alunoQueries = alunoQueries;
             _cursoQueries = cursoQueries;
             _userManager = userManager;
-            _cursoAppService = cursoAppService;
         }
 
         [HttpPost("{alunoId}/matriculas")]
@@ -70,7 +66,7 @@ namespace MBA_DevXpert_PEO.Alunos.API.Controllers
                 return CustomResponse();
             }
 
-            var curso = await _cursoAppService.ObterPorCursoId(matricula.CursoId);
+            var curso = await _cursoQueries.ObterPorCursoId(matricula.CursoId);
             if (curso == null)
             {
                 await _mediatorHandler.PublicarNotificacao(new DomainNotification("Curso", "Curso não encontrado."));
@@ -146,7 +142,7 @@ namespace MBA_DevXpert_PEO.Alunos.API.Controllers
             if (matricula == null)
                 return BadRequest("Matrícula não encontrada.");
 
-            var curso = await _cursoAppService.ObterPorCursoId(matricula.CursoId);
+            var curso = await _cursoQueries.ObterPorCursoId(matricula.CursoId);
             if (curso == null)
                 return BadRequest("Curso não encontrado.");
             var aluno = await _alunoQueries.ObterPorId(alunoId);

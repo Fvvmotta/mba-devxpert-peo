@@ -29,7 +29,8 @@ namespace MBA_DevXpert_PEO.Conteudos.Application.DTOs
 
         [Required]
         public string Titulo { get; set; }
-
+        public string? Descricao { get; set; }
+        [Required]
         public string MaterialUrl { get; set; }
     }
 

@@ -942,29 +942,6 @@
           }
         }
       }
-    },
-    "/api/diagnostico/teste-base": {
-      "get": {
-        "tags": [
-          "Diagnostico"
-        ],
-        "parameters": [
-          {
-            "name": "api-version",
-            "in": "query",
-            "description": "The requested API version",
-            "schema": {
-              "type": "string",
-              "default": "1.0"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
     }
   },
   "components": {
@@ -972,6 +949,7 @@
       "AdicionarAulaInputDTO": {
         "required": [
           "cursoId",
+          "materialUrl",
           "titulo"
         ],
         "type": "object",
@@ -984,9 +962,13 @@
             "minLength": 1,
             "type": "string"
           },
-          "materialUrl": {
+          "descricao": {
             "type": "string",
             "nullable": true
+          },
+          "materialUrl": {
+            "minLength": 1,
+            "type": "string"
           }
         },
         "additionalProperties": false

@@ -1,6 +1,6 @@
 [
   {
-    "ContainingType": "MBA_DevXpert_PEO.Api.Controllers.AdminAlunoController",
+    "ContainingType": "AdminAlunoController",
     "Method": "ObterTodos",
     "RelativePath": "api/adminaluno",
     "HttpMethod": "GET",
@@ -16,7 +16,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MBA_DevXpert_PEO.Api.Controllers.AdminAlunoController",
+    "ContainingType": "AdminAlunoController",
     "Method": "Criar",
     "RelativePath": "api/adminaluno",
     "HttpMethod": "POST",
@@ -37,7 +37,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MBA_DevXpert_PEO.Api.Controllers.AdminAlunoController",
+    "ContainingType": "AdminAlunoController",
     "Method": "ObterPorId",
     "RelativePath": "api/adminaluno/{id}",
     "HttpMethod": "GET",
@@ -58,7 +58,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MBA_DevXpert_PEO.Api.Controllers.AdminAlunoController",
+    "ContainingType": "AdminAlunoController",
     "Method": "Atualizar",
     "RelativePath": "api/adminaluno/{id}",
     "HttpMethod": "PUT",
@@ -84,7 +84,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MBA_DevXpert_PEO.Api.Controllers.AdminAlunoController",
+    "ContainingType": "AdminAlunoController",
     "Method": "Remover",
     "RelativePath": "api/adminaluno/{id}",
     "HttpMethod": "DELETE",
@@ -105,7 +105,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MBA_DevXpert_PEO.Api.Controllers.AdminAlunoController",
+    "ContainingType": "AdminAlunoController",
     "Method": "ObterMatriculasDetalhadas",
     "RelativePath": "api/adminaluno/matriculas-detalhadas",
     "HttpMethod": "GET",
@@ -499,22 +499,6 @@
         "Type": "System.Guid",
         "IsRequired": true
       },
-      {
-        "Name": "api-version",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "MBA_DevXpert_PEO.Api.Controllers.DiagnosticoController",
-    "Method": "ObterBaseDeTeste",
-    "RelativePath": "api/diagnostico/teste-base",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
       {
         "Name": "api-version",
         "Type": "System.String",

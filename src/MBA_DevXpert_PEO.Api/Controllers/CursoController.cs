@@ -4,9 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 using MediatR;
 using MBA_DevXpert_PEO.Core.Communication.Mediator;
 using MBA_DevXpert_PEO.Core.Messages.CommonMessages.Notifications;
-using MBA_DevXpert_PEO.Conteudos.Application.Services;
 using MBA_DevXpert_PEO.Core.Messages.CommonMessages.IntegrationEvents;
 using MBA_DevXpert_PEO.Core.DomainObjects.DTO;
+using MBA_DevXpert_PEO.Conteudos.Application.Queries;
 
 namespace MBA_DevXpert_PEO.Api.Controllers.Admin
 {
@@ -14,26 +14,26 @@ namespace MBA_DevXpert_PEO.Api.Controllers.Admin
     [Route("api/[controller]")]
     public class CursoController : BaseController
     {
-        private readonly ICursoAppService _cursoAppService;
+        private readonly ICursoQueries _cursoQueries;
 
-        public CursoController(ICursoAppService cursoAppService,
-            INotificationHandler<DomainNotification> notifications,
-            IMediatorHandler mediatorHandler) : base(notifications, mediatorHandler)
+        public CursoController( INotificationHandler<DomainNotification> notifications,
+                                ICursoQueries cursoQueries,
+                                IMediatorHandler mediatorHandler) : base(notifications, mediatorHandler)
         {
-            _cursoAppService = cursoAppService;
+            _cursoQueries = cursoQueries;
         }
 
         [HttpGet]
         public async Task<IActionResult> ObterCursos()
         {
-            var cursos = await _cursoAppService.ObterTodos();
+            var cursos = await _cursoQueries.ObterTodos();
             return CustomResponse(cursos);
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> ObterCursoPorId(Guid id)
         {
-            var curso = await _cursoAppService.ObterPorId(id);
+            var curso = await _cursoQueries.ObterPorId(id);
 
             if (curso == null)
             {

@@ -4,7 +4,7 @@ using MBA_DevXpert_PEO.Core.Communication.Mediator;
 using MBA_DevXpert_PEO.Core.Messages.CommonMessages.Notifications;
 using MBA_DevXpert_PEO.Conteudos.Application.DTOs;
 using MBA_DevXpert_PEO.Conteudos.Application.Commands;
-using MBA_DevXpert_PEO.Conteudos.Application.Services;
+using MBA_DevXpert_PEO.Conteudos.Application.Queries;
 
 namespace MBA_DevXpert_PEO.Api.Controllers
 {
@@ -12,28 +12,28 @@ namespace MBA_DevXpert_PEO.Api.Controllers
     [Route("api/[controller]")]
     public class AdminCursoController : BaseController
     {
-        private readonly ICursoAppService _cursoAppService;
+        private readonly ICursoQueries _cursoQueries;
 
         public AdminCursoController(
             INotificationHandler<DomainNotification> notifications,
-            IMediatorHandler mediatorHandler,
-            ICursoAppService cursoAppService)
+            ICursoQueries cursoQueries,
+            IMediatorHandler mediatorHandler)
             : base(notifications, mediatorHandler)
         {
-            _cursoAppService = cursoAppService;
+            _cursoQueries = cursoQueries;
         }
 
         [HttpGet]
         public async Task<IActionResult> ObterCursos()
         {
-            var cursos = await _cursoAppService.ObterTodos();
+            var cursos = await _cursoQueries.ObterTodos();
             return CustomResponse(cursos);
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> ObterCursoPorId(Guid id)
         {
-            var curso = await _cursoAppService.ObterPorId(id);
+            var curso = await _cursoQueries.ObterPorId(id);
 
             if (curso == null)
             {
@@ -81,7 +81,7 @@ namespace MBA_DevXpert_PEO.Api.Controllers
                 return CustomResponse();
             }
 
-            var command = new AdicionarAulaCommand(dto.CursoId, dto.Titulo, dto.MaterialUrl);
+            var command = new AdicionarAulaCommand(dto.CursoId, dto.Titulo, dto.Descricao, dto.MaterialUrl);
 
             var sucesso = await _mediatorHandler.EnviarComando(command);
 

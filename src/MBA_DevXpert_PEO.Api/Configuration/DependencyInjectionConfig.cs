@@ -6,7 +6,6 @@ using MBA_DevXpert_PEO.Alunos.Domain.Repositories;
 using MBA_DevXpert_PEO.Alunos.Infra.Repositories;
 using MBA_DevXpert_PEO.Conteudos.Application.Commands;
 using MBA_DevXpert_PEO.Conteudos.Application.Handlers;
-using MBA_DevXpert_PEO.Conteudos.Application.Services;
 using MBA_DevXpert_PEO.Conteudos.Domain.Repositories;
 using MBA_DevXpert_PEO.Conteudos.Infra.Repository;
 using MediatR;
@@ -45,10 +44,6 @@ namespace MBA_DevXpert_PEO.Api.Configuration
             // Queries
             services.AddScoped<IAlunoQueries, AlunoQueries>();
             services.AddScoped<ICursoQueries, CursoQueries>();
-
-            // Services 
-            services.AddScoped<ICursoAppService, CursoAppService>();
-            services.AddScoped<IAlunoAppService, AlunoAppService>();
 
             // Identity Services
             services.AddScoped<IUser, AspNetUser>();

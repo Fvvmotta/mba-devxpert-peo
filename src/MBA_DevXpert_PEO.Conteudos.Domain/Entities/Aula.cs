@@ -20,6 +20,14 @@ namespace MBA_DevXpert_PEO.Conteudos.Domain.Entities
             SetDescricao(descricao);
             MaterialUrl = materialUrl;
         }
+        public Aula(Guid cursoId, string titulo, string descricao, string materialUrl = null)
+        {
+            Id = Guid.NewGuid();
+            CursoId = cursoId;
+            SetTitulo(titulo);
+            SetDescricao(descricao);
+            MaterialUrl = materialUrl;
+        }
 
         private void SetTitulo(string titulo)
         {

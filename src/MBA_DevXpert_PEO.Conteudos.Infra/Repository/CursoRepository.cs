@@ -21,7 +21,10 @@ namespace MBA_DevXpert_PEO.Conteudos.Infra.Repository
         {
             _context.Cursos.Add(curso);
         }
-
+        public void AdicionarAula(Aula aula)
+        {
+            _context.Aulas.Add(aula);
+        }
         public void Atualizar(Curso curso)
         {
             _context.Cursos.Update(curso);
@@ -41,14 +44,17 @@ namespace MBA_DevXpert_PEO.Conteudos.Infra.Repository
                 .AsNoTracking()
                 .ToListAsync();
         }
+
         public void Remover(Curso curso)
         {
             _context.Cursos.Remove(curso);
         }
+
         public void Dispose()
         {
             _context?.Dispose();
         }
     }
+
 }
 
