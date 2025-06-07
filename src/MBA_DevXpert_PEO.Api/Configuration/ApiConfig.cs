@@ -56,6 +56,7 @@ namespace MBA_DevXpert_PEO.Api.Configuration
             services.AddMediatR(cfg =>
                 cfg.RegisterServicesFromAssemblies(
                     typeof(CursoCommandHandler).Assembly,
+                    typeof(CursoEventHandler).Assembly,
                     typeof(AlunoEventHandler).Assembly,
                     typeof(AlunoCommandHandler).Assembly,
                     typeof(PagamentoEventHandler).Assembly,

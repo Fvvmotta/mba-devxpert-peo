@@ -109,7 +109,7 @@ namespace MBA_DevXpert_PEO.Api.Controllers
                 return CustomResponse();
             }
 
-            var command = new UpdateCursoCommand(dto.Id, dto.Nome, dto.Autor, dto.CargaHoraria, dto.DescricaoConteudoProgramatico);
+            var command = new AtualizarCursoCommand(dto.Id, dto.Nome, dto.Autor, dto.CargaHoraria, dto.DescricaoConteudoProgramatico);
 
             var sucesso = await _mediatorHandler.EnviarComando(command);
 
@@ -125,7 +125,7 @@ namespace MBA_DevXpert_PEO.Api.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeletarCurso(Guid id)
         {
-            var sucesso = await _mediatorHandler.EnviarComando(new DeleteCursoCommand(id));
+            var sucesso = await _mediatorHandler.EnviarComando(new ExcluirCursoCommand(id));
 
             if (!sucesso)
             {
@@ -139,7 +139,7 @@ namespace MBA_DevXpert_PEO.Api.Controllers
         [HttpDelete("{cursoId}/aulas/{aulaId}")]
         public async Task<IActionResult> DeletarAula(Guid cursoId, Guid aulaId)
         {
-            var comando = new DeleteAulaCursoCommand(cursoId, aulaId);
+            var comando = new ExcluirAulaCursoCommand(cursoId, aulaId);
             var sucesso = await _mediatorHandler.EnviarComando(comando);
 
             if (!sucesso)

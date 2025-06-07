@@ -8,15 +8,16 @@ using MBA_DevXpert_PEO.Conteudos.Application.Commands;
 using MBA_DevXpert_PEO.Core.Messages;
 using MBA_DevXpert_PEO.Conteudos.Domain.Entities;
 using MBA_DevXpert_PEO.Conteudos.Domain.ValueObjects;
+using MBA_DevXpert_PEO.Conteudos.Application.Events;
 
 namespace MBA_DevXpert_PEO.Conteudos.Application.Handlers
 {
     public class CursoCommandHandler :
         IRequestHandler<CriarCursoCommand, Guid?>,
         IRequestHandler<AdicionarAulaCommand, bool>,
-        IRequestHandler<UpdateCursoCommand, bool>,
-        IRequestHandler<DeleteCursoCommand, bool>,
-        IRequestHandler<DeleteAulaCursoCommand, bool>
+        IRequestHandler<AtualizarCursoCommand, bool>,
+        IRequestHandler<ExcluirCursoCommand, bool>,
+        IRequestHandler<ExcluirAulaCursoCommand, bool>
     {
         private readonly ICursoRepository _cursoRepository;
         private readonly IMediatorHandler _mediatorHandler;
@@ -34,20 +35,25 @@ namespace MBA_DevXpert_PEO.Conteudos.Application.Handlers
                 await NotificarErros(command);
                 return null;
             }
+
             var conteudo = ConteudoProgramatico.Criar(command.DescricaoConteudoProgramatico);
             var curso = new Curso(command.Nome, command.Autor, command.CargaHoraria, conteudo);
 
             _cursoRepository.Adicionar(curso);
             var sucesso = await _cursoRepository.UnitOfWork.Commit();
 
-            return sucesso ? curso.Id : null;
+            if (!sucesso) return null;
+
+            await _mediatorHandler.PublicarEvento(new CursoCriadoEvent(curso.Id, curso.Nome, curso.Autor));
+
+            return curso.Id;
         }
 
         public async Task<bool> Handle(AdicionarAulaCommand command, CancellationToken cancellationToken)
         {
             if (!command.EhValido())
             {
-                await NotificarErros(command); 
+                await NotificarErros(command);
                 return false;
             }
 
@@ -61,10 +67,18 @@ namespace MBA_DevXpert_PEO.Conteudos.Application.Handlers
             var aula = curso.AdicionarAula(command.Titulo, command.Descricao, command.MaterialUrl);
             _cursoRepository.AdicionarAula(aula);
 
-            return await _cursoRepository.UnitOfWork.Commit();
+            var sucesso = await _cursoRepository.UnitOfWork.Commit();
+
+            if (sucesso)
+            {
+                await _mediatorHandler.PublicarEvento(new AulaAdicionadaEvent(command.CursoId, aula.Id, aula.Titulo));
+            }
+
+            return sucesso;
         }
 
-        public async Task<bool> Handle(UpdateCursoCommand command, CancellationToken cancellationToken)
+
+        public async Task<bool> Handle(AtualizarCursoCommand command, CancellationToken cancellationToken)
         {
             if (!command.EhValido())
             {
@@ -84,10 +98,16 @@ namespace MBA_DevXpert_PEO.Conteudos.Application.Handlers
             curso.AtualizarCurso(command.Nome, command.CargaHoraria, command.Autor, novoConteudo);
 
             _cursoRepository.Atualizar(curso);
-            return await _cursoRepository.UnitOfWork.Commit();
+            var sucesso = await _cursoRepository.UnitOfWork.Commit();
+            if (sucesso)
+            {
+                await _mediatorHandler.PublicarEvento(new CursoAtualizadoEvent(curso.Id, curso.Nome));
+            }
+
+            return sucesso;
         }
 
-        public async Task<bool> Handle(DeleteCursoCommand command, CancellationToken cancellationToken)
+        public async Task<bool> Handle(ExcluirCursoCommand command, CancellationToken cancellationToken)
         {
             var curso = await _cursoRepository.ObterPorId(command.Id);
 
@@ -99,10 +119,17 @@ namespace MBA_DevXpert_PEO.Conteudos.Application.Handlers
 
             _cursoRepository.Remover(curso);
 
-            return await _cursoRepository.UnitOfWork.Commit();
+            var sucesso = await _cursoRepository.UnitOfWork.Commit();
+
+            if (sucesso)
+            {
+                await _mediatorHandler.PublicarEvento(new CursoRemovidoEvent(command.Id));
+            }
+
+            return sucesso;
         }
 
-        public async Task<bool> Handle(DeleteAulaCursoCommand command, CancellationToken cancellationToken)
+        public async Task<bool> Handle(ExcluirAulaCursoCommand command, CancellationToken cancellationToken)
         {
             if (!command.EhValido())
             {
@@ -124,9 +151,13 @@ namespace MBA_DevXpert_PEO.Conteudos.Application.Handlers
 
             var sucesso = await _cursoRepository.UnitOfWork.Commit();
 
+            if (sucesso)
+            {
+                await _mediatorHandler.PublicarEvento(new AulaRemovidaEvent(command.CursoId, command.AulaId));
+            }
+
             return sucesso;
         }
-
 
         private async Task NotificarErros<TResponse>(Command<TResponse> command)
         {

@@ -38,8 +38,8 @@ namespace MBA_DevXpert_PEO.Api.Configuration
             // Command Handlers
             services.AddScoped<IRequestHandler<CriarCursoCommand, Guid?>, CursoCommandHandler>();
             services.AddScoped<IRequestHandler<AdicionarAulaCommand, bool>, CursoCommandHandler>();
-            services.AddScoped<IRequestHandler<UpdateCursoCommand, bool>, CursoCommandHandler>();
-            services.AddScoped<IRequestHandler<DeleteCursoCommand, bool>, CursoCommandHandler>();
+            services.AddScoped<IRequestHandler<AtualizarCursoCommand, bool>, CursoCommandHandler>();
+            services.AddScoped<IRequestHandler<ExcluirCursoCommand, bool>, CursoCommandHandler>();
 
             // Queries
             services.AddScoped<IAlunoQueries, AlunoQueries>();

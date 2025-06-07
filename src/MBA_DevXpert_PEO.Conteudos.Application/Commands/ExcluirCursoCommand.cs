@@ -4,11 +4,11 @@ using MBA_DevXpert_PEO.Core.Messages;
 
 namespace MBA_DevXpert_PEO.Conteudos.Application.Commands
 {
-    public class DeleteCursoCommand : Command<bool>
+    public class ExcluirCursoCommand : Command<bool>
     {
         public Guid Id { get; set; }
 
-        public DeleteCursoCommand(Guid id)
+        public ExcluirCursoCommand(Guid id)
         {
             AggregateId = id;
             Id = id;
@@ -20,12 +20,14 @@ namespace MBA_DevXpert_PEO.Conteudos.Application.Commands
             return ValidationResult.IsValid;
         }
     }
-    public class DeleteCursoValidation : AbstractValidator<DeleteCursoCommand>
+    public class DeleteCursoValidation : AbstractValidator<ExcluirCursoCommand>
     {
+        public const string CursoIdObrigatorioMsg = "O ID do curso é obrigatório.";
         public DeleteCursoValidation()
         {
             RuleFor(c => c.Id)
-                .NotEqual(Guid.Empty).WithMessage("O ID do curso é obrigatório.");
+                .NotEqual(Guid.Empty)
+                .WithMessage(CursoIdObrigatorioMsg);
         }
     }
 }
