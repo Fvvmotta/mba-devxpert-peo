@@ -27,25 +27,27 @@ namespace MBA_DevXpert_PEO.Alunos.Application.Commands
             return ValidationResult.IsValid;
         }
     }
-
-
     public class CriarMatriculaValidation : AbstractValidator<CriarMatriculaCommand>
     {
+        public const string AlunoIdErroMsg = "O ID do aluno é obrigatório.";
+        public const string CursoIdErroMsg = "O ID do curso é obrigatório.";
+        public const string ValorErroMsg = "O valor do curso deve ser maior que zero.";
+        public const string TotalAulasErroMsg = "O total de aulas deve ser maior que zero.";
+
         public CriarMatriculaValidation()
         {
             RuleFor(c => c.AlunoId)
-                .NotEqual(Guid.Empty).WithMessage("O ID do aluno é obrigatório.");
+                .NotEqual(Guid.Empty).WithMessage(AlunoIdErroMsg);
 
             RuleFor(c => c.CursoId)
-                .NotEqual(Guid.Empty).WithMessage("O ID do curso é obrigatório.");
+                .NotEqual(Guid.Empty).WithMessage(CursoIdErroMsg);
 
             RuleFor(c => c.Valor)
-                .GreaterThan(0).WithMessage("O valor do curso deve ser maior que zero.");
+                .GreaterThan(0).WithMessage(ValorErroMsg);
 
             RuleFor(c => c.TotalAulas)
-                .GreaterThan(0).WithMessage("O total de aulas deve ser maior que zero.");
+                .GreaterThan(0).WithMessage(TotalAulasErroMsg);
         }
     }
-
 }
 

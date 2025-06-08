@@ -30,17 +30,22 @@ namespace Alunos.Commands
     }
     public class CriarAlunoValidation : AbstractValidator<CriarAlunoCommand>
     {
+        public const string IdObrigatorioMsg = "O ID do aluno é obrigatório.";
+        public const string NomeObrigatorioMsg = "O nome é obrigatório.";
+        public const string EmailObrigatorioMsg = "O e-mail é obrigatório.";
+        public const string EmailInvalidoMsg = "E-mail inválido.";
+
         public CriarAlunoValidation()
         {
             RuleFor(c => c.AlunoId)
-                .NotEqual(Guid.Empty).WithMessage("O ID do aluno é obrigatório.");
+                .NotEqual(Guid.Empty).WithMessage(IdObrigatorioMsg);
 
             RuleFor(c => c.Nome)
-                .NotEmpty().WithMessage("O nome é obrigatório.");
+                .NotEmpty().WithMessage(NomeObrigatorioMsg);
 
             RuleFor(c => c.Email)
-                .NotEmpty().WithMessage("O e-mail é obrigatório.")
-                .EmailAddress().WithMessage("E-mail inválido.");
+                .NotEmpty().WithMessage(EmailObrigatorioMsg)
+                .EmailAddress().WithMessage(EmailInvalidoMsg);
         }
     }
 

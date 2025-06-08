@@ -22,13 +22,12 @@ builder.Services.AddSwaggerConfig();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment() || app.Environment.IsEnvironment("Testing"))
 {
     var provider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
     app.UseSwaggerConfig(provider);
     await app.UseDatabaseSeeder();
 }
-
 app.UseHttpsRedirection();
 
 app.MapControllers();

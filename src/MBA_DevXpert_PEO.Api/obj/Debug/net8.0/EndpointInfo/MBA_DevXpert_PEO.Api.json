@@ -252,17 +252,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CursoInputDTO"
+                "$ref": "#/components/schemas/AdicionarCursoDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CursoInputDTO"
+                "$ref": "#/components/schemas/AdicionarCursoDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CursoInputDTO"
+                "$ref": "#/components/schemas/AdicionarCursoDto"
               }
             }
           }
@@ -333,17 +333,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateCursoInputDTO"
+                "$ref": "#/components/schemas/AtualizarCursoDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateCursoInputDTO"
+                "$ref": "#/components/schemas/AtualizarCursoDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateCursoInputDTO"
+                "$ref": "#/components/schemas/AtualizarCursoDto"
               }
             }
           }
@@ -414,17 +414,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/AdicionarAulaInputDTO"
+                "$ref": "#/components/schemas/AdicionarAulaDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/AdicionarAulaInputDTO"
+                "$ref": "#/components/schemas/AdicionarAulaDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/AdicionarAulaInputDTO"
+                "$ref": "#/components/schemas/AdicionarAulaDto"
               }
             }
           }
@@ -946,7 +946,7 @@
   },
   "components": {
     "schemas": {
-      "AdicionarAulaInputDTO": {
+      "AdicionarAulaDto": {
         "required": [
           "cursoId",
           "materialUrl",
@@ -969,6 +969,34 @@
           "materialUrl": {
             "minLength": 1,
             "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AdicionarCursoDto": {
+        "required": [
+          "autor",
+          "nome"
+        ],
+        "type": "object",
+        "properties": {
+          "nome": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "autor": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "cargaHoraria": {
+            "maximum": 500,
+            "minimum": 1,
+            "type": "integer",
+            "format": "int32"
+          },
+          "descricaoConteudoProgramatico": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -999,22 +1027,10 @@
         },
         "additionalProperties": false
       },
-      "CriarMatriculaDto": {
-        "required": [
-          "cursoId"
-        ],
-        "type": "object",
-        "properties": {
-          "cursoId": {
-            "type": "string",
-            "format": "uuid"
-          }
-        },
-        "additionalProperties": false
-      },
-      "CursoInputDTO": {
+      "AtualizarCursoDto": {
         "required": [
           "autor",
+          "id",
           "nome"
         ],
         "type": "object",
@@ -1036,6 +1052,23 @@
           "descricaoConteudoProgramatico": {
             "type": "string",
             "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CriarMatriculaDto": {
+        "required": [
+          "cursoId"
+        ],
+        "type": "object",
+        "properties": {
+          "cursoId": {
+            "type": "string",
+            "format": "uuid"
           }
         },
         "additionalProperties": false
@@ -1070,39 +1103,6 @@
           "cvvCartao": {
             "type": "string",
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "UpdateCursoInputDTO": {
-        "required": [
-          "autor",
-          "id",
-          "nome"
-        ],
-        "type": "object",
-        "properties": {
-          "nome": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "autor": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "cargaHoraria": {
-            "maximum": 500,
-            "minimum": 1,
-            "type": "integer",
-            "format": "int32"
-          },
-          "descricaoConteudoProgramatico": {
-            "type": "string",
-            "nullable": true
-          },
-          "id": {
-            "type": "string",
-            "format": "uuid"
           }
         },
         "additionalProperties": false

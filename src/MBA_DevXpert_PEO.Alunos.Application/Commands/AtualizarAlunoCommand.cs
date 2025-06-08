@@ -26,20 +26,25 @@ namespace MBA_DevXpert_PEO.Alunos.Application.Commands
     }
     public class AtualizarAlunoValidation : AbstractValidator<AtualizarAlunoCommand>
     {
+        public static string IdAlunoErroMsg => "O ID do aluno é obrigatório.";
+        public static string NomeErroMsg => "O nome do aluno é obrigatório.";
+        public static string NomeMaxErroMsg => "O nome do aluno deve ter no máximo 100 caracteres.";
+        public static string EmailErroMsg => "O e-mail do aluno é obrigatório.";
+        public static string EmailInvalidoErroMsg => "O e-mail informado não é válido.";
+
         public AtualizarAlunoValidation()
         {
             RuleFor(c => c.AlunoId)
-                .NotEqual(Guid.Empty).WithMessage("O ID do aluno é obrigatório.");
+                .NotEqual(Guid.Empty).WithMessage(IdAlunoErroMsg);
 
             RuleFor(c => c.Nome)
-                .NotEmpty().WithMessage("O nome do aluno é obrigatório.")
-                .MaximumLength(100).WithMessage("O nome do aluno deve ter no máximo 100 caracteres.");
+                .NotEmpty().WithMessage(NomeErroMsg)
+                .MaximumLength(100).WithMessage(NomeMaxErroMsg);
 
             RuleFor(c => c.Email)
-                .NotEmpty().WithMessage("O e-mail do aluno é obrigatório.")
-                .EmailAddress().WithMessage("O e-mail informado não é válido.");
+                .NotEmpty().WithMessage(EmailErroMsg)
+                .EmailAddress().WithMessage(EmailInvalidoErroMsg);
         }
     }
-
 }
 

@@ -346,15 +346,9 @@ C:\Users\adm\Documents\MBA\Modulo3\MBA_DevXpert_PEO\src\MBA_DevXpert_PEO.Api\bin
 C:\Users\adm\Documents\MBA\Modulo3\MBA_DevXpert_PEO\src\MBA_DevXpert_PEO.Api\bin\Debug\net8.0\MBA_DevXpert_PEO.PagamentoEFaturamento.Infra.pdb
 C:\Users\adm\Documents\MBA\Modulo3\MBA_DevXpert_PEO\src\MBA_DevXpert_PEO.Api\bin\Debug\net8.0\MBA_DevXpert_PEO.PagamentoEFaturamento.Application.dll
 C:\Users\adm\Documents\MBA\Modulo3\MBA_DevXpert_PEO\src\MBA_DevXpert_PEO.Api\bin\Debug\net8.0\MBA_DevXpert_PEO.PagamentoEFaturamento.Application.pdb
-C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Api\obj\Debug\net8.0\MBA_DevXpert_PEO.Api.csproj.AssemblyReference.cache
-C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Api\obj\Debug\net8.0\MBA_DevXpert_PEO.Api.GeneratedMSBuildEditorConfig.editorconfig
-C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Api\obj\Debug\net8.0\MBA_DevXpert_PEO.Api.AssemblyInfoInputs.cache
-C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Api\obj\Debug\net8.0\MBA_DevXpert_PEO.Api.AssemblyInfo.cs
-C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Api\obj\Debug\net8.0\MBA_DevXpert_PEO.Api.csproj.CoreCompileInputs.cache
-C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Api\obj\Debug\net8.0\MBA_DevXpert_PEO.Api.MvcApplicationPartsAssemblyInfo.cache
-C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Api\obj\Debug\net8.0\MBA_DevXpert_PEO.Api.sourcelink.json
 C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Api\bin\Debug\net8.0\appsettings.Development.json
 C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Api\bin\Debug\net8.0\appsettings.json
+C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Api\bin\Debug\net8.0\appsettings.Testing.json
 C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Api\bin\Debug\net8.0\MBA_DevXpert_PEO.Api.staticwebassets.endpoints.json
 C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Api\bin\Debug\net8.0\MBA_DevXpert_PEO.Api.exe
 C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Api\bin\Debug\net8.0\MBA_DevXpert_PEO.Api.deps.json
@@ -586,6 +580,14 @@ C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Api\bin\Debug\net8.0\MBA_DevXpert_
 C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Api\bin\Debug\net8.0\MBA_DevXpert_PEO.Conteudos.Domain.pdb
 C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Api\bin\Debug\net8.0\MBA_DevXpert_PEO.Core.pdb
 C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Api\bin\Debug\net8.0\MBA_DevXpert_PEO.Pagamentos.Business.pdb
+C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Api\obj\Debug\net8.0\MBA_DevXpert_PEO.Api.csproj.AssemblyReference.cache
+C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Api\obj\Debug\net8.0\MBA_DevXpert_PEO.Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Api\obj\Debug\net8.0\MBA_DevXpert_PEO.Api.AssemblyInfoInputs.cache
+C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Api\obj\Debug\net8.0\MBA_DevXpert_PEO.Api.AssemblyInfo.cs
+C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Api\obj\Debug\net8.0\MBA_DevXpert_PEO.Api.csproj.CoreCompileInputs.cache
+C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Api\obj\Debug\net8.0\MBA_DevXpert_PEO.Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Api\obj\Debug\net8.0\MBA_DevXpert_PEO.Api.MvcApplicationPartsAssemblyInfo.cache
+C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Api\obj\Debug\net8.0\MBA_DevXpert_PEO.Api.sourcelink.json
 C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Api\obj\Debug\net8.0\scopedcss\bundle\MBA_DevXpert_PEO.Api.styles.css
 C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Api\obj\Debug\net8.0\staticwebassets.build.json
 C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Api\obj\Debug\net8.0\staticwebassets.development.json
@@ -603,4 +605,3 @@ C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Api\obj\Debug\net8.0\refint\MBA_De
 C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Api\obj\Debug\net8.0\MBA_DevXpert_PEO.Api.pdb
 C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Api\obj\Debug\net8.0\MBA_DevXpert_PEO.Api.genruntimeconfig.cache
 C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Api\obj\Debug\net8.0\ref\MBA_DevXpert_PEO.Api.dll
-C:\Labs\mba-devxpert-peo\src\MBA_DevXpert_PEO.Api\obj\Debug\net8.0\MBA_DevXpert_PEO.Api.MvcApplicationPartsAssemblyInfo.cs

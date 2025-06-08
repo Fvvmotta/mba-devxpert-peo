@@ -146,7 +146,7 @@
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "MBA_DevXpert_PEO.Conteudos.Application.DTOs.CursoInputDTO",
+        "Type": "MBA_DevXpert_PEO.Conteudos.Application.DTOs.AdicionarCursoDto",
         "IsRequired": true
       },
       {
@@ -172,7 +172,7 @@
       },
       {
         "Name": "dto",
-        "Type": "MBA_DevXpert_PEO.Conteudos.Application.DTOs.AdicionarAulaInputDTO",
+        "Type": "MBA_DevXpert_PEO.Conteudos.Application.DTOs.AdicionarAulaDto",
         "IsRequired": true
       },
       {
@@ -245,7 +245,7 @@
       },
       {
         "Name": "dto",
-        "Type": "MBA_DevXpert_PEO.Conteudos.Application.DTOs.UpdateCursoInputDTO",
+        "Type": "MBA_DevXpert_PEO.Conteudos.Application.DTOs.AtualizarCursoDto",
         "IsRequired": true
       },
       {

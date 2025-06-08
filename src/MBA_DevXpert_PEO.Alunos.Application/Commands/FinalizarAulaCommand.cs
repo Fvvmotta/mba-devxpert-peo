@@ -23,19 +23,23 @@ namespace Alunos.Commands
             return ValidationResult.IsValid;
         }
     }
-    
     public class FinalizarAulaValidation : AbstractValidator<FinalizarAulaCommand>
     {
+        public const string AlunoIdErroMsg = "O ID do aluno é obrigatório.";
+        public const string MatriculaIdErroMsg = "O ID da matrícula é obrigatório.";
+        public const string TotalAulasErroMsg = "O total de aulas do curso deve ser maior que zero.";
+
         public FinalizarAulaValidation()
         {
             RuleFor(c => c.AlunoId)
-                .NotEqual(Guid.Empty).WithMessage("O ID do aluno é obrigatório.");
+                .NotEqual(Guid.Empty).WithMessage(AlunoIdErroMsg);
 
             RuleFor(c => c.MatriculaId)
-                .NotEqual(Guid.Empty).WithMessage("O ID da matrícula é obrigatório.");
+                .NotEqual(Guid.Empty).WithMessage(MatriculaIdErroMsg);
 
             RuleFor(c => c.TotalAulasCurso)
-                .GreaterThan(0).WithMessage("O total de aulas do curso deve ser maior que zero.");
+                .GreaterThan(0).WithMessage(TotalAulasErroMsg);
         }
     }
+
 }

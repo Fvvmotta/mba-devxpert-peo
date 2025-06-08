@@ -16,19 +16,20 @@ public static class DatabaseSelectorExtension
 
         var connection = configuration.GetConnectionString("DefaultConnection");
         Console.WriteLine($"Connection String: {connection}");
-        var useSqlServer = environment.IsDevelopment();
+        var useSqlite = environment.IsDevelopment() || environment.IsEnvironment("Testing");
 
-        RegisterDbContext<IdentityContext>(services, connection, useSqlServer);
-        RegisterDbContext<AlunosContext>(services, connection, useSqlServer);
-        RegisterDbContext<GestaoConteudoContext>(services, connection, useSqlServer);
-        RegisterDbContext<PagamentosContext>(services, connection, useSqlServer);
+        RegisterDbContext<IdentityContext>(services, connection, useSqlite);
+        RegisterDbContext<AlunosContext>(services, connection, useSqlite);
+        RegisterDbContext<GestaoConteudoContext>(services, connection, useSqlite);
+        RegisterDbContext<PagamentosContext>(services, connection, useSqlite);
     }
 
-    private static void RegisterDbContext<T>(IServiceCollection services, string connection, bool useSqlServer) where T : DbContext
+    private static void RegisterDbContext<T>(IServiceCollection services, string connection, bool useSqlite) where T : DbContext
     {
-        if (useSqlServer)
-            services.AddDbContext<T>(options => options.UseSqlServer(connection).EnableSensitiveDataLogging().LogTo(Console.WriteLine));
-        else
+        if (useSqlite)
             services.AddDbContext<T>(options => options.UseSqlite(connection));
+            //services.AddDbContext<T>(options => options.UseSqlServer(connection).EnableSensitiveDataLogging().LogTo(Console.WriteLine));
+        else
+            services.AddDbContext<T>(options => options.UseSqlServer(connection));
     }
 }
