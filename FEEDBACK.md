@@ -1,86 +1,121 @@
-# Feedback - Avaliação Geral
+# FEEDBACK – Revisão Técnica (Plataforma de Educação Online)
 
 ## Organização do Projeto
-- **Pontos positivos:**
-  - Projeto bem estruturado com separação por camadas (`Application`, `Domain`, `Infrastructure`, `Api`) e domínios distintos (Conteúdo, Alunos, Pagamentos).
-  - `README.md` e `FEEDBACK.md` presentes.
 
-- **Pontos negativos:**
-  - **Arquivos de configuração do Visual Studio foram versionados** (`.vs`, `.suo`, `.v2`, etc.), o que deve ser evitado.
-  - **`Program.cs` está sobrecarregado** com todas as configurações misturadas (serviços, banco, CORS, identity), dificultando manutenção e leitura — deveria ser modularizado com métodos de extensão.
-  - O projeto `MBA_DevXpert_PEO.Identity` está isolado de forma desnecessária — **isso poderia estar incorporado à API principal**, evitando complexidade extra.
-  - **Namespaces são excessivamente longos e verbosos** (`MBA_DevXpert_PEO.PagamentoEFaturamento.Application`), impactando negativamente a legibilidade do código.
+Pontos positivos:
+- Estrutura limpa e modular por bounded contexts (`src/*` com `Alunos`, `Conteudos`, `Pagamentos`, `Api`, `Core`).
+- Solution file `MBA_DevXpert_PEO.sln` presente na raiz e projetos de teste separados em `test/`.
 
-## Modelagem de Domínio
-- **Pontos positivos:**
-  - Entidades e VOs bem definidos em cada contexto: `Curso`, `Aula`, `ConteudoProgramatico`, `Aluno`, `Matricula`, `Certificado`, `Pagamento`, `StatusPagamento`, `HistoricoAprendizado`.
-  - Uso adequado de `AggregateRoot`, `Entity`, `ValueObject`.
+Pontos negativos / observações:
+- Existem warnings numerosos (nullable, possíveis NREs) que devem ser tratados para reduzir ruído e evitar bugs em produção (ex.: `src/**/Api` e `Pagamentos.Business`).
+- Não foram encontradas pastas `Migrations/` versionadas no repositório para os contextos (busca por `Migrations` retornou vazio). Apesar disso, a aplicação chama `Database.MigrateAsync()` no seeder — isso funciona se as migrations existirem nas assemblies, mas dificulta análise offline.
 
-- **Pontos negativos:**
-  - Interface como `ICursoConsultaService` foi colocada no `Core`, **quebrando a separação de contextos** — contratos de aplicação de um BC não devem ser expostos como compartilhados.
-  - A classe `AlunoAppService` **acessa diretamente dados de pagamento**, evidenciando **acoplamento entre os BCs**, contrariando o isolamento que o DDD exige.
-  - Mesmo com um `SharedKernel`, **o Core centraliza responsabilidades que deveriam ser exclusivas dos domínios**, o que reduz a coesão dos contextos.
+---
+
+## Modelagem de Domínio (DDD)
+
+Pontos positivos:
+- Os três bounded contexts estão presentes e com pastas distintas: `Conteudos`, `Alunos` e `Pagamentos`.
+- Entidades e VOs esperados (ex.: `Curso`, `Aula`, `Aluno`, `Matricula`, `Pagamento`) existem e os agregados implementam regras (ex.: métodos de domínio nas entidades).
+
+Pontos negativos:
+- O projeto `Core` centraliza mensagens e alguns contratos.
+
+---
 
 ## Casos de Uso e Regras de Negócio
-- **Pontos positivos:**
-  - Implementação dos comandos e handlers para criação de curso, matrícula, pagamento.
-  - Aplicação de CQRS com `Command` e `CommandHandler` por fluxo funcional.
 
-- **Pontos negativos:**
-  - Alguns fluxos ainda **não estão finalizados ou não estão expostos pela API**.
-  - Falta clareza na orquestração de fluxo completo, como progressão do aluno e geração de certificado com verificação de pré-requisitos.
+Pontos positivos:
+- Handlers, Commands e Queries implementados para operações básicas (criar curso, adicionar aula, matricular aluno).
 
-## Integração entre Contextos
-- **Pontos positivos:**
-  - Estrutura de eventos presente no `Core`, com definições de domínio e integração.
+Pontos negativos:
+- Fluxos críticos testados apenas parcialmente; integrações end-to-end falham por problema de migração/seed, impedindo validação completa dos cenários (matrícula + pagamento + certificado).
 
-- **Pontos negativos:**
-  - **Integração entre contextos não ocorre via eventos**: há chamadas diretas e dependência de interfaces entre BCs, o que **quebra o isolamento arquitetural**.
-  - O `Core` está assumindo responsabilidade de camadas superiores e intermediando acesso entre contextos, o que **deveria ser feito por eventos de integração ou mediadores**.
+---
 
-## Estratégias Técnicas Suportando DDD
-- **Pontos positivos:**
-  - Uso consistente de CQRS, abstrações, notificações e validações.
-  - Domínios organizados e modelagem orientada a agregados.
+## Infra / Migrations / Seed
 
-- **Pontos negativos:**
-  - Mesmo com o uso correto de muitos padrões, **a aplicação não atinge o isolamento ideal entre contextos** devido ao uso indevido do `Core` como elo de integração.
+O que foi verificado:
+- `Program.cs` chama `await app.UseDatabaseSeeder();` quando o ambiente é `Development` ou `Testing`.
+- `DbSeederExtension` executa `Database.MigrateAsync()` para os quatro contexts:
+  - `GestaoConteudoContext`
+  - `AlunosContext`
+  - `PagamentosContext`
+  - `IdentityContext`
+- Em seguida o seeder popula cursos, usuário admin/aluno e uma matrícula de teste.
 
-## Autenticação e Identidade
-- **Pontos positivos:**
-  - JWT com ASP.NET Identity bem configurado.
-  - Separação de perfis (Aluno, Admin) implementada.
+Problema encontrado (causa dos testes de integração falharem):
+- Durante execução dos testes de integração, a chamada ao seeder tenta consultar `context.Cursos.Any()` antes das tabelas existirem — resultando em `SQLite Error 1: 'no such table: Cursos'`.
+- Observação: a solução registra DbContexts com SQLite quando o ambiente é `Development` ou `Testing` (arquivo `DbSelectorExtension.cs`) e a `appsettings.Testing.json` define `DefaultConnection` apontando para `Data Source=devxpert_tests.db`.
 
-- **Pontos negativos:**
-  - O projeto `MBA_DevXpert_PEO.Identity` **não agrega valor** por estar isolado — poderia estar unificado à API principal.
-  - Não ficou claro se o vínculo entre identidade e a entidade `Aluno` está automaticamente configurado com o mesmo ID.
+Sugestões:
+- Garantir que as migrations estejam incluídas nas assemblies (ou que a estratégia de criação seja compatível com o banco em tempo de teste). Ex.: criar migrations per-project e mantê-las versionadas ou usar EnsureCreated em testes, ou executar explicitamente `context.Database.Migrate()` antes de qualquer consulta no seeder.
+- Tornar o seeder mais resiliente: envolver o fluxo de verificação em try/catch e executar `context.Database.EnsureCreated()` quando apropriado no ambiente de testes.
 
-## Execução e Testes
-- **Pontos positivos:**
-  - Utiliza SQLite, com base local e estrutura para migrações.
-  - Swagger presente e funcional.
+---
 
-- **Pontos negativos:**
-  - **Baixa cobertura de testes**: poucos arquivos de teste encontrados.
-  - Não há validação automática dos fluxos via testes de integração.
-  - A cobertura de domínio não atinge o mínimo recomendado.
+## Autenticação e Identidade (JWT)
+
+Pontos positivos:
+- Identity está configurado e JWT configurado via `AddIdentityConfig` em `IdentityConfig.cs`.
+- `appsettings.json` contém `JwtSettings` com `Secret`, `Issuer`, `Audience`.
+
+Pontos negativos / observações:
+- Em `AppSettings.cs` nomes de propriedades não coincidem exatamente com keys em `appsettings.json` (`JwtSettings` contém `ExpirationHours`, `Issuer`, `Audience` — o `AppSettings` usa `ExpirationHours`/`Issuer`/`Audience` em partes, mas há campos extras como `RootFilePath` que não aparecem no JSON). Conferir o binding e nomes.
+
+---
+
+## Testes e Cobertura
+
+Resultados observados (execução local):
+- `dotnet test --collect:"XPlat Code Coverage"` retornou: total 70 testes, falharam 6 (integração). Build finalizou com erro devido aos 6 testes falhando; logs de teste e cobertura foram gerados.
+
+Observação de conformidade:
+- A cobertura global está muito abaixo do requisito de 80% (48.13%).
+
+Recomendações:
+- Aumentar testes unitários nos projetos de Application e Controllers; adicionar testes de integração que inicializem banco via EnsureCreated ou aplicar migrations antes do seeder.
+
+---
 
 ## Documentação
-- **Pontos positivos:**
-  - `README.md` descreve o escopo geral da aplicação.
-  - `FEEDBACK.md` está presente.
 
-- **Pontos negativos:**
-  - Documentação poderia detalhar melhor como rodar os fluxos e como os contextos se comunicam.
+Pontos positivos:
+- `README.md` presente e descreve stack e execução básica.
 
-## Conclusão
+Pontos negativos:
+- Documentação operacional incompleta sobre como reproduzir o ambiente de testes (por exemplo: instruções explícitas para aplicar migrations, ou passo a passo para rodar testes de integração localmente).
 
-O projeto demonstra boa arquitetura inicial e aplicação consistente de padrões de DDD, porém **falha em isolar corretamente os domínios e organiza mal a separação das responsabilidades**. Pontos principais de melhoria:
+Sugestão:
+- Adicionar um parágrafo no README com comandos mínimos para preparar e rodar os testes (ex.: dotnet ef database update, dotnet test --collect...).
 
-1. **Evitar exposição de contratos no Core**.
-2. **Não misturar acesso de dados entre contextos** — utilizar eventos.
-3. **Reestruturar o `Program.cs` para maior clareza**.
-4. **Evitar projetos isolados sem justificativa (como o de Identity)**.
-5. **Aumentar a cobertura de testes, especialmente nos fluxos de negócio.**
+---
 
-Com esses ajustes, o projeto se alinha ao padrão técnico esperado pelo desafio.
+## Conclusão e próximos passos (ação recomendada)
+
+Resumo:
+- O repositório tem boa arquitetura inicial e separação por bounded contexts; contudo, falhas nos testes de integração (migrations/seed) e cobertura baixa reduzem a nota técnica atual.
+
+Prioridade imediata (curto prazo):
+1. Corrigir o fluxo de criação/migração do banco em ambiente de teste (garantir que `Cursos` exista antes do seeder consultar). Verificar `Migrations` ou usar `EnsureCreated()` no ambiente `Testing`.
+2. Ajustar binding de `AppSettings`/JWT e tratar warnings nullable críticos.
+3. Aumentar cobertura com testes unitários nas camadas de Application/Controllers e reforçar testes de integração com banco criado apropriado.
+
+Sugestões de melhorias (médio prazo):
+- Revisar acoplamentos entre bounded contexts e reduzir vazamento de contratos para o `Core`.
+- Tratar warnings de nullable e melhorar análise estática (dotnet format/nullable).
+
+---
+
+## Matriz de Avaliação (NOTAS: inteiro 5..10) — pedir revisão antes de publicar final
+
+| **Critério**                   | **Peso** | **Descrição** | **Nota** |
+|--------------------------------|----------|-----------------|--------|
+| **Funcionalidade**             | 30%      | Se atende aos requisitos funcionais. | 7 |
+| **Qualidade do Código**        | 20%      | Clareza, organização, padrões. | 7 |
+| **Eficiência e Desempenho**    | 20%      | Eficiência das soluções. | 7 |
+| **Inovação e Diferenciais**    | 10%      | Criatividade e aspectos únicos. | 7 |
+| **Documentação e Organização** | 10%      | Qualidade e completude da documentação. | 7 |
+| **Resolução de Feedbacks**     | 10%      | Capacidade de responder feedbacks. | 7 |
+
+🎯 Nota Final: 7.0 / 10
